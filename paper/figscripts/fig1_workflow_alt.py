@@ -99,7 +99,7 @@ def main():
                                     facecolor=col, edgecolor="none", zorder=0))
         ax.text(bx - 0.22, b1 - 0.03, k, fontsize=S.SZ_PANEL, fontweight="bold",
                 va="top", ha="left", color=S.INK, fontfamily=FONT)
-        ax.text(L, b1 - 0.19, titles[k], fontsize=S.SZ_TITLE, fontweight="medium",
+        ax.text(L, b1 - 0.19, titles[k], fontsize=S.SZ_TITLE, fontweight="bold",
                 va="center", ha="left", color=S.INK, fontfamily=FONT)
 
     # ───────────────────────── band a ─────────────────────────
@@ -226,7 +226,7 @@ def main():
     yb = top - bh
     box(ax, L, yb, hw, bh, fc="white", ec=S.ORANGE, lw=0.7)
     ax.text(L + 0.14, yb + bh - 0.14, "Direct measurement", fontsize=S.SZ_ANNOT,
-            fontweight="medium", color=S.ORANGE, ha="left", va="top", fontfamily=FONT, zorder=4)
+            fontweight="bold", color=S.ORANGE, ha="left", va="top", fontfamily=FONT, zorder=4)
     ax.text(L + 0.14, yb + bh - 0.40,
             "Coordinates that no label has\ntouched are correlated with\npublished human ratings",
             fontsize=S.SZ_NOTE, color=S.INK2, ha="left", va="top", fontfamily=FONT,
@@ -244,7 +244,7 @@ def main():
     x2 = L + hw + 0.40
     box(ax, x2, yb, hw, bh, fc="white", ec=S.ORANGE, lw=0.7)
     ax.text(x2 + 0.14, yb + bh - 0.14, "Trained prediction", fontsize=S.SZ_ANNOT,
-            fontweight="medium", color=S.ORANGE, ha="left", va="top", fontfamily=FONT, zorder=4)
+            fontweight="bold", color=S.ORANGE, ha="left", va="top", fontfamily=FONT, zorder=4)
     ax.text(x2 + 0.14, yb + bh - 0.40,
             "One linear predictor, fitted on\nlabelled training rows, to the\ncoordinates and to general vectors",
             fontsize=S.SZ_NOTE, color=S.INK2, ha="left", va="top", fontfamily=FONT,

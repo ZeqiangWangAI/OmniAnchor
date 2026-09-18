@@ -45,7 +45,7 @@ def main():
     ax.set_yticks([0, 1, 2, 4, 5, 6]); ax.set_yticklabels([l for _, l, _, _ in methods] * 2, fontsize=ncstyle.SZ_NOTE)
     ax.axhline(3, color=ncstyle.GRID, linewidth=0.5, zorder=0)
     for y, lab in [(-0.6, "Valence"), (3.4, "Arousal")]:
-        ax.text(0.02, y, lab, fontsize=ncstyle.SZ_ANNOT, fontweight="medium", transform=ax.get_yaxis_transform(), ha="left", va="center", color=ncstyle.INK2)
+        ax.text(0.02, y, lab, fontsize=ncstyle.SZ_ANNOT, fontweight="bold", transform=ax.get_yaxis_transform(), ha="left", va="center", color=ncstyle.INK2)
     ax.set(xlabel="Pearson $r$ with published norms", xlim=(0, 1.42), xticks=[0, 0.5, 1.0], ylim=(-1.0, 7.0))
     ax.set_title("Photographs: OmniAnchor above\nboth heads on valence", fontsize=ncstyle.SZ_TITLE, loc="left")
     ax.invert_yaxis(); ncstyle.xgrid(ax)

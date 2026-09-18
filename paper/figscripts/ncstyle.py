@@ -15,9 +15,11 @@ from pathlib import Path
 from typing import Sequence
 
 # ── Font registration ─────────────────────────────────────────────────
-_FONT_DIR = Path(__file__).resolve().parent / "fonts"
-for _ttf in sorted(_FONT_DIR.glob("HelveticaNeue-*.ttf")):
-    fm.fontManager.addfont(str(_ttf))
+# Times New Roman (system files); the manuscript figures use a serif face.
+import glob as _glob
+for _ttf in sorted(_glob.glob("/System/Library/Fonts/Supplemental/Times New Roman*.ttf")):
+    fm.fontManager.addfont(_ttf)
+FONT_FAMILY = "Times New Roman"
 
 # ── Ink tokens ────────────────────────────────────────────────────────
 INK       = "#0b0b0b"   # primary: titles, panel letters
@@ -76,12 +78,12 @@ def figsize_mm(w_mm: float, h_mm: float) -> tuple[float, float]:
     return mm(w_mm), mm(h_mm)
 
 # ── Typographic sizes (pt at print scale) ─────────────────────────────
-SZ_PANEL = 9.0    # Bold
-SZ_TITLE = 8.0    # Medium (weight 500)
-SZ_LABEL = 7.5    # axis labels, Regular
-SZ_TICK  = 7.0    # tick labels, Regular
-SZ_ANNOT = 7.0    # annotations, legends, Regular
-SZ_NOTE  = 6.5    # footnotes (hard minimum)
+SZ_PANEL = 10.0    # Bold
+SZ_TITLE = 9.0    # Medium (weight 500)
+SZ_LABEL = 8.5    # axis labels, Regular
+SZ_TICK  = 8.0    # tick labels, Regular
+SZ_ANNOT = 8.0    # annotations, legends, Regular
+SZ_NOTE  = 7.0    # footnotes (hard minimum)
 
 # ── Mark specs ────────────────────────────────────────────────────────
 LW       = 1.0    # data-line width (pt)
@@ -99,21 +101,21 @@ def apply_style() -> None:
     """Set all rcParams for the NC visual system."""
     mpl.rcParams.update({
         # Font
-        "font.family":       "Helvetica Neue",
+        "font.family":       FONT_FAMILY,
         "font.size":         SZ_TICK,
         "pdf.fonttype":      42,
         "ps.fonttype":       42,
         "mathtext.fontset":  "custom",
-        "mathtext.rm":       "Helvetica Neue",
-        "mathtext.it":       "Helvetica Neue:italic",
-        "mathtext.bf":       "Helvetica Neue:bold",
+        "mathtext.rm":       FONT_FAMILY,
+        "mathtext.it":       FONT_FAMILY + ":italic",
+        "mathtext.bf":       FONT_FAMILY + ":bold",
         # Axes
         "axes.linewidth":    SPINE_W,
         "axes.edgecolor":    SPINE_CLR,
         "axes.labelsize":    SZ_LABEL,
         "axes.labelcolor":   INK2,
         "axes.titlesize":    SZ_TITLE,
-        "axes.titleweight":  500,           # Medium face
+        "axes.titleweight":  "bold",
         "axes.titlepad":     4,
         "axes.labelpad":     3,
         "axes.spines.top":   False,
