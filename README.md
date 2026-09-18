@@ -1,8 +1,7 @@
 # OmniAnchor
 
-OmniAnchor is the measurement toolkit described in the manuscript *OmniAnchor turns a
-frozen multimodal generative model into a measurement instrument for psychological
-constructs* (Nature Communications, submitted 2026). The Python package and command-line
+OmniAnchor is the measurement toolkit described in the manuscript *OmniAnchor: measuring researcher-named psychological constructs in text, images and
+video with a frozen generative model* (Nature Communications, submitted 2026). The Python package and command-line
 entry point keep their development name `omnianchor`; the import path and the frozen study
 configurations below are unchanged from the runs reported in the paper.
 
