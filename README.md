@@ -10,6 +10,10 @@ This repository holds the source, tests, frozen study configurations, analysis s
 environment locks and documentation. Raw scores, manifests and Source Data are released
 separately on acceptance, as stated in the manuscript's Data availability section.
 
+## Authors
+
+Zeqiang Wang (University of Surrey), Hanru Qiao (Hebei University), Yu Zhan (Huazhong Agricultural University), Yu Yue (Hong Kong Baptist University), Zixi Chen (New York University Shanghai), Suparna De (University of Surrey), Qingwen Xu (New York University).
+
 ---
 
 # OmniAnchor
