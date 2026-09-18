@@ -1,0 +1,150 @@
+{
+  "name": "media-general16-qwen35",
+  "model": {
+    "backend": "hf",
+    "id": "Qwen/Qwen3.5-4B",
+    "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+    "device": "cuda",
+    "precision": "bf16",
+    "attention_implementation": null
+  },
+  "anchors": [
+    {
+      "id": "general:wic:en:make",
+      "surface": "make",
+      "language": "en",
+      "concept_id": "general:wic:en:make"
+    },
+    {
+      "id": "general:wic:en:break",
+      "surface": "break",
+      "language": "en",
+      "concept_id": "general:wic:en:break"
+    },
+    {
+      "id": "general:wic:en:play",
+      "surface": "play",
+      "language": "en",
+      "concept_id": "general:wic:en:play"
+    },
+    {
+      "id": "general:wic:en:head",
+      "surface": "head",
+      "language": "en",
+      "concept_id": "general:wic:en:head"
+    },
+    {
+      "id": "general:wic:en:take",
+      "surface": "take",
+      "language": "en",
+      "concept_id": "general:wic:en:take"
+    },
+    {
+      "id": "general:wic:en:work",
+      "surface": "work",
+      "language": "en",
+      "concept_id": "general:wic:en:work"
+    },
+    {
+      "id": "general:wic:en:carry",
+      "surface": "carry",
+      "language": "en",
+      "concept_id": "general:wic:en:carry"
+    },
+    {
+      "id": "general:wic:en:run",
+      "surface": "run",
+      "language": "en",
+      "concept_id": "general:wic:en:run"
+    },
+    {
+      "id": "general:wic:en:come",
+      "surface": "come",
+      "language": "en",
+      "concept_id": "general:wic:en:come"
+    },
+    {
+      "id": "general:wic:en:cut",
+      "surface": "cut",
+      "language": "en",
+      "concept_id": "general:wic:en:cut"
+    },
+    {
+      "id": "general:wic:en:give",
+      "surface": "give",
+      "language": "en",
+      "concept_id": "general:wic:en:give"
+    },
+    {
+      "id": "general:wic:en:hold",
+      "surface": "hold",
+      "language": "en",
+      "concept_id": "general:wic:en:hold"
+    },
+    {
+      "id": "general:wic:en:see",
+      "surface": "see",
+      "language": "en",
+      "concept_id": "general:wic:en:see"
+    },
+    {
+      "id": "general:wic:en:keep",
+      "surface": "keep",
+      "language": "en",
+      "concept_id": "general:wic:en:keep"
+    },
+    {
+      "id": "general:wic:en:catch",
+      "surface": "catch",
+      "language": "en",
+      "concept_id": "general:wic:en:catch"
+    },
+    {
+      "id": "general:wic:en:fall",
+      "surface": "fall",
+      "language": "en",
+      "concept_id": "general:wic:en:fall"
+    }
+  ],
+  "bridges": [
+    {
+      "id": "associated_en_1",
+      "prefix": "A concept associated with this material is:\n",
+      "relation": "associated_with",
+      "language": "en"
+    },
+    {
+      "id": "associated_en_2",
+      "prefix": "This material is associated with the concept of:\n",
+      "relation": "associated_with",
+      "language": "en"
+    },
+    {
+      "id": "associated_en_3",
+      "prefix": "One concept related to this material is:\n",
+      "relation": "associated_with",
+      "language": "en"
+    }
+  ],
+  "event": "token_prefix",
+  "resources": {
+    "image": {
+      "min_pixels": 65536,
+      "max_pixels": 262144
+    },
+    "video": {
+      "sampled_frames": 8,
+      "sampling": "uniform",
+      "max_pixels_per_frame": 65536
+    },
+    "limits": {
+      "input_text_tokens": 2048,
+      "anchor_continuation_tokens": 32,
+      "total_postprocessor_tokens": 8192,
+      "implicit_truncation": false
+    }
+  },
+  "seed": 42,
+  "include_token_details": true,
+  "system_prompt": null
+}

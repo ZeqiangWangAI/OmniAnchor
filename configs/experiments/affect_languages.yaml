@@ -1,0 +1,23 @@
+schema_version: 1
+protocol_id: affect_languages
+accepted_experiments: [E2, E3]
+title: Independently supported English and Chinese affect measurement
+status: planned
+seed: 42
+inputs:
+  - adapter: emobank
+    kwargs: {path: data/emobank/emobank.csv, rating_perspective: reader, individual_ratings_path: data/emobank/individual_reader_ratings.csv}
+    role: English reader VAD with official split preserved
+  - adapter: chinese_emobank
+    kwargs: {path: data/chinese_emobank/CVAS_all.csv}
+    role: Chinese VA with deterministic local group split
+metrics: [spearman_per_dimension, mean_spearman, group_bootstrap_ci]
+protocol:
+  unit: text/content group within each language
+  development: separate language-specific bridge artifacts and train-only calibration
+  test: evaluate each language independently; do not pool raw scores across languages
+  claim_boundary: affect VA/VAD validates general association measurement, not moral values or measurement invariance across languages
+budget: {max_smoke_samples: 32, model_parameter_cap: 4000000000}
+notes:
+  - Published Chinese CSV files are tab-delimited, despite their filename extension.
+  - Regression probes use ridge alpha=[0.1,1,10,100] selected by dev MSE.

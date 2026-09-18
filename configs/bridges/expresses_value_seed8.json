@@ -1,0 +1,50 @@
+[
+  {
+    "id": "expresses_en_1",
+    "prefix": "A value expressed in this material is:\n",
+    "relation": "expresses_value",
+    "language": "en"
+  },
+  {
+    "id": "expresses_en_2",
+    "prefix": "This material expresses the value of:\n",
+    "relation": "expresses_value",
+    "language": "en"
+  },
+  {
+    "id": "expresses_en_3",
+    "prefix": "One value expressed by this material is:\n",
+    "relation": "expresses_value",
+    "language": "en"
+  },
+  {
+    "id": "expresses_en_4",
+    "prefix": "The material expresses a value described as:\n",
+    "relation": "expresses_value",
+    "language": "en"
+  },
+  {
+    "id": "expresses_en_5",
+    "prefix": "An expressed value in this material is:\n",
+    "relation": "expresses_value",
+    "language": "en"
+  },
+  {
+    "id": "expresses_en_6",
+    "prefix": "A value that this material expresses is:\n",
+    "relation": "expresses_value",
+    "language": "en"
+  },
+  {
+    "id": "expresses_en_7",
+    "prefix": "This material gives expression to the value of:\n",
+    "relation": "expresses_value",
+    "language": "en"
+  },
+  {
+    "id": "expresses_en_8",
+    "prefix": "Among the values expressed in this material is:\n",
+    "relation": "expresses_value",
+    "language": "en"
+  }
+]

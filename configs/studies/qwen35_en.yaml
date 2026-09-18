@@ -1,0 +1,35 @@
+name: qwen35-en-reference
+model:
+  backend: hf
+  id: Qwen/Qwen3.5-4B
+  revision: 851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a
+  device: cuda
+  precision: bf16
+anchors:
+- id: care
+  surface: care
+- id: freedom
+  surface: freedom
+- id: safety
+  surface: safety
+bridges:
+- id: associated_en_1
+  relation: associated_with
+  language: en
+  prefix: 'A concept associated with this material is:
+
+    '
+- id: associated_en_2
+  relation: associated_with
+  language: en
+  prefix: 'This material is associated with the concept of:
+
+    '
+- id: associated_en_3
+  relation: associated_with
+  language: en
+  prefix: 'One concept related to this material is:
+
+    '
+event: token_prefix
+seed: 42

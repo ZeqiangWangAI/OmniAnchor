@@ -1,0 +1,35 @@
+name: toy-en-example
+model:
+  backend: toy
+  id: toy
+  revision: v1
+  device: cpu
+  precision: fp32
+anchors:
+- id: care
+  surface: care
+- id: freedom
+  surface: freedom
+- id: safety
+  surface: safety
+bridges:
+- id: associated_en_1
+  relation: associated_with
+  language: en
+  prefix: 'A concept associated with this material is:
+
+    '
+- id: associated_en_2
+  relation: associated_with
+  language: en
+  prefix: 'This material is associated with the concept of:
+
+    '
+- id: associated_en_3
+  relation: associated_with
+  language: en
+  prefix: 'One concept related to this material is:
+
+    '
+event: token_prefix
+seed: 42

@@ -1,0 +1,24 @@
+schema_version: 1
+protocol_id: images_values
+accepted_experiments: [E2, E4]
+title: Image affect and action-conditioned multimodal value candidates
+status: planned
+seed: 42
+inputs:
+  - adapter: oasis
+    kwargs: {metadata_path: data/oasis/OASIS.csv, media_root: data/oasis/images, require_media: true}
+    role: human image VA reference
+  - adapter: viva
+    kwargs: {annotation_path: data/viva/VIVA_annotation.json, media_root: data/viva/images, task: values, require_media: true}
+    role: per-instance value ranking conditioned on correct action
+metrics: [spearman_per_dimension, mean_instance_ap, mrr, group_bootstrap_ci]
+protocol:
+  unit: image; all action/candidate variants of an image remain grouped
+  development: freeze bridge and exact anchor extraction before held-out image evaluation
+  test: no reasons, scene descriptions, or value explanations included in scored input
+  claim_boundary: VIVA positives/negatives are relative to a supplied action; negative mixes irrelevant and contradictory values
+budget: {max_smoke_samples: 8, model_parameter_cap: 4000000000}
+notes:
+  - OASIS labels are affect, not value truth.
+  - VIVA anchors are free phrases local to each sample; report mean per-instance AP, not fixed-ontology macro AP.
+  - Record missing media and the exact evaluated subset; never substitute broken media with blank images.

@@ -1,0 +1,62 @@
+name: values20_en
+anchors:
+- id: 'Self-direction: thought'
+  surface: 'Self-direction: thought'
+  language: en
+- id: 'Self-direction: action'
+  surface: 'Self-direction: action'
+  language: en
+- id: Stimulation
+  surface: Stimulation
+  language: en
+- id: Hedonism
+  surface: Hedonism
+  language: en
+- id: Achievement
+  surface: Achievement
+  language: en
+- id: 'Power: dominance'
+  surface: 'Power: dominance'
+  language: en
+- id: 'Power: resources'
+  surface: 'Power: resources'
+  language: en
+- id: Face
+  surface: Face
+  language: en
+- id: 'Security: personal'
+  surface: 'Security: personal'
+  language: en
+- id: 'Security: societal'
+  surface: 'Security: societal'
+  language: en
+- id: Tradition
+  surface: Tradition
+  language: en
+- id: 'Conformity: rules'
+  surface: 'Conformity: rules'
+  language: en
+- id: 'Conformity: interpersonal'
+  surface: 'Conformity: interpersonal'
+  language: en
+- id: Humility
+  surface: Humility
+  language: en
+- id: 'Benevolence: caring'
+  surface: 'Benevolence: caring'
+  language: en
+- id: 'Benevolence: dependability'
+  surface: 'Benevolence: dependability'
+  language: en
+- id: 'Universalism: concern'
+  surface: 'Universalism: concern'
+  language: en
+- id: 'Universalism: nature'
+  surface: 'Universalism: nature'
+  language: en
+- id: 'Universalism: tolerance'
+  surface: 'Universalism: tolerance'
+  language: en
+- id: 'Universalism: objectivity'
+  surface: 'Universalism: objectivity'
+  language: en

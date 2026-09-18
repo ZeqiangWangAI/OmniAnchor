@@ -1,0 +1,822 @@
+{
+  "name": "vatex-associated-with-general128",
+  "model": {
+    "backend": "hf",
+    "id": "Qwen/Qwen3.5-4B",
+    "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+    "device": "cuda",
+    "precision": "bf16",
+    "attention_implementation": null
+  },
+  "anchors": [
+    {
+      "id": "general:wic:en:make",
+      "surface": "make",
+      "language": "en",
+      "concept_id": "general:wic:en:make"
+    },
+    {
+      "id": "general:wic:en:break",
+      "surface": "break",
+      "language": "en",
+      "concept_id": "general:wic:en:break"
+    },
+    {
+      "id": "general:wic:en:play",
+      "surface": "play",
+      "language": "en",
+      "concept_id": "general:wic:en:play"
+    },
+    {
+      "id": "general:wic:en:head",
+      "surface": "head",
+      "language": "en",
+      "concept_id": "general:wic:en:head"
+    },
+    {
+      "id": "general:wic:en:take",
+      "surface": "take",
+      "language": "en",
+      "concept_id": "general:wic:en:take"
+    },
+    {
+      "id": "general:wic:en:work",
+      "surface": "work",
+      "language": "en",
+      "concept_id": "general:wic:en:work"
+    },
+    {
+      "id": "general:wic:en:carry",
+      "surface": "carry",
+      "language": "en",
+      "concept_id": "general:wic:en:carry"
+    },
+    {
+      "id": "general:wic:en:run",
+      "surface": "run",
+      "language": "en",
+      "concept_id": "general:wic:en:run"
+    },
+    {
+      "id": "general:wic:en:come",
+      "surface": "come",
+      "language": "en",
+      "concept_id": "general:wic:en:come"
+    },
+    {
+      "id": "general:wic:en:cut",
+      "surface": "cut",
+      "language": "en",
+      "concept_id": "general:wic:en:cut"
+    },
+    {
+      "id": "general:wic:en:give",
+      "surface": "give",
+      "language": "en",
+      "concept_id": "general:wic:en:give"
+    },
+    {
+      "id": "general:wic:en:hold",
+      "surface": "hold",
+      "language": "en",
+      "concept_id": "general:wic:en:hold"
+    },
+    {
+      "id": "general:wic:en:see",
+      "surface": "see",
+      "language": "en",
+      "concept_id": "general:wic:en:see"
+    },
+    {
+      "id": "general:wic:en:keep",
+      "surface": "keep",
+      "language": "en",
+      "concept_id": "general:wic:en:keep"
+    },
+    {
+      "id": "general:wic:en:catch",
+      "surface": "catch",
+      "language": "en",
+      "concept_id": "general:wic:en:catch"
+    },
+    {
+      "id": "general:wic:en:fall",
+      "surface": "fall",
+      "language": "en",
+      "concept_id": "general:wic:en:fall"
+    },
+    {
+      "id": "general:wic:en:go",
+      "surface": "go",
+      "language": "en",
+      "concept_id": "general:wic:en:go"
+    },
+    {
+      "id": "general:wic:en:line",
+      "surface": "line",
+      "language": "en",
+      "concept_id": "general:wic:en:line"
+    },
+    {
+      "id": "general:wic:en:raise",
+      "surface": "raise",
+      "language": "en",
+      "concept_id": "general:wic:en:raise"
+    },
+    {
+      "id": "general:wic:en:time",
+      "surface": "time",
+      "language": "en",
+      "concept_id": "general:wic:en:time"
+    },
+    {
+      "id": "general:wic:en:turn",
+      "surface": "turn",
+      "language": "en",
+      "concept_id": "general:wic:en:turn"
+    },
+    {
+      "id": "general:wic:en:draw",
+      "surface": "draw",
+      "language": "en",
+      "concept_id": "general:wic:en:draw"
+    },
+    {
+      "id": "general:wic:en:get",
+      "surface": "get",
+      "language": "en",
+      "concept_id": "general:wic:en:get"
+    },
+    {
+      "id": "general:wic:en:pull",
+      "surface": "pull",
+      "language": "en",
+      "concept_id": "general:wic:en:pull"
+    },
+    {
+      "id": "general:wic:en:call",
+      "surface": "call",
+      "language": "en",
+      "concept_id": "general:wic:en:call"
+    },
+    {
+      "id": "general:wic:en:life",
+      "surface": "life",
+      "language": "en",
+      "concept_id": "general:wic:en:life"
+    },
+    {
+      "id": "general:wic:en:strike",
+      "surface": "strike",
+      "language": "en",
+      "concept_id": "general:wic:en:strike"
+    },
+    {
+      "id": "general:wic:en:point",
+      "surface": "point",
+      "language": "en",
+      "concept_id": "general:wic:en:point"
+    },
+    {
+      "id": "general:wic:en:be",
+      "surface": "be",
+      "language": "en",
+      "concept_id": "general:wic:en:be"
+    },
+    {
+      "id": "general:wic:en:face",
+      "surface": "face",
+      "language": "en",
+      "concept_id": "general:wic:en:face"
+    },
+    {
+      "id": "general:wic:en:leave",
+      "surface": "leave",
+      "language": "en",
+      "concept_id": "general:wic:en:leave"
+    },
+    {
+      "id": "general:wic:en:pay",
+      "surface": "pay",
+      "language": "en",
+      "concept_id": "general:wic:en:pay"
+    },
+    {
+      "id": "general:wic:en:hit",
+      "surface": "hit",
+      "language": "en",
+      "concept_id": "general:wic:en:hit"
+    },
+    {
+      "id": "general:wic:en:beat",
+      "surface": "beat",
+      "language": "en",
+      "concept_id": "general:wic:en:beat"
+    },
+    {
+      "id": "general:wic:en:check",
+      "surface": "check",
+      "language": "en",
+      "concept_id": "general:wic:en:check"
+    },
+    {
+      "id": "general:wic:en:cover",
+      "surface": "cover",
+      "language": "en",
+      "concept_id": "general:wic:en:cover"
+    },
+    {
+      "id": "general:wic:en:set",
+      "surface": "set",
+      "language": "en",
+      "concept_id": "general:wic:en:set"
+    },
+    {
+      "id": "general:wic:en:touch",
+      "surface": "touch",
+      "language": "en",
+      "concept_id": "general:wic:en:touch"
+    },
+    {
+      "id": "general:wic:en:connect",
+      "surface": "connect",
+      "language": "en",
+      "concept_id": "general:wic:en:connect"
+    },
+    {
+      "id": "general:wic:en:drive",
+      "surface": "drive",
+      "language": "en",
+      "concept_id": "general:wic:en:drive"
+    },
+    {
+      "id": "general:wic:en:use",
+      "surface": "use",
+      "language": "en",
+      "concept_id": "general:wic:en:use"
+    },
+    {
+      "id": "general:wic:en:air",
+      "surface": "air",
+      "language": "en",
+      "concept_id": "general:wic:en:air"
+    },
+    {
+      "id": "general:wic:en:place",
+      "surface": "place",
+      "language": "en",
+      "concept_id": "general:wic:en:place"
+    },
+    {
+      "id": "general:wic:en:charge",
+      "surface": "charge",
+      "language": "en",
+      "concept_id": "general:wic:en:charge"
+    },
+    {
+      "id": "general:wic:en:block",
+      "surface": "block",
+      "language": "en",
+      "concept_id": "general:wic:en:block"
+    },
+    {
+      "id": "general:wic:en:have",
+      "surface": "have",
+      "language": "en",
+      "concept_id": "general:wic:en:have"
+    },
+    {
+      "id": "general:wic:en:know",
+      "surface": "know",
+      "language": "en",
+      "concept_id": "general:wic:en:know"
+    },
+    {
+      "id": "general:wic:en:side",
+      "surface": "side",
+      "language": "en",
+      "concept_id": "general:wic:en:side"
+    },
+    {
+      "id": "general:wic:en:stay",
+      "surface": "stay",
+      "language": "en",
+      "concept_id": "general:wic:en:stay"
+    },
+    {
+      "id": "general:wic:en:light",
+      "surface": "light",
+      "language": "en",
+      "concept_id": "general:wic:en:light"
+    },
+    {
+      "id": "general:wic:en:admit",
+      "surface": "admit",
+      "language": "en",
+      "concept_id": "general:wic:en:admit"
+    },
+    {
+      "id": "general:wic:en:drop",
+      "surface": "drop",
+      "language": "en",
+      "concept_id": "general:wic:en:drop"
+    },
+    {
+      "id": "general:wic:en:order",
+      "surface": "order",
+      "language": "en",
+      "concept_id": "general:wic:en:order"
+    },
+    {
+      "id": "general:wic:en:stretch",
+      "surface": "stretch",
+      "language": "en",
+      "concept_id": "general:wic:en:stretch"
+    },
+    {
+      "id": "general:wic:en:business",
+      "surface": "business",
+      "language": "en",
+      "concept_id": "general:wic:en:business"
+    },
+    {
+      "id": "general:wic:en:end",
+      "surface": "end",
+      "language": "en",
+      "concept_id": "general:wic:en:end"
+    },
+    {
+      "id": "general:wic:en:field",
+      "surface": "field",
+      "language": "en",
+      "concept_id": "general:wic:en:field"
+    },
+    {
+      "id": "general:wic:en:mean",
+      "surface": "mean",
+      "language": "en",
+      "concept_id": "general:wic:en:mean"
+    },
+    {
+      "id": "general:wic:en:unit",
+      "surface": "unit",
+      "language": "en",
+      "concept_id": "general:wic:en:unit"
+    },
+    {
+      "id": "general:wic:en:day",
+      "surface": "day",
+      "language": "en",
+      "concept_id": "general:wic:en:day"
+    },
+    {
+      "id": "general:wic:en:floor",
+      "surface": "floor",
+      "language": "en",
+      "concept_id": "general:wic:en:floor"
+    },
+    {
+      "id": "general:wic:en:follow",
+      "surface": "follow",
+      "language": "en",
+      "concept_id": "general:wic:en:follow"
+    },
+    {
+      "id": "general:wic:en:develop",
+      "surface": "develop",
+      "language": "en",
+      "concept_id": "general:wic:en:develop"
+    },
+    {
+      "id": "general:wic:en:finish",
+      "surface": "finish",
+      "language": "en",
+      "concept_id": "general:wic:en:finish"
+    },
+    {
+      "id": "general:wic:en:foot",
+      "surface": "foot",
+      "language": "en",
+      "concept_id": "general:wic:en:foot"
+    },
+    {
+      "id": "general:wic:en:throw",
+      "surface": "throw",
+      "language": "en",
+      "concept_id": "general:wic:en:throw"
+    },
+    {
+      "id": "general:wic:en:wall",
+      "surface": "wall",
+      "language": "en",
+      "concept_id": "general:wic:en:wall"
+    },
+    {
+      "id": "general:wic:en:number",
+      "surface": "number",
+      "language": "en",
+      "concept_id": "general:wic:en:number"
+    },
+    {
+      "id": "general:wic:en:stand",
+      "surface": "stand",
+      "language": "en",
+      "concept_id": "general:wic:en:stand"
+    },
+    {
+      "id": "general:wic:en:case",
+      "surface": "case",
+      "language": "en",
+      "concept_id": "general:wic:en:case"
+    },
+    {
+      "id": "general:wic:en:dress",
+      "surface": "dress",
+      "language": "en",
+      "concept_id": "general:wic:en:dress"
+    },
+    {
+      "id": "general:wic:en:feel",
+      "surface": "feel",
+      "language": "en",
+      "concept_id": "general:wic:en:feel"
+    },
+    {
+      "id": "general:wic:en:quality",
+      "surface": "quality",
+      "language": "en",
+      "concept_id": "general:wic:en:quality"
+    },
+    {
+      "id": "general:wic:en:sense",
+      "surface": "sense",
+      "language": "en",
+      "concept_id": "general:wic:en:sense"
+    },
+    {
+      "id": "general:wic:en:voice",
+      "surface": "voice",
+      "language": "en",
+      "concept_id": "general:wic:en:voice"
+    },
+    {
+      "id": "general:wic:en:action",
+      "surface": "action",
+      "language": "en",
+      "concept_id": "general:wic:en:action"
+    },
+    {
+      "id": "general:wic:en:fire",
+      "surface": "fire",
+      "language": "en",
+      "concept_id": "general:wic:en:fire"
+    },
+    {
+      "id": "general:wic:en:hand",
+      "surface": "hand",
+      "language": "en",
+      "concept_id": "general:wic:en:hand"
+    },
+    {
+      "id": "general:wic:en:language",
+      "surface": "language",
+      "language": "en",
+      "concept_id": "general:wic:en:language"
+    },
+    {
+      "id": "general:wic:en:lift",
+      "surface": "lift",
+      "language": "en",
+      "concept_id": "general:wic:en:lift"
+    },
+    {
+      "id": "general:wic:en:piece",
+      "surface": "piece",
+      "language": "en",
+      "concept_id": "general:wic:en:piece"
+    },
+    {
+      "id": "general:wic:en:rest",
+      "surface": "rest",
+      "language": "en",
+      "concept_id": "general:wic:en:rest"
+    },
+    {
+      "id": "general:wic:en:roll",
+      "surface": "roll",
+      "language": "en",
+      "concept_id": "general:wic:en:roll"
+    },
+    {
+      "id": "general:wic:en:space",
+      "surface": "space",
+      "language": "en",
+      "concept_id": "general:wic:en:space"
+    },
+    {
+      "id": "general:wic:en:start",
+      "surface": "start",
+      "language": "en",
+      "concept_id": "general:wic:en:start"
+    },
+    {
+      "id": "general:wic:en:way",
+      "surface": "way",
+      "language": "en",
+      "concept_id": "general:wic:en:way"
+    },
+    {
+      "id": "general:wic:en:body",
+      "surface": "body",
+      "language": "en",
+      "concept_id": "general:wic:en:body"
+    },
+    {
+      "id": "general:wic:en:breath",
+      "surface": "breath",
+      "language": "en",
+      "concept_id": "general:wic:en:breath"
+    },
+    {
+      "id": "general:wic:en:do",
+      "surface": "do",
+      "language": "en",
+      "concept_id": "general:wic:en:do"
+    },
+    {
+      "id": "general:wic:en:drink",
+      "surface": "drink",
+      "language": "en",
+      "concept_id": "general:wic:en:drink"
+    },
+    {
+      "id": "general:wic:en:gather",
+      "surface": "gather",
+      "language": "en",
+      "concept_id": "general:wic:en:gather"
+    },
+    {
+      "id": "general:wic:en:move",
+      "surface": "move",
+      "language": "en",
+      "concept_id": "general:wic:en:move"
+    },
+    {
+      "id": "general:wic:en:operation",
+      "surface": "operation",
+      "language": "en",
+      "concept_id": "general:wic:en:operation"
+    },
+    {
+      "id": "general:wic:en:range",
+      "surface": "range",
+      "language": "en",
+      "concept_id": "general:wic:en:range"
+    },
+    {
+      "id": "general:wic:en:reaction",
+      "surface": "reaction",
+      "language": "en",
+      "concept_id": "general:wic:en:reaction"
+    },
+    {
+      "id": "general:wic:en:stick",
+      "surface": "stick",
+      "language": "en",
+      "concept_id": "general:wic:en:stick"
+    },
+    {
+      "id": "general:wic:en:support",
+      "surface": "support",
+      "language": "en",
+      "concept_id": "general:wic:en:support"
+    },
+    {
+      "id": "general:wic:en:back",
+      "surface": "back",
+      "language": "en",
+      "concept_id": "general:wic:en:back"
+    },
+    {
+      "id": "general:wic:en:land",
+      "surface": "land",
+      "language": "en",
+      "concept_id": "general:wic:en:land"
+    },
+    {
+      "id": "general:wic:en:patch",
+      "surface": "patch",
+      "language": "en",
+      "concept_id": "general:wic:en:patch"
+    },
+    {
+      "id": "general:wic:en:product",
+      "surface": "product",
+      "language": "en",
+      "concept_id": "general:wic:en:product"
+    },
+    {
+      "id": "general:wic:en:sign",
+      "surface": "sign",
+      "language": "en",
+      "concept_id": "general:wic:en:sign"
+    },
+    {
+      "id": "general:wic:en:snap",
+      "surface": "snap",
+      "language": "en",
+      "concept_id": "general:wic:en:snap"
+    },
+    {
+      "id": "general:wic:en:tell",
+      "surface": "tell",
+      "language": "en",
+      "concept_id": "general:wic:en:tell"
+    },
+    {
+      "id": "general:wic:en:top",
+      "surface": "top",
+      "language": "en",
+      "concept_id": "general:wic:en:top"
+    },
+    {
+      "id": "general:wic:en:war",
+      "surface": "war",
+      "language": "en",
+      "concept_id": "general:wic:en:war"
+    },
+    {
+      "id": "general:wic:en:wash",
+      "surface": "wash",
+      "language": "en",
+      "concept_id": "general:wic:en:wash"
+    },
+    {
+      "id": "general:wic:en:answer",
+      "surface": "answer",
+      "language": "en",
+      "concept_id": "general:wic:en:answer"
+    },
+    {
+      "id": "general:wic:en:baby",
+      "surface": "baby",
+      "language": "en",
+      "concept_id": "general:wic:en:baby"
+    },
+    {
+      "id": "general:wic:en:bear",
+      "surface": "bear",
+      "language": "en",
+      "concept_id": "general:wic:en:bear"
+    },
+    {
+      "id": "general:wic:en:coverage",
+      "surface": "coverage",
+      "language": "en",
+      "concept_id": "general:wic:en:coverage"
+    },
+    {
+      "id": "general:wic:en:extend",
+      "surface": "extend",
+      "language": "en",
+      "concept_id": "general:wic:en:extend"
+    },
+    {
+      "id": "general:wic:en:focus",
+      "surface": "focus",
+      "language": "en",
+      "concept_id": "general:wic:en:focus"
+    },
+    {
+      "id": "general:wic:en:furniture",
+      "surface": "furniture",
+      "language": "en",
+      "concept_id": "general:wic:en:furniture"
+    },
+    {
+      "id": "general:wic:en:opening",
+      "surface": "opening",
+      "language": "en",
+      "concept_id": "general:wic:en:opening"
+    },
+    {
+      "id": "general:wic:en:part",
+      "surface": "part",
+      "language": "en",
+      "concept_id": "general:wic:en:part"
+    },
+    {
+      "id": "general:wic:en:post",
+      "surface": "post",
+      "language": "en",
+      "concept_id": "general:wic:en:post"
+    },
+    {
+      "id": "general:wic:en:stuff",
+      "surface": "stuff",
+      "language": "en",
+      "concept_id": "general:wic:en:stuff"
+    },
+    {
+      "id": "general:wic:en:term",
+      "surface": "term",
+      "language": "en",
+      "concept_id": "general:wic:en:term"
+    },
+    {
+      "id": "general:wic:en:academy",
+      "surface": "academy",
+      "language": "en",
+      "concept_id": "general:wic:en:academy"
+    },
+    {
+      "id": "general:wic:en:authority",
+      "surface": "authority",
+      "language": "en",
+      "concept_id": "general:wic:en:authority"
+    },
+    {
+      "id": "general:wic:en:ball",
+      "surface": "ball",
+      "language": "en",
+      "concept_id": "general:wic:en:ball"
+    },
+    {
+      "id": "general:wic:en:chain",
+      "surface": "chain",
+      "language": "en",
+      "concept_id": "general:wic:en:chain"
+    },
+    {
+      "id": "general:wic:en:course",
+      "surface": "course",
+      "language": "en",
+      "concept_id": "general:wic:en:course"
+    },
+    {
+      "id": "general:wic:en:degree",
+      "surface": "degree",
+      "language": "en",
+      "concept_id": "general:wic:en:degree"
+    },
+    {
+      "id": "general:wic:en:fatigue",
+      "surface": "fatigue",
+      "language": "en",
+      "concept_id": "general:wic:en:fatigue"
+    },
+    {
+      "id": "general:wic:en:leak",
+      "surface": "leak",
+      "language": "en",
+      "concept_id": "general:wic:en:leak"
+    },
+    {
+      "id": "general:wic:en:pack",
+      "surface": "pack",
+      "language": "en",
+      "concept_id": "general:wic:en:pack"
+    }
+  ],
+  "bridges": [
+    {
+      "id": "associated_en_1",
+      "prefix": "A concept associated with this material is:\n",
+      "relation": "associated_with",
+      "language": "en"
+    },
+    {
+      "id": "associated_en_2",
+      "prefix": "This material is associated with the concept of:\n",
+      "relation": "associated_with",
+      "language": "en"
+    },
+    {
+      "id": "associated_en_3",
+      "prefix": "One concept related to this material is:\n",
+      "relation": "associated_with",
+      "language": "en"
+    }
+  ],
+  "event": "token_prefix",
+  "resources": {
+    "image": {
+      "min_pixels": 65536,
+      "max_pixels": 262144
+    },
+    "video": {
+      "sampled_frames": 8,
+      "sampling": "uniform",
+      "max_pixels_per_frame": 65536
+    },
+    "limits": {
+      "input_text_tokens": 2048,
+      "anchor_continuation_tokens": 32,
+      "total_postprocessor_tokens": 8192,
+      "implicit_truncation": false
+    }
+  },
+  "seed": 42,
+  "include_token_details": true,
+  "system_prompt": null
+}

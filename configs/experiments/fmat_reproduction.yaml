@@ -1,0 +1,21 @@
+schema_version: 1
+protocol_id: fmat_reproduction
+accepted_experiments: [E1]
+title: FMAT stored-probability and public occupational-reference reproduction
+status: planned
+seed: 42
+inputs:
+  - adapter: fmat
+    kwargs: {path: data/fmat/d1a.csv}
+    role: stored model probabilities; not human labels
+metrics: [pearson_occupation_reference, spearman_occupation_reference, group_bootstrap_ci]
+protocol:
+  unit: occupation; model and template repeats are repeated measurements
+  development: freeze exact log-ratio sign, word sets, and probability handling before comparison
+  test: public stats.occupation from FMAT RData; no optimization on these same occupations
+  claim_boundary: reproduces model-association measurement against population composition, not individual value truth
+budget: {max_smoke_samples: 32, model_parameter_cap: 4000000000}
+notes:
+  - Export stats.occupation separately from the public RData for reference joins; it is not a text sample table.
+  - Zero stored probability cannot become a finite log score without a declared censoring policy.
+  - OSF data CC BY 4.0; package code GPL 3 is a different license.

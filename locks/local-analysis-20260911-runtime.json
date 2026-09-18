@@ -1,0 +1,6 @@
+{
+  "python": "3.11.14 (main, Jan 14 2026, 21:09:41) [Clang 21.1.4 ]",
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "purpose": "Observed local analysis/SciencePlots environment; clean reinstall verification separate",
+  "packages": 49
+}

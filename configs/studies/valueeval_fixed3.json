@@ -1,0 +1,174 @@
+{
+  "name": "valueeval-fixed3-qwen35",
+  "model": {
+    "backend": "hf",
+    "id": "Qwen/Qwen3.5-4B",
+    "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+    "device": "cuda",
+    "precision": "bf16",
+    "attention_implementation": null
+  },
+  "anchors": [
+    {
+      "id": "Self-direction: thought",
+      "surface": "Self-direction: thought",
+      "language": "en",
+      "concept_id": null
+    },
+    {
+      "id": "Self-direction: action",
+      "surface": "Self-direction: action",
+      "language": "en",
+      "concept_id": null
+    },
+    {
+      "id": "Stimulation",
+      "surface": "Stimulation",
+      "language": "en",
+      "concept_id": null
+    },
+    {
+      "id": "Hedonism",
+      "surface": "Hedonism",
+      "language": "en",
+      "concept_id": null
+    },
+    {
+      "id": "Achievement",
+      "surface": "Achievement",
+      "language": "en",
+      "concept_id": null
+    },
+    {
+      "id": "Power: dominance",
+      "surface": "Power: dominance",
+      "language": "en",
+      "concept_id": null
+    },
+    {
+      "id": "Power: resources",
+      "surface": "Power: resources",
+      "language": "en",
+      "concept_id": null
+    },
+    {
+      "id": "Face",
+      "surface": "Face",
+      "language": "en",
+      "concept_id": null
+    },
+    {
+      "id": "Security: personal",
+      "surface": "Security: personal",
+      "language": "en",
+      "concept_id": null
+    },
+    {
+      "id": "Security: societal",
+      "surface": "Security: societal",
+      "language": "en",
+      "concept_id": null
+    },
+    {
+      "id": "Tradition",
+      "surface": "Tradition",
+      "language": "en",
+      "concept_id": null
+    },
+    {
+      "id": "Conformity: rules",
+      "surface": "Conformity: rules",
+      "language": "en",
+      "concept_id": null
+    },
+    {
+      "id": "Conformity: interpersonal",
+      "surface": "Conformity: interpersonal",
+      "language": "en",
+      "concept_id": null
+    },
+    {
+      "id": "Humility",
+      "surface": "Humility",
+      "language": "en",
+      "concept_id": null
+    },
+    {
+      "id": "Benevolence: caring",
+      "surface": "Benevolence: caring",
+      "language": "en",
+      "concept_id": null
+    },
+    {
+      "id": "Benevolence: dependability",
+      "surface": "Benevolence: dependability",
+      "language": "en",
+      "concept_id": null
+    },
+    {
+      "id": "Universalism: concern",
+      "surface": "Universalism: concern",
+      "language": "en",
+      "concept_id": null
+    },
+    {
+      "id": "Universalism: nature",
+      "surface": "Universalism: nature",
+      "language": "en",
+      "concept_id": null
+    },
+    {
+      "id": "Universalism: tolerance",
+      "surface": "Universalism: tolerance",
+      "language": "en",
+      "concept_id": null
+    },
+    {
+      "id": "Universalism: objectivity",
+      "surface": "Universalism: objectivity",
+      "language": "en",
+      "concept_id": null
+    }
+  ],
+  "bridges": [
+    {
+      "id": "expresses_en_1",
+      "prefix": "A value expressed in this material is:\n",
+      "relation": "expresses_value",
+      "language": "en"
+    },
+    {
+      "id": "expresses_en_2",
+      "prefix": "This material expresses the value of:\n",
+      "relation": "expresses_value",
+      "language": "en"
+    },
+    {
+      "id": "expresses_en_3",
+      "prefix": "One value expressed by this material is:\n",
+      "relation": "expresses_value",
+      "language": "en"
+    }
+  ],
+  "event": "token_prefix",
+  "resources": {
+    "image": {
+      "min_pixels": 65536,
+      "max_pixels": 262144
+    },
+    "video": {
+      "sampled_frames": 8,
+      "sampling": "uniform",
+      "max_pixels_per_frame": 65536
+    },
+    "limits": {
+      "input_text_tokens": 2048,
+      "anchor_continuation_tokens": 32,
+      "total_postprocessor_tokens": 8192,
+      "implicit_truncation": false
+    }
+  },
+  "seed": 42,
+  "include_token_details": true,
+  "system_prompt": null
+}

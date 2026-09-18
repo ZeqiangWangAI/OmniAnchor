@@ -1,0 +1,126 @@
+{
+  "name": "smoke-affect12-qwen3vl-zh",
+  "model": {
+    "backend": "hf",
+    "id": "Qwen/Qwen3-VL-4B-Instruct",
+    "revision": "ebb281ec70b05090aa6165b016eac8ec08e71b17",
+    "device": "cuda",
+    "precision": "bf16",
+    "attention_implementation": null
+  },
+  "anchors": [
+    {
+      "id": "joy",
+      "surface": "喜悦",
+      "language": "zh-Hans",
+      "concept_id": null
+    },
+    {
+      "id": "sadness",
+      "surface": "悲伤",
+      "language": "zh-Hans",
+      "concept_id": null
+    },
+    {
+      "id": "fear",
+      "surface": "恐惧",
+      "language": "zh-Hans",
+      "concept_id": null
+    },
+    {
+      "id": "anger",
+      "surface": "愤怒",
+      "language": "zh-Hans",
+      "concept_id": null
+    },
+    {
+      "id": "calmness",
+      "surface": "平静",
+      "language": "zh-Hans",
+      "concept_id": null
+    },
+    {
+      "id": "excitement",
+      "surface": "兴奋",
+      "language": "zh-Hans",
+      "concept_id": null
+    },
+    {
+      "id": "pleasure",
+      "surface": "愉悦",
+      "language": "zh-Hans",
+      "concept_id": null
+    },
+    {
+      "id": "discomfort",
+      "surface": "不适",
+      "language": "zh-Hans",
+      "concept_id": null
+    },
+    {
+      "id": "confidence",
+      "surface": "自信",
+      "language": "zh-Hans",
+      "concept_id": null
+    },
+    {
+      "id": "helplessness",
+      "surface": "无助",
+      "language": "zh-Hans",
+      "concept_id": null
+    },
+    {
+      "id": "interest",
+      "surface": "兴趣",
+      "language": "zh-Hans",
+      "concept_id": null
+    },
+    {
+      "id": "boredom",
+      "surface": "无聊",
+      "language": "zh-Hans",
+      "concept_id": null
+    }
+  ],
+  "bridges": [
+    {
+      "id": "evokes_zh_1",
+      "prefix": "这段材料在读者心中唤起的一种情绪是：\n",
+      "relation": "evokes_emotion",
+      "language": "zh"
+    },
+    {
+      "id": "evokes_zh_2",
+      "prefix": "读者阅读这段材料时感受到的一种情绪是：\n",
+      "relation": "evokes_emotion",
+      "language": "zh"
+    },
+    {
+      "id": "evokes_zh_3",
+      "prefix": "这段材料让读者产生的一种感受是：\n",
+      "relation": "evokes_emotion",
+      "language": "zh"
+    }
+  ],
+  "event": "token_prefix",
+  "resources": {
+    "image": {
+      "min_pixels": 65536,
+      "max_pixels": 262144
+    },
+    "video": {
+      "sampled_frames": 8,
+      "sampling": "uniform",
+      "max_pixels_per_frame": 65536
+    },
+    "limits": {
+      "input_text_tokens": 2048,
+      "anchor_continuation_tokens": 32,
+      "total_postprocessor_tokens": 8192,
+      "implicit_truncation": false
+    }
+  },
+  "seed": 42,
+  "include_token_details": true,
+  "system_prompt": null
+}

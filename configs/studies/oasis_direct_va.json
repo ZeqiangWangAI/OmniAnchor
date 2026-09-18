@@ -1,0 +1,78 @@
+{
+  "name": "oasis-direct-va-bipolar-fixed3",
+  "model": {
+    "backend": "hf",
+    "id": "Qwen/Qwen3.5-4B",
+    "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+    "device": "cuda",
+    "precision": "bf16",
+    "attention_implementation": null
+  },
+  "anchors": [
+    {
+      "id": "pleasant",
+      "surface": "pleasant",
+      "language": "en",
+      "concept_id": null
+    },
+    {
+      "id": "unpleasant",
+      "surface": "unpleasant",
+      "language": "en",
+      "concept_id": null
+    },
+    {
+      "id": "aroused",
+      "surface": "aroused",
+      "language": "en",
+      "concept_id": null
+    },
+    {
+      "id": "calm",
+      "surface": "calm",
+      "language": "en",
+      "concept_id": null
+    }
+  ],
+  "bridges": [
+    {
+      "id": "evokes_en_1",
+      "prefix": "An emotion evoked in the reader by this material is:\n",
+      "relation": "evokes_emotion",
+      "language": "en"
+    },
+    {
+      "id": "evokes_en_2",
+      "prefix": "This material evokes the following emotion in the reader:\n",
+      "relation": "evokes_emotion",
+      "language": "en"
+    },
+    {
+      "id": "evokes_en_3",
+      "prefix": "A feeling this material evokes in the reader is:\n",
+      "relation": "evokes_emotion",
+      "language": "en"
+    }
+  ],
+  "event": "token_prefix",
+  "resources": {
+    "image": {
+      "min_pixels": 65536,
+      "max_pixels": 262144
+    },
+    "video": {
+      "sampled_frames": 8,
+      "sampling": "uniform",
+      "max_pixels_per_frame": 65536
+    },
+    "limits": {
+      "input_text_tokens": 2048,
+      "anchor_continuation_tokens": 32,
+      "total_postprocessor_tokens": 8192,
+      "implicit_truncation": false
+    }
+  },
+  "seed": 42,
+  "include_token_details": true,
+  "system_prompt": null
+}

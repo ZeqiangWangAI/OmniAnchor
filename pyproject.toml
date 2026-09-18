@@ -1,0 +1,39 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "vlanchor"
+version = "0.1.0"
+description = "Reproducible probabilistic anchor representations for multimodal measurement"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "Apache-2.0"
+dependencies = [
+  "numpy>=1.26", "scipy>=1.12", "pandas>=2.2", "pyarrow>=15",
+  "scikit-learn>=1.4", "networkx>=3.2", "pydantic>=2.7",
+  "PyYAML>=6.0", "Pillow>=10.3",
+]
+
+[project.optional-dependencies]
+hf = ["torch>=2.6", "torchvision>=0.21", "transformers>=5.0", "accelerate>=1.0", "av>=13"]
+data = ["datasets>=3.0", "pyreadr>=0.5", "openpyxl>=3.1"]
+dev = ["pytest>=8", "ruff>=0.9", "build>=1.2"]
+notebooks = ["jupyter>=1.0", "matplotlib>=3.8", "SciencePlots==2.2.2"]
+
+[project.scripts]
+vlanchor = "vlanchor.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/vlanchor"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = ["gpu: opt-in real checkpoint tests requiring CUDA", "integration: end-to-end checks"]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F"]

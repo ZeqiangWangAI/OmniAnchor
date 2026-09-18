@@ -1,0 +1,54 @@
+[
+  {
+    "id": "s0",
+    "parts": [
+      {
+        "type": "text",
+        "text": "Neighbors share food."
+      }
+    ],
+    "metadata": {
+      "split": "train"
+    },
+    "source": "synthetic_example"
+  },
+  {
+    "id": "s1",
+    "parts": [
+      {
+        "type": "text",
+        "text": "People demand freedom."
+      }
+    ],
+    "metadata": {
+      "split": "train"
+    },
+    "source": "synthetic_example"
+  },
+  {
+    "id": "s2",
+    "parts": [
+      {
+        "type": "text",
+        "text": "A gate protects the building."
+      }
+    ],
+    "metadata": {
+      "split": "train"
+    },
+    "source": "synthetic_example"
+  },
+  {
+    "id": "s3",
+    "parts": [
+      {
+        "type": "text",
+        "text": "Everyone deserves fair treatment."
+      }
+    ],
+    "metadata": {
+      "split": "train"
+    },
+    "source": "synthetic_example"
+  }
+]

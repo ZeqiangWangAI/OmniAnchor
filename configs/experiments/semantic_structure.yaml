@@ -1,0 +1,24 @@
+schema_version: 1
+protocol_id: semantic_structure
+accepted_experiments: [E5, E6]
+title: Context-sensitive lexical meaning, semantic shift, and network structure
+status: planned
+seed: 42
+inputs:
+  - adapter: wic
+    kwargs: {data_path: data/wic/dev/dev.data.txt, gold_path: data/wic/dev/dev.gold.txt, split: dev}
+    role: context-pair development
+  - adapter: dwug
+    kwargs: {uses_path: data/dwug/lemma/uses.csv, judgments_path: data/dwug/lemma/judgments.csv, language: en}
+    role: version-locked historical human relatedness reference
+metrics: [same_sense_pair_auc, graded_shift_spearman, edge_weight_spearman, top_k_edge_jaccard, group_bootstrap_ci]
+protocol:
+  unit: target lemma; usage-pair annotations are not independent lemmas
+  development: fixed general anchor bank or training-only anchors; retain target Unicode spans
+  test: exclude test lemmas from bridge search and threshold selection; pin WUG graph version and clustering choice
+  claim_boundary: corpus-conditioned usage change differs from contemporary models prompted with historical year words
+budget: {max_smoke_samples: 32, model_parameter_cap: 4000000000}
+notes:
+  - A single lemma uses.csv is one adapter input; assemble all target lemmas without merging their annotation IDs.
+  - DWUG judgment 0 means undecidable and must be explicitly excluded from graded relatedness metrics.
+  - Compare matched node identities; anchor co-association networks and word-association norms are different constructs.

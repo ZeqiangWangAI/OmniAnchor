@@ -1,0 +1,14 @@
+{
+  "resolved_utc_date": "2026-09-10",
+  "source": "https://huggingface.co/api/models/{model_id}",
+  "transformers_source_revision": "4815a0a6a064214f2d8208c094464a5a6b76ca8d",
+  "models": {
+    "Qwen/Qwen3.5-4B": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+    "Qwen/Qwen3-VL-4B-Instruct": "ebb281ec70b05090aa6165b016eac8ec08e71b17",
+    "Qwen/Qwen3-VL-Embedding-2B": "9f2f7e710d6d81056aa5c0a4f04764fec6bb7bda",
+    "Qwen/Qwen3-VL-Reranker-2B": "4bd860ac4f15ad1897a214615cccc700f8f71818",
+    "intfloat/multilingual-e5-large": "3d7cfbdacd47fdda877c5cd8a79fbcc4f2a574f3",
+    "google-bert/bert-base-uncased": "86b5e0934494bd15c9632b12f734a8a67f723594",
+    "FacebookAI/roberta-base": "e2da8e2f811d1448a5b465c236feacd80ffbac7b"
+  }
+}

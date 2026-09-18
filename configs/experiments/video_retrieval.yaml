@@ -1,0 +1,21 @@
+schema_version: 1
+protocol_id: video_retrieval
+accepted_experiments: [E4]
+title: Public-caption video retrieval as a capability validation
+status: planned
+seed: 42
+inputs:
+  - adapter: vatex
+    kwargs: {annotation_path: data/vatex/vatex_validation_v1.0.json, media_root: data/vatex/clips, split: dev, language: en, videos_are_clips: true, require_media: true}
+    role: fixed local video-caption retrieval subset
+metrics: [success@1, success@5, recall@1, recall@5, group_bootstrap_ci]
+protocol:
+  unit: source YouTube video; all clips and captions from it remain grouped
+  development: freeze frame sampling, image budget, bridge bank, anchor bank and available subset
+  test: evaluation caption never included in its video input; candidate captions are scored as separate samples
+  claim_boundary: video-caption semantics demonstrates video support; it is not a video value-ground-truth benchmark
+budget: {max_smoke_samples: 4, model_parameter_cap: 4000000000}
+notes:
+  - videos_are_clips=true expects videoID_Start_End.mp4 already cropped; do not crop it a second time.
+  - Full-video mode expects YouTubeID.mp4 and passes original start/end to the processor.
+  - Metadata and pretrained I3D features do not substitute for raw video availability.

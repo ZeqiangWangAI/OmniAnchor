@@ -1,0 +1,27 @@
+schema_version: 1
+protocol_id: valueeval_validity
+accepted_experiments: [E2, E3, E6]
+title: Human value validity and optional reference-guided bridge calibration
+status: planned
+seed: 42
+inputs:
+  - adapter: valueeval
+    kwargs: {arguments_path: data/valueeval/arguments-training.tsv, labels_path: data/valueeval/labels-training.tsv, split: train}
+    role: grouped calibration/probe training only
+  - adapter: valueeval
+    kwargs: {arguments_path: data/valueeval/arguments-validation.tsv, labels_path: data/valueeval/labels-validation.tsv, split: dev}
+    role: final selection only
+  - adapter: valueeval
+    kwargs: {arguments_path: data/valueeval/arguments-test.tsv, labels_path: data/valueeval/labels-test.tsv, split: test}
+    role: protected final evaluation
+metrics: [macro_ap, micro_ap, per_anchor_ap, bridge_rank_consistency, alpha_per_anchor, group_bootstrap_ci]
+protocol:
+  unit: normalized conclusion group
+  development: D_opt and reference are disjoint groups from official train; optimizer 8 seeds plus 2 rounds of 4 offspring, K=3
+  test: official test excluded from prompt search, reference fitting, standardization and linear-probe fitting
+  claim_boundary: value support annotations are construct-specific external evidence; no claim of all-purpose objective value truth
+budget: {max_smoke_samples: 32, model_parameter_cap: 4000000000}
+notes:
+  - Preserve official split even if groups cross it; record and report those crossings.
+  - Compare fixed ensemble, equal-budget random candidates and alpha-only search.
+  - Independent multilabel logistic probes use C=[0.01,0.1,1,10,100], train-only StandardScaler, dev macro AP selection.
