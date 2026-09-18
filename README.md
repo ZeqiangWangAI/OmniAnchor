@@ -2,8 +2,10 @@
 
 OmniAnchor is the measurement toolkit described in the manuscript *OmniAnchor: measuring researcher-named psychological constructs in text, images and
 video with a frozen generative model* (Nature Communications, submitted 2026). The Python package and command-line
-entry point keep their development name `omnianchor`; the import path and the frozen study
-configurations below are unchanged from the runs reported in the paper.
+entry point are `omnianchor`. The runs reported in the paper were produced under the
+package's development name `vlanchor` (version 0.1.0); the code, frozen study
+configurations and environment locks are otherwise unchanged, and the locks keep the
+original name as recorded.
 
 This repository holds the source, tests, frozen study configurations, analysis scripts,
 environment locks and documentation. Raw scores, manifests and Source Data are released
