@@ -6,15 +6,15 @@ Exact surfaces and stable IDs are preserved; no automatic translation or normali
 language packs requiring their own validation; shared IDs do not establish aligned scales.
 
 Build general64/128/256 from the same frozen WiC training bundle with
-`vlanchor.datasets.build_general_anchors(bundle, n=128)`. The function counts each
+`omnianchor.datasets.build_general_anchors(bundle, n=128)`. The function counts each
 pair once, ranks exact lemmas by descending frequency then Unicode string order,
 and returns a tuple of `Anchor` objects. It rejects non-WiC data, undeclared/non-train
 splits, and insufficient unique lemmas. Pack sizes share identical prefix IDs.
 Save the source bundle manifest and serialized pack before DWUG evaluation:
 
 ```python
-from vlanchor.datasets import build_general_anchors, load_wic
-from vlanchor.io import write_json
+from omnianchor.datasets import build_general_anchors, load_wic
+from omnianchor.io import write_json
 
 bundle = load_wic("data/wic/train/train.data.txt", split="train")
 anchors = build_general_anchors(bundle, n=256)

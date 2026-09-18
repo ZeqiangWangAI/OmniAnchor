@@ -6,7 +6,7 @@ from pathlib import Path
 import pandas as pd
 
 from build_verified_paper_tables import emit_table
-from vlanchor.provenance import file_hash
+from omnianchor.provenance import file_hash
 
 
 def main():

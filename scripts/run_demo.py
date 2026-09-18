@@ -12,14 +12,14 @@ import traceback
 import numpy as np
 from PIL import Image, ImageDraw
 
-from vlanchor import (Anchor, Bridge, ModelSpec, Part, Sample, StudySpec, fit_reference,
+from omnianchor import (Anchor, Bridge, ModelSpec, Part, Sample, StudySpec, fit_reference,
                       measure, to_matrix, transform)
-from vlanchor.analysis import cluster, pca, semantic_network, semantic_shift
-from vlanchor.backends import HFBackend, ToyBackend
-from vlanchor.io import save_calibration, save_matrix, save_scores, write_json
-from vlanchor.provenance import runtime_manifest
-from vlanchor.reliability import audit_reliability, template_radii
-from vlanchor.types import ScoreTable
+from omnianchor.analysis import cluster, pca, semantic_network, semantic_shift
+from omnianchor.backends import HFBackend, ToyBackend
+from omnianchor.io import save_calibration, save_matrix, save_scores, write_json
+from omnianchor.provenance import runtime_manifest
+from omnianchor.reliability import audit_reliability, template_radii
+from omnianchor.types import ScoreTable
 
 
 def fixtures(directory: Path, *, video: bool = True):

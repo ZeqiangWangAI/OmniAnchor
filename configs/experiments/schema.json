@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "VLanchor planned experiment manifest",
+  "title": "OmniAnchor planned experiment manifest",
   "type": "object",
   "additionalProperties": false,
   "required": ["schema_version", "protocol_id", "accepted_experiments", "title", "status", "seed", "inputs", "metrics", "protocol", "budget"],

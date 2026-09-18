@@ -2,8 +2,8 @@
 import argparse
 from pathlib import Path
 
-from vlanchor.io import load_samples, load_spec, read_json, write_json
-from vlanchor.provenance import file_hash
+from omnianchor.io import load_samples, load_spec, read_json, write_json
+from omnianchor.provenance import file_hash
 
 
 def main():

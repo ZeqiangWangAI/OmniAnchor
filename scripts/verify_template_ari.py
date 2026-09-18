@@ -6,7 +6,7 @@ from pathlib import Path
 
 import numpy as np
 
-from vlanchor.provenance import file_hash
+from omnianchor.provenance import file_hash
 
 
 def ari(left, right):

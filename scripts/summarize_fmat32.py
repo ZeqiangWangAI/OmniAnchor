@@ -5,9 +5,9 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
-from vlanchor.campaign import append_event, create_run
-from vlanchor.io import read_json, write_json
-from vlanchor.provenance import file_hash
+from omnianchor.campaign import append_event, create_run
+from omnianchor.io import read_json, write_json
+from omnianchor.provenance import file_hash
 
 
 def main():

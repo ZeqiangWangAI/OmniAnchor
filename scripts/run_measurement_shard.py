@@ -7,12 +7,12 @@ import subprocess
 from pathlib import Path
 from time import perf_counter
 
-from vlanchor import measure
-from vlanchor.backends.vision_reuse import VisionReuseBackend
-from vlanchor.campaign import append_event, create_run
-from vlanchor.io import load_samples, load_spec, save_scores, write_json
-from vlanchor.provenance import file_hash, runtime_manifest
-from vlanchor.types import Anchor
+from omnianchor import measure
+from omnianchor.backends.vision_reuse import VisionReuseBackend
+from omnianchor.campaign import append_event, create_run
+from omnianchor.io import load_samples, load_spec, save_scores, write_json
+from omnianchor.provenance import file_hash, runtime_manifest
+from omnianchor.types import Anchor
 from verify_native import verify_native
 from vision_reuse_admission import admit_vision_reuse
 from frozen_evaluation import validate_frozen_evaluation

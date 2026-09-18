@@ -6,8 +6,8 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
-from vlanchor.io import load_samples
-from vlanchor.provenance import file_hash
+from omnianchor.io import load_samples
+from omnianchor.provenance import file_hash
 
 
 def endpoint_counts(units, periods, draws=1000):

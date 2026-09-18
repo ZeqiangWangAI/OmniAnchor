@@ -3,7 +3,7 @@ import pytest
 from scipy.spatial.distance import cdist
 
 from scripts.dwug_statistics import distances_from_indices, source_shift
-from vlanchor.analysis import energy_distance
+from omnianchor.analysis import energy_distance
 
 
 def test_reused_distances_match_exact_energy_with_repeated_source_rows():

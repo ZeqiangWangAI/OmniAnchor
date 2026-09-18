@@ -4,9 +4,9 @@ import hashlib
 from collections import Counter
 from pathlib import Path
 
-from vlanchor.io import load_samples,read_json,write_json
-from vlanchor.provenance import file_hash
-from vlanchor.types import TargetSpan
+from omnianchor.io import load_samples,read_json,write_json
+from omnianchor.provenance import file_hash
+from omnianchor.types import TargetSpan
 
 
 def main():

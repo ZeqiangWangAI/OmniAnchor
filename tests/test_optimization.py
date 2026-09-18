@@ -3,8 +3,8 @@ from dataclasses import replace
 import numpy as np
 import pytest
 
-from vlanchor.optimization import OptimizationConfig, OptimizationData, optimize_bridges
-from vlanchor.types import Bridge
+from omnianchor.optimization import OptimizationConfig, OptimizationData, optimize_bridges
+from omnianchor.types import Bridge
 
 
 def training_data():

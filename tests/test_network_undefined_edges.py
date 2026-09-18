@@ -4,8 +4,8 @@ import numpy as np
 import pandas as pd
 
 from scripts.analyze_development_networks import main
-from vlanchor.io import read_json, write_json
-from vlanchor.types import Part, Sample
+from omnianchor.io import read_json, write_json
+from omnianchor.types import Part, Sample
 
 
 def test_network_retains_undefined_edges_without_zero_imputation(tmp_path, monkeypatch):

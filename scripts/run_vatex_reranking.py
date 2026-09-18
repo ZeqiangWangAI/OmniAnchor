@@ -9,11 +9,11 @@ import numpy as np
 from analyze_vatex import align_scores, two_stage_priority
 from frozen_evaluation import validate_frozen_evaluation
 from vision_reuse_admission import admit_vision_reuse
-from vlanchor.backends.vision_reuse import reuse_vision_outputs
-from vlanchor.campaign import append_event, create_run
-from vlanchor.io import load_samples, load_spec, read_json, write_json
-from vlanchor.official_baselines import QwenRetrieval
-from vlanchor.provenance import file_hash, runtime_manifest
+from omnianchor.backends.vision_reuse import reuse_vision_outputs
+from omnianchor.campaign import append_event, create_run
+from omnianchor.io import load_samples, load_spec, read_json, write_json
+from omnianchor.official_baselines import QwenRetrieval
+from omnianchor.provenance import file_hash, runtime_manifest
 
 
 def main():
@@ -78,7 +78,7 @@ def main():
         "score_units": "Raw selected yesprobabilities with NaN outside support; retrieval priority2+yes within support and original embedding score outside. Priority is not a probability.",
         "direction": "caption_to_video only; transpose is not a valid reverse-reranking protocol",
         "input_policy": "Video inputs contain no captions. Query is the candidate caption, never human relevance labels.",
-        "source_sha256": {p: file_hash(root/p) for p in ["scripts/run_vatex_reranking.py", "scripts/analyze_vatex.py", "src/vlanchor/official_baselines.py"]}})
+        "source_sha256": {p: file_hash(root/p) for p in ["scripts/run_vatex_reranking.py", "scripts/analyze_vatex.py", "src/omnianchor/official_baselines.py"]}})
     started = perf_counter()
     try:
         import torch

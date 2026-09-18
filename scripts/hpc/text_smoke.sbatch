@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --job-name=vlanchor-smoke32
+#SBATCH --job-name=omnianchor-smoke32
 #SBATCH --partition=debug
 #SBATCH --gres=gpu:1
 #SBATCH --cpus-per-task=4
@@ -7,7 +7,7 @@
 #SBATCH --time=02:00:00
 
 set -euo pipefail
-VL_CAMPAIGN=/mnt/fast/nobackup/scratch4weeks/zw00924/VLanchor-20260910
+VL_CAMPAIGN=/mnt/fast/nobackup/scratch4weeks/zw00924/OmniAnchor-20260910
 VL_RUN="$VL_CAMPAIGN/runs/smoke-${SLURM_JOB_ID}"
 mkdir "$VL_RUN"
 export TMPDIR="$VL_CAMPAIGN/tmp/$SLURM_JOB_ID"

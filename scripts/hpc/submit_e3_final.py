@@ -7,9 +7,9 @@ import tarfile
 import shutil
 from datetime import datetime, timezone
 
-root = Path("/mnt/fast/nobackup/scratch4weeks/zw00924/VLanchor-20260910")
+root = Path("/mnt/fast/nobackup/scratch4weeks/zw00924/OmniAnchor-20260910")
 release = root / "releases/final-drivers-fc2e398"
-archive = root / "vlanchor-final-drivers-fc2e398.tgz"
+archive = root / "omnianchor-final-drivers-fc2e398.tgz"
 assert (
     hashlib.sha256(archive.read_bytes()).hexdigest()
     == "08965d97cfe22bd92960566ddb77bd29d069f2fce6c670ebffcdccd745ffb249"

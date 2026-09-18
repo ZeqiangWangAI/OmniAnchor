@@ -1,4 +1,4 @@
-# VLanchor v0.1：工具與測量契約
+# OmniAnchor v0.1：工具與測量契約
 
 狀態：實作與 demo 已交付，完整外部效度研究正在執行，尚未全部完成；最新證據見
 [研究狀態](docs/RESEARCH_STATUS.md)。這份文件與
@@ -46,7 +46,7 @@ log probability。錨點可為價值、情緒、行為或一般概念；不要�
 
 ## 3. 公共資料契約與 API
 
-實際型別在 `src/vlanchor/types.py`；Pydantic extra fields 禁止。
+實際型別在 `src/omnianchor/types.py`；Pydantic extra fields 禁止。
 
 | 型別 | 欄位與約束 |
 |---|---|
@@ -61,7 +61,7 @@ log probability。錨點可為價值、情緒、行為或一般概念；不要�
 | MeasurementMatrix | float64 values、sample_ids、anchor_ids、variant、manifest |
 
 ```python
-from vlanchor import measure, score, fit_reference, transform, to_matrix
+from omnianchor import measure, score, fit_reference, transform, to_matrix
 raw = measure(samples, spec, cache="runs/study/cache")
 # reference_raw 必須是獨立允許的 train/external 材料。
 calibration = fit_reference(reference_raw)

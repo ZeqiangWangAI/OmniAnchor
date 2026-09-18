@@ -1,10 +1,10 @@
 from pathlib import Path
 import json,os,subprocess,shutil,tarfile
-root=Path('/mnt/fast/nobackup/scratch4weeks/zw00924/VLanchor-20260910')
+root=Path('/mnt/fast/nobackup/scratch4weeks/zw00924/OmniAnchor-20260910')
 release=root/'releases/e3-final-cpu-d708ada'
 assert not release.exists()
 shutil.copytree(root/'releases/final-drivers-fc2e398',release)
-with tarfile.open(root/'vlanchor-d708ada.tar') as t: t.extractall(release,filter='data')
+with tarfile.open(root/'omnianchor-d708ada.tar') as t: t.extractall(release,filter='data')
 env={k:v for k,v in os.environ.items() if not k.startswith('VL_')}
 env.update(VL_SOURCE_DIR=str(release),VL_ENV_PYTHON=str(root/'runs/smoke-44672/venv/bin/python'))
 record={}

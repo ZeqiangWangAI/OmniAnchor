@@ -4,8 +4,8 @@ from datetime import datetime, timezone
 from pathlib import Path
 import shutil
 
-from vlanchor.io import load_samples, write_json
-from vlanchor.provenance import file_hash
+from omnianchor.io import load_samples, write_json
+from omnianchor.provenance import file_hash
 
 
 def main():
@@ -31,8 +31,8 @@ def main():
         raise ValueError("Require frozen32development verification inputs.")
     if (reference/"exit_code.txt").read_text().strip() != "0":
         raise ValueError("Original train reference did not complete.")
-    sources = ["src/vlanchor/engine.py", "src/vlanchor/backends/hf.py", "src/vlanchor/backends/media.py",
-        "src/vlanchor/backends/vision_reuse.py", "src/vlanchor/official_baselines.py",
+    sources = ["src/omnianchor/engine.py", "src/omnianchor/backends/hf.py", "src/omnianchor/backends/media.py",
+        "src/omnianchor/backends/vision_reuse.py", "src/omnianchor/official_baselines.py",
         "scripts/run_measurement_shard.py", "scripts/run_baseline_shard.py", "scripts/frozen_evaluation.py",
         "configs/models-20260910.json"]
     args.output.mkdir(parents=True)
@@ -60,7 +60,7 @@ def main():
         contracts[str(admission.relative_to(args.output))] = file_hash(admission)
     write_json(args.output/"shards/manifest.json", {"files": files, "train_samples": 0, "dev_samples": 0,
         "test_samples": len(samples), "parent_samples_sha256": file_hash(args.output/"samples.json")})
-    analysis_sources = ["scripts/analyze_dwug.py", "scripts/dwug_statistics.py", "src/vlanchor/evaluation.py", "src/vlanchor/analysis.py"]
+    analysis_sources = ["scripts/analyze_dwug.py", "scripts/dwug_statistics.py", "src/omnianchor/evaluation.py", "src/omnianchor/analysis.py"]
     write_json(args.contract, {"status": "frozen", "frozen_utc": datetime.now(timezone.utc).isoformat(),
         "purpose": "Full held-out DWUG semantic change and usage-relatedness, no model/geometry selection",
         "samples_sha256": file_hash(args.output/"samples.json"), "sample_ids": [s.id for s in samples],

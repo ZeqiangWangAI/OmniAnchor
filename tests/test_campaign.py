@@ -1,7 +1,7 @@
 import pytest
 
-from vlanchor.campaign import create_run, mark_target, merge_score_shards, select_smoke
-from vlanchor.types import Part, Sample, TargetSpan
+from omnianchor.campaign import create_run, mark_target, merge_score_shards, select_smoke
+from omnianchor.types import Part, Sample, TargetSpan
 
 
 def test_target_rendering_preserves_repeated_word_occurrence_and_unicode():
@@ -43,8 +43,8 @@ def test_run_cannot_overwrite_failure(tmp_path):
 
 
 def test_merge_rejects_partial_duplicate_or_changed_measurements():
-    from vlanchor import Anchor, Bridge, score
-    from vlanchor.backends import ToyBackend
+    from omnianchor import Anchor, Bridge, score
+    from omnianchor.backends import ToyBackend
     anchors = [Anchor(id="a", surface="care")]
     bridges = [Bridge(id="b", prefix="Associated concept:\n")]
     tables = [score([sample(i, "train")], anchors, bridges, ToyBackend()) for i in range(2)]
@@ -60,9 +60,9 @@ def test_merge_rejects_partial_duplicate_or_changed_measurements():
 
 
 def test_bridge_composition_calibrates_only_identical_instruments():
-    from vlanchor import Anchor, Bridge, fit_reference, score, transform
-    from vlanchor.backends import ToyBackend
-    from vlanchor.campaign import combine_bridge_tables
+    from omnianchor import Anchor, Bridge, fit_reference, score, transform
+    from omnianchor.backends import ToyBackend
+    from omnianchor.campaign import combine_bridge_tables
     anchors = [Anchor(id="a", surface="care")]
     bridges = [Bridge(id=f"b{i}", prefix=f"Relation {i}:\n") for i in range(2)]
     ref = [sample(i, "train") for i in range(3)]
@@ -79,9 +79,9 @@ def test_bridge_composition_calibrates_only_identical_instruments():
 
 
 def test_coordinate_alias_matches_direct_measurement_without_mutating_source():
-    from vlanchor import Anchor, Bridge, score
-    from vlanchor.backends import ToyBackend
-    from vlanchor.campaign import select_bridge_coordinates
+    from omnianchor import Anchor, Bridge, score
+    from omnianchor.backends import ToyBackend
+    from omnianchor.campaign import select_bridge_coordinates
     bridges = [Bridge(id="first", prefix="Associated:\n"), Bridge(id="second", prefix="A concept:\n")]
     anchors = [Anchor(id="a", surface="care")]
     samples = [sample(i, "train") for i in range(2)]

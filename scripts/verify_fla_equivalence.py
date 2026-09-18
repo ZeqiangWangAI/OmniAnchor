@@ -7,11 +7,11 @@ from time import perf_counter
 
 import numpy as np
 
-from vlanchor import measure
-from vlanchor.backends.hf import HFBackend
-from vlanchor.campaign import append_event, create_run
-from vlanchor.io import load_samples, load_spec, save_scores, write_json
-from vlanchor.types import Anchor
+from omnianchor import measure
+from omnianchor.backends.hf import HFBackend
+from omnianchor.campaign import append_event, create_run
+from omnianchor.io import load_samples, load_spec, save_scores, write_json
+from omnianchor.types import Anchor
 from verify_native import verify_native
 
 

@@ -5,13 +5,13 @@ import json
 import pandas as pd
 import pytest
 
-from vlanchor.datasets import (
+from omnianchor.datasets import (
     VALUEEVAL_LABELS, general_anchors, grouped_hash_splits, load_dataset, load_dwug,
     load_emobank, load_fmat, load_oasis, load_vatex, load_valueeval, load_viva, load_wic,
     sha256_file,
 )
-from vlanchor.errors import MissingMedia
-from vlanchor.types import Part, Sample
+from omnianchor.errors import MissingMedia
+from omnianchor.types import Part, Sample
 
 
 def write_table(tmp_path, name, data, sep=","):

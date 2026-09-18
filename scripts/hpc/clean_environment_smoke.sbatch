@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --job-name=vlanchor-clean-smoke
+#SBATCH --job-name=omnianchor-clean-smoke
 #SBATCH --partition=debug
 #SBATCH --gres=gpu:nvidia_rtx_5000_ada:1
 #SBATCH --cpus-per-task=4
@@ -7,7 +7,7 @@
 #SBATCH --time=02:00:00
 
 set -euo pipefail
-VL_ROOT=/mnt/fast/nobackup/scratch4weeks/zw00924/VLanchor-20260910
+VL_ROOT=/mnt/fast/nobackup/scratch4weeks/zw00924/OmniAnchor-20260910
 VL_SOURCE="${VL_SOURCE_DIR:?Set immutable release with official baseline source}"
 VL_PYTHON="${VL_ENV_PYTHON:?Set successfully rebuilt environment}"
 VL_DATA="$VL_ROOT/source/data/prepared"

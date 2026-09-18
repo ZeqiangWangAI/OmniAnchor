@@ -7,15 +7,15 @@ import pandas as pd
 from PIL import Image
 import pytest
 
-from vlanchor.backends import ToyBackend
-from vlanchor.calibration import fit_reference, to_matrix, transform
-from vlanchor.engine import measure, sample_fingerprint, score
-from vlanchor.errors import IncompatibleMeasurement, MissingScores, ResourceUnavailable
-from vlanchor.io import (
+from omnianchor.backends import ToyBackend
+from omnianchor.calibration import fit_reference, to_matrix, transform
+from omnianchor.engine import measure, sample_fingerprint, score
+from omnianchor.errors import IncompatibleMeasurement, MissingScores, ResourceUnavailable
+from omnianchor.io import (
     load_calibration, load_matrix, load_samples, load_scores, read_json,
     save_calibration, save_matrix, save_scores, write_json,
 )
-from vlanchor.types import Anchor, Bridge, Limits, ModelSpec, Part, ResourceProfile, Sample, StudySpec
+from omnianchor.types import Anchor, Bridge, Limits, ModelSpec, Part, ResourceProfile, Sample, StudySpec
 
 
 class CountingToy(ToyBackend):
@@ -280,4 +280,4 @@ def test_json_serialization_is_standard_and_leaves_no_temp_files(tmp_path):
     path = tmp_path / "nested" / "data.json"
     write_json(path, {"values": np.array([1, np.nan, np.inf]), "count": np.int64(2)})
     assert read_json(path) == {"values": [1, None, None], "count": 2}
-    assert not list(path.parent.glob(".vlanchor-*.tmp"))
+    assert not list(path.parent.glob(".omnianchor-*.tmp"))

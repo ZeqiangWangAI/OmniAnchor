@@ -11,12 +11,12 @@ import math
 from pathlib import Path
 from typing import Any, Sequence
 
-from vlanchor.backends import HFBackend
-from vlanchor.backends.hf import PreparedCandidate
-from vlanchor.backends.media import freeze_media
-from vlanchor.errors import BudgetExceeded, ResourceUnavailable, VLanchorError
-from vlanchor.io import write_json
-from vlanchor.types import Anchor, Bridge, Part, Sample
+from omnianchor.backends import HFBackend
+from omnianchor.backends.hf import PreparedCandidate
+from omnianchor.backends.media import freeze_media
+from omnianchor.errors import BudgetExceeded, ResourceUnavailable, OmniAnchorError
+from omnianchor.io import write_json
+from omnianchor.types import Anchor, Bridge, Part, Sample
 
 
 def _full_logps(backend: HFBackend, item: PreparedCandidate) -> list[float]:
@@ -30,20 +30,20 @@ def _full_logps(backend: HFBackend, item: PreparedCandidate) -> list[float]:
         output = backend._model(**inputs, use_cache=False, return_dict=True, logits_to_keep=0)
         ids = inputs["input_ids"]
         if output.logits.shape[:2] != ids.shape:
-            raise VLanchorError("logits_to_keep=0 did not return all sequence positions.")
+            raise OmniAnchorError("logits_to_keep=0 did not return all sequence positions.")
         p = item.prefix_length
         # Independent full-output reference: position p-1 predicts target token p.
         target_logits = output.logits[0, p - 1:-1, :].float()
         target_ids = ids[0, p:]
         values = target_logits.log_softmax(-1).gather(1, target_ids[:, None]).squeeze(1)
         if not bool(torch.isfinite(values).all()):
-            raise VLanchorError("Non-finite full-logit reference probabilities.")
+            raise OmniAnchorError("Non-finite full-logit reference probabilities.")
         return values.cpu().tolist()
 
 
 def _comparison(left: list[float], right: list[float], tolerance: float) -> dict[str, Any]:
     if len(left) != len(right) or not left:
-        raise VLanchorError("Native verification requires matching nonempty token chains.")
+        raise OmniAnchorError("Native verification requires matching nonempty token chains.")
     errors = [abs(a - b) for a, b in zip(left, right)]
     maximum = max(errors)
     return {"passed": math.isfinite(maximum) and maximum <= tolerance,
@@ -53,14 +53,14 @@ def _comparison(left: list[float], right: list[float], tolerance: float) -> dict
 
 def _successful(rows: list[dict]) -> None:
     if any(row.get("status") != "ok" for row in rows):
-        raise VLanchorError(f"Native verification candidate failed: {rows}")
+        raise OmniAnchorError(f"Native verification candidate failed: {rows}")
 
 
 def _shared_evidence(backend: HFBackend, evidence: dict, source: str,
                      comparisons: list[dict] | None = None) -> dict[str, Any]:
     validation = dict(evidence.get("runtime_validation") or evidence)
     if not isinstance(validation.get("passed"), bool):
-        raise VLanchorError("Shared prefill evidence needs an explicit passed boolean.")
+        raise OmniAnchorError("Shared prefill evidence needs an explicit passed boolean.")
     accepted = validation["passed"] and all(row["passed"] for row in comparisons or [])
     if not accepted:
         # Numerical disagreement disables this optional optimization. The strict
@@ -93,18 +93,18 @@ def verify_native(
     if backend._model is None or backend._processor is None:
         raise ResourceUnavailable("Native verification requires an already-loaded backend.")
     if getattr(backend._model, "training", False):
-        raise VLanchorError("Native verification requires model.eval().")
+        raise OmniAnchorError("Native verification requires model.eval().")
     if not math.isfinite(tolerance_nats) or tolerance_nats <= 0:
-        raise VLanchorError("Native verification tolerance must be finite and positive.")
+        raise OmniAnchorError("Native verification tolerance must be finite and positive.")
     sample = sample or Sample(id="native-check", parts=(Part(type="text", text="A red circle."),))
     bridge = bridge or Bridge(id="native-check", prefix="An associated concept is:\n")
     anchors = tuple(anchors) if anchors is not None else (
         Anchor(id="red", surface="red"), Anchor(id="circle", surface="blue circle"),
     )
     if not anchors or len(anchors) > 4 or len({a.id for a in anchors}) != len(anchors):
-        raise VLanchorError("Native full-logit verification needs one to four unique anchors.")
+        raise OmniAnchorError("Native full-logit verification needs one to four unique anchors.")
     if any(part.type != "text" for part in sample.parts):
-        raise VLanchorError("Full-logit verification uses a bounded text-only input.")
+        raise OmniAnchorError("Full-logit verification uses a bounded text-only input.")
     frozen = freeze_media(sample, backend.resources)
     messages = []
     if backend.system_prompt is not None:
@@ -138,7 +138,7 @@ def verify_native(
     for key in ("shared_prefill", "modality_state"):
         if key in existing_checks:
             if not isinstance(existing_checks[key].get("passed"), bool):
-                raise VLanchorError(f"Reused {key} evidence needs an explicit passed boolean.")
+                raise OmniAnchorError(f"Reused {key} evidence needs an explicit passed boolean.")
             checks[key] = (
                 _shared_evidence(backend, existing_checks[key], "reused_live_demo_evidence")
                 if key == "shared_prefill" else
@@ -169,12 +169,12 @@ def verify_native(
             _successful(baseline)
             for kind, media in media_samples:
                 if not any(part.type == kind for part in media.parts):
-                    raise VLanchorError(f"The {kind} state check needs an actual {kind} input part.")
+                    raise OmniAnchorError(f"The {kind} state check needs an actual {kind} input part.")
                 _successful(backend.score_candidates(media, bridge, anchors[:1]))
                 preparation = backend.last_preparation
                 grid = preparation.get("grids", {}).get(f"{kind}_grid_thw")
                 if not grid:
-                    raise VLanchorError(f"The {kind} forward did not record its native grid.")
+                    raise OmniAnchorError(f"The {kind} forward did not record its native grid.")
                 replay = backend.score_candidates(sample, bridge, anchors)
                 _successful(replay)
                 token_checks = [

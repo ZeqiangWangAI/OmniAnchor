@@ -5,10 +5,10 @@ from pathlib import Path
 import joblib
 import numpy as np
 
-from vlanchor import to_matrix, transform
-from vlanchor.campaign import create_run, append_event, merge_score_shards
-from vlanchor.io import load_calibration, load_scores, read_json, write_json
-from vlanchor.provenance import file_hash
+from omnianchor import to_matrix, transform
+from omnianchor.campaign import create_run, append_event, merge_score_shards
+from omnianchor.io import load_calibration, load_scores, read_json, write_json
+from omnianchor.provenance import file_hash
 
 
 def empty_paths(study, native_run, baseline_run):

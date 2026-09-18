@@ -3,10 +3,10 @@ import argparse
 import hashlib
 from pathlib import Path
 
-from vlanchor.campaign import mark_target
-from vlanchor.datasets import load_wic
-from vlanchor.io import load_samples, write_json
-from vlanchor.provenance import file_hash
+from omnianchor.campaign import mark_target
+from omnianchor.datasets import load_wic
+from omnianchor.io import load_samples, write_json
+from omnianchor.provenance import file_hash
 
 
 def main():

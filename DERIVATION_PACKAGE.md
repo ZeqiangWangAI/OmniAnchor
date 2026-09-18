@@ -1,4 +1,4 @@
-# VLanchor：數學推導與論文命題
+# OmniAnchor：數學推導與論文命題
 
 狀態：**COHERENT_AFTER_REFRAMING**。可識別的目標是「固定模型條件下，材料使
 指定錨點 token 事件更/不容易出現的程度」。材料的模型外真實價值取向仍需外部效度。
@@ -203,6 +203,6 @@ Cronbach α 僅沿同錨點的模板軸診斷，負值可存在，常數維度�
 | 概念有效性 | E2/E4/E5/E6的保留人工標註；目前尚未執行 |
 
 FMAT 以命題填詞提供測量思路與驗證框架；PMPO 提供可優化探針工具觀。
-本文件的自回歸事件、任意錨點幾何與參照推導是 VLanchor 的操作定義與分析，
+本文件的自回歸事件、任意錨點幾何與參照推導是 OmniAnchor 的操作定義與分析，
 不宣稱復現兩文全部方法或數值。來源：[FMAT](https://psychbruce.github.io/paper/Bao_2024_JPSP_FMAT.pdf)、
 [PMPO](https://aclanthology.org/2025.ijcnlp-long.130/)。

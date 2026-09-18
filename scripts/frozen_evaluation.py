@@ -1,8 +1,8 @@
 """Validate an immutable final-evaluation contract without changing split labels."""
 from pathlib import Path
 
-from vlanchor.io import load_samples,read_json
-from vlanchor.provenance import file_hash
+from omnianchor.io import load_samples,read_json
+from omnianchor.provenance import file_hash
 
 
 def validate_frozen_evaluation(contract_path: Path, samples_path: Path, config_path: Path, method: str) -> dict:

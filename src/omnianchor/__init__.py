@@ -1,4 +1,4 @@
-"""VLanchor: conditional anchor measurement, with explicit provenance."""
+"""OmniAnchor: conditional anchor measurement, with explicit provenance."""
 
 from .types import (
     Anchor, Bridge, CalibrationArtifact, MeasurementMatrix, ModelSpec,

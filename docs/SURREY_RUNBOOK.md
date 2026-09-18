@@ -3,13 +3,13 @@
 ## 已核對環境
 
 SSH alias `surrey-aisurrey` 使用既有gateway與使用者zw00924。
-登入節點的工作目錄為 `/mnt/fast/nobackup/users/zw00924/VLanchor`。
+登入節點的工作目錄為 `/mnt/fast/nobackup/users/zw00924/OmniAnchor`。
 demo: Slurm debug，1 GPU、4 CPU、48GB RAM、1小時；實際分配RTX A5000 24GB，
 節點aisurrey-debug03。安全檢查只讀squeue/sinfo/nvidia-smi，不終止其他作業。
 
 共享home當時約200GB且接近額滿；初始Qwen快取只有config/preprocessor設定，
 沒有權重。程式把環境、pip cache、HF weights、媒體中間檔放node-local
-`/var/tmp/$USER/vlanchor/$SLURM_JOB_ID`。該節點scratch當時约1.2TB可用。
+`/var/tmp/$USER/omnianchor/$SLURM_JOB_ID`。該節點scratch當時约1.2TB可用。
 這不是長期儲存承諾，下一次運行需要重新檢查。
 
 唯讀借用基礎Python：
@@ -25,9 +25,9 @@ kernel，必須建立新環境並重做數值等價驗證。
 本機：
 
 ```bash
-cd /Volumes/OutsourceData/VLanchor
-rsync -az --exclude=.venv --exclude=.git --exclude=runs --exclude=__pycache__ --exclude=.pytest_cache --exclude=.ruff_cache --exclude=.DS_Store ./ surrey-aisurrey:/mnt/fast/nobackup/users/zw00924/VLanchor/
-ssh -o BatchMode=yes surrey-aisurrey 'cd /mnt/fast/nobackup/users/zw00924/VLanchor && mkdir -p logs && sbatch --parsable scripts/hpc/demo.sbatch'
+cd /Volumes/OutsourceData/OmniAnchor
+rsync -az --exclude=.venv --exclude=.git --exclude=runs --exclude=__pycache__ --exclude=.pytest_cache --exclude=.ruff_cache --exclude=.DS_Store ./ surrey-aisurrey:/mnt/fast/nobackup/users/zw00924/OmniAnchor/
+ssh -o BatchMode=yes surrey-aisurrey 'cd /mnt/fast/nobackup/users/zw00924/OmniAnchor && mkdir -p logs && sbatch --parsable scripts/hpc/demo.sbatch'
 ```
 
 保留返回job ID。script先複製src/tests/scripts/configs/pyproject為獨立snapshot，
@@ -40,10 +40,10 @@ ssh -o BatchMode=yes surrey-aisurrey 'cd /mnt/fast/nobackup/users/zw00924/VLanch
 
 ```bash
 ssh -o BatchMode=yes surrey-aisurrey 'squeue -j 44314 -o "%.18i %.8T %.10M %.20R"'
-ssh -o BatchMode=yes surrey-aisurrey 'tail -40 /mnt/fast/nobackup/users/zw00924/VLanchor/logs/demo-44314.out'
-ssh -o BatchMode=yes surrey-aisurrey 'tail -40 /mnt/fast/nobackup/users/zw00924/VLanchor/logs/demo-44314.err'
+ssh -o BatchMode=yes surrey-aisurrey 'tail -40 /mnt/fast/nobackup/users/zw00924/OmniAnchor/logs/demo-44314.out'
+ssh -o BatchMode=yes surrey-aisurrey 'tail -40 /mnt/fast/nobackup/users/zw00924/OmniAnchor/logs/demo-44314.err'
 ssh -o BatchMode=yes surrey-aisurrey 'sacct -j 44314 --format=JobID,State,Elapsed,ExitCode,AllocTRES'
-rsync -az surrey-aisurrey:/mnt/fast/nobackup/users/zw00924/VLanchor/runs/surrey-44314/ runs/surrey-44314/
+rsync -az surrey-aisurrey:/mnt/fast/nobackup/users/zw00924/OmniAnchor/runs/surrey-44314/ runs/surrey-44314/
 ```
 
 以exit_code.txt、demo_report.json、native_verification.json與tests.xml共同判斷。
@@ -54,7 +54,7 @@ squeue中消失只表示不再排隊/運行，不等於成功；warning也不等
 為避免重下載，第二次作業要求同一節點，並使用第一次本人的venv/HF cache：
 
 ```bash
-ssh -o BatchMode=yes surrey-aisurrey 'cd /mnt/fast/nobackup/users/zw00924/VLanchor && sbatch --parsable --nodelist=aisurrey-debug03 --export=ALL,VL_ENV_PYTHON=/var/tmp/zw00924/vlanchor/44308/venv/bin/python,VL_HF_HOME=/var/tmp/zw00924/vlanchor/44308/hf-home scripts/hpc/demo.sbatch'
+ssh -o BatchMode=yes surrey-aisurrey 'cd /mnt/fast/nobackup/users/zw00924/OmniAnchor && sbatch --parsable --nodelist=aisurrey-debug03 --export=ALL,VL_ENV_PYTHON=/var/tmp/zw00924/omnianchor/44308/venv/bin/python,VL_HF_HOME=/var/tmp/zw00924/omnianchor/44308/hf-home scripts/hpc/demo.sbatch'
 ```
 
 此命令仍由Slurm排隊，不占用未分配GPU。路徑只有在資料尚存且同一節點時有效；

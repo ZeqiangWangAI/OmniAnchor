@@ -2,11 +2,11 @@
 import argparse
 from pathlib import Path
 
-from vlanchor.campaign import save_bundle
-from vlanchor.datasets import load_oasis
-from vlanchor.datasets.common import read_table
-from vlanchor.io import write_json
-from vlanchor.provenance import file_hash
+from omnianchor.campaign import save_bundle
+from omnianchor.datasets import load_oasis
+from omnianchor.datasets.common import read_table
+from omnianchor.io import write_json
+from omnianchor.provenance import file_hash
 
 
 def main():

@@ -1,12 +1,12 @@
 #!/bin/bash
-#SBATCH --job-name=vlanchor-clean-e5
+#SBATCH --job-name=omnianchor-clean-e5
 #SBATCH --partition=debug
 #SBATCH --gres=gpu:nvidia_rtx_5000_ada:1
 #SBATCH --cpus-per-task=4
 #SBATCH --mem=16G
 #SBATCH --time=00:20:00
 set -euo pipefail
-VL_ROOT=/mnt/fast/nobackup/scratch4weeks/zw00924/VLanchor-20260910
+VL_ROOT=/mnt/fast/nobackup/scratch4weeks/zw00924/OmniAnchor-20260910
 VL_SOURCE="${VL_SOURCE_DIR:?Set immutable release}"
 VL_PYTHON="${VL_ENV_PYTHON:?Set verified rebuilt environment}"
 VL_RUN="$VL_ROOT/runs/clean-e5-${SLURM_JOB_ID}"

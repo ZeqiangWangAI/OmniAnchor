@@ -7,12 +7,12 @@ from time import perf_counter
 
 import numpy as np
 
-from vlanchor.backends.vision_reuse import reuse_vision_outputs
-from vlanchor.campaign import create_run,append_event
-from vlanchor.io import load_samples,load_spec,read_json,write_json
-from vlanchor.official_baselines import QwenRetrieval
-from vlanchor.provenance import file_hash
-from vlanchor.types import Anchor
+from omnianchor.backends.vision_reuse import reuse_vision_outputs
+from omnianchor.campaign import create_run,append_event
+from omnianchor.io import load_samples,load_spec,read_json,write_json
+from omnianchor.official_baselines import QwenRetrieval
+from omnianchor.provenance import file_hash
+from omnianchor.types import Anchor
 from vision_reuse_admission import admit_vision_reuse
 
 
@@ -38,7 +38,7 @@ def main():
     create_run(args.output,{"purpose":"Exact reuse of frozen media preprocessing within one query list; no changed pixels/frames/tokens/model",
         "prior_gate":prior,"model_id":model_id,"revision":revision,"samples":[s.id for s in samples],
         "source_sha256":{str(p.relative_to(root)):file_hash(p) for p in
-            [Path(__file__),root/"src/vlanchor/official_baselines.py",root/"src/vlanchor/backends/vision_reuse.py"]},
+            [Path(__file__),root/"src/omnianchor/official_baselines.py",root/"src/omnianchor/backends/vision_reuse.py"]},
         "probability_tolerance":1e-5,"slurm_job_id":os.environ["SLURM_JOB_ID"],"test_used":False})
     import torch
     torch.manual_seed(42)

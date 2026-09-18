@@ -7,12 +7,12 @@ from time import perf_counter
 
 import numpy as np
 
-from vlanchor import measure
-from vlanchor.backends.vision_reuse import VisionReuseBackend, reuse_vision_outputs
-from vlanchor.campaign import append_event, create_run
-from vlanchor.io import load_samples, load_spec, read_json, save_scores, write_json
-from vlanchor.official_baselines import QwenRetrieval
-from vlanchor.types import Anchor
+from omnianchor import measure
+from omnianchor.backends.vision_reuse import VisionReuseBackend, reuse_vision_outputs
+from omnianchor.campaign import append_event, create_run
+from omnianchor.io import load_samples, load_spec, read_json, save_scores, write_json
+from omnianchor.official_baselines import QwenRetrieval
+from omnianchor.types import Anchor
 from verify_native import verify_native
 
 

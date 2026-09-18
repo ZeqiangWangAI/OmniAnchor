@@ -187,7 +187,7 @@ def load_fmat(
         try:
             import pyreadr
         except ImportError as exc:
-            raise ImportError("Install vlanchor[data] for pyreadr, or supply a CSV export.") from exc
+            raise ImportError("Install omnianchor[data] for pyreadr, or supply a CSV export.") from exc
         objects = pyreadr.read_r(str(path), use_objects=[object_name])
         if object_name not in objects:
             raise ValueError(f"RData does not contain dataframe {object_name!r}.")

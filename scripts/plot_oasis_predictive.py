@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import scienceplots  # noqa: F401
 
-from vlanchor.provenance import file_hash
+from omnianchor.provenance import file_hash
 
 
 def main():
@@ -18,7 +18,7 @@ def main():
     data = pd.read_csv(args.metrics)
     methods = ['native-raw_logp', 'native-reference_log_ratio', 'native-reference_z',
                'qwen-embedding-anchor', 'qwen-embedding-original', 'qwen-reranker-anchor']
-    labels = ['VLanchor: raw', 'VLanchor: log ratio', 'VLanchor: reference z',
+    labels = ['OmniAnchor: raw', 'OmniAnchor: log ratio', 'OmniAnchor: reference z',
               'Embedding: anchors', 'Embedding: original', 'Reranker: anchors']
     expected = {(m, c) for m in methods for c in ['spearman_V', 'spearman_A']}
     if (len(data) != 12 or set(zip(data.method, data.metric)) != expected

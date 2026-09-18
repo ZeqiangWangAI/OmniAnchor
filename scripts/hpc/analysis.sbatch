@@ -1,11 +1,11 @@
 #!/bin/bash
-#SBATCH --job-name=vlanchor-statistics
+#SBATCH --job-name=omnianchor-statistics
 #SBATCH --partition=debug,2080ti
 #SBATCH --cpus-per-task=4
 #SBATCH --mem=16G
 #SBATCH --time=04:00:00
 set -euo pipefail
-VL_ROOT=/mnt/fast/nobackup/scratch4weeks/zw00924/VLanchor-20260910
+VL_ROOT=/mnt/fast/nobackup/scratch4weeks/zw00924/OmniAnchor-20260910
 VL_RUN="$VL_ROOT/runs/analysis-${SLURM_JOB_ID}"
 mkdir "$VL_RUN"
 trap 'VL_EXIT=$?; printf "%s\n" "$VL_EXIT" > "$VL_RUN/exit_code.txt"' EXIT

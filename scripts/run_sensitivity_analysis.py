@@ -8,7 +8,7 @@ if __package__:
     from .run_analysis_request import completed_array_runs
 else:
     from run_analysis_request import completed_array_runs
-from vlanchor.io import read_json, write_json
+from omnianchor.io import read_json, write_json
 
 
 def match_runs(rows, runs):

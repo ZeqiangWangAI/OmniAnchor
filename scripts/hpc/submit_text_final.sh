@@ -1,9 +1,9 @@
 #!/bin/bash
 # Run on the Surrey submit host after staging the named immutable archive.
 set -euo pipefail
-VL_ROOT=/mnt/fast/nobackup/scratch4weeks/zw00924/VLanchor-20260910
+VL_ROOT=/mnt/fast/nobackup/scratch4weeks/zw00924/OmniAnchor-20260910
 cd "$VL_ROOT/source"
-tar -xzf "$VL_ROOT/vlanchor-text-final-ad08a6c.tgz"
+tar -xzf "$VL_ROOT/omnianchor-text-final-ad08a6c.tgz"
 VL_RELEASE="$VL_ROOT/releases/text-final-ad08a6c"
 test ! -e "$VL_RELEASE"
 cp -a "$VL_ROOT/source" "$VL_RELEASE"

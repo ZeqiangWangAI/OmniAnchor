@@ -7,8 +7,8 @@ import sys
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
-from vlanchor.io import write_json
-from vlanchor.provenance import file_hash
+from omnianchor.io import write_json
+from omnianchor.provenance import file_hash
 
 
 def main():

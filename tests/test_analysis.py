@@ -3,10 +3,10 @@ import pandas as pd
 import pytest
 from scipy.spatial.distance import cdist
 
-from vlanchor.analysis import (bh_fdr, cluster, compare_groups, concept_network, energy_distance,
+from omnianchor.analysis import (bh_fdr, cluster, compare_groups, concept_network, energy_distance,
                                independent_column_null, pca, sample_distance_graph, semantic_shift)
-from vlanchor.errors import MissingScores
-from vlanchor.types import MeasurementMatrix
+from omnianchor.errors import MissingScores
+from omnianchor.types import MeasurementMatrix
 
 
 def matrix(values):

@@ -5,7 +5,7 @@ from pathlib import Path
 
 import pandas as pd
 
-from vlanchor.provenance import file_hash
+from omnianchor.provenance import file_hash
 
 
 def main():

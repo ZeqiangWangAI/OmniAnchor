@@ -1,12 +1,12 @@
 #!/bin/bash
-#SBATCH --job-name=vlanchor-clean-env
+#SBATCH --job-name=omnianchor-clean-env
 #SBATCH --partition=debug,2080ti
 #SBATCH --cpus-per-task=4
 #SBATCH --mem=16G
 #SBATCH --time=02:00:00
 
 set -euo pipefail
-VL_ROOT=/mnt/fast/nobackup/scratch4weeks/zw00924/VLanchor-20260910
+VL_ROOT=/mnt/fast/nobackup/scratch4weeks/zw00924/OmniAnchor-20260910
 VL_SOURCE="${VL_SOURCE_DIR:?Set immutable source release}"
 VL_RUN="$VL_ROOT/runs/clean-environment-${SLURM_JOB_ID}"
 mkdir "$VL_RUN"

@@ -5,12 +5,12 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
-from vlanchor import to_matrix
-from vlanchor.analysis import bh_fdr
-from vlanchor.campaign import create_run, append_event
-from vlanchor.evaluation import evaluate_candidates
-from vlanchor.io import load_samples, load_scores, read_json, write_json
-from vlanchor.provenance import file_hash
+from omnianchor import to_matrix
+from omnianchor.analysis import bh_fdr
+from omnianchor.campaign import create_run, append_event
+from omnianchor.evaluation import evaluate_candidates
+from omnianchor.io import load_samples, load_scores, read_json, write_json
+from omnianchor.provenance import file_hash
 
 
 def aligned_scores(folder, native, expected):

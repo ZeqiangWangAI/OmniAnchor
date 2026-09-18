@@ -7,7 +7,7 @@ import json
 import math
 from typing import Any, Sequence
 
-from ..errors import BudgetExceeded, VLanchorError
+from ..errors import BudgetExceeded, OmniAnchorError
 from ..types import Anchor, Bridge, Event, ResourceProfile, Sample
 from .media import freeze_media
 
@@ -27,7 +27,7 @@ class ToyBackend:
     @property
     def identity(self) -> dict[str, Any]:
         return {
-            "backend": "toy", "id": "vlanchor/toy-byte-markov-v1", "seed": self.seed,
+            "backend": "toy", "id": "omnianchor/toy-byte-markov-v1", "seed": self.seed,
             "scientific_validity": False, "tokenizer": "utf8-bytes-plus-eot-256",
             "system_prompt": self.system_prompt, "resources": self.resources.model_dump(),
         }
@@ -44,9 +44,9 @@ class ToyBackend:
         *, event: Event = "token_prefix",
     ) -> list[dict[str, Any]]:
         if event not in ("token_prefix", "turn_terminated"):
-            raise VLanchorError(f"Unsupported score event: {event}")
+            raise OmniAnchorError(f"Unsupported score event: {event}")
         if len({a.id for a in anchors}) != len(anchors):
-            raise VLanchorError("Duplicate anchor IDs.")
+            raise OmniAnchorError("Duplicate anchor IDs.")
         text_bytes = sum(len((p.text or "").encode("utf-8"))
                          for p in sample.parts if p.type == "text")
         if text_bytes > self.resources.limits.input_text_tokens:
@@ -65,7 +65,7 @@ class ToyBackend:
         for anchor in anchors:
             try:
                 tokens = self._candidate_tokens(anchor, event, text_bytes, bridge)
-            except VLanchorError as exc:
+            except OmniAnchorError as exc:
                 results.append({
                     "anchor_id": anchor.id, "raw_logp": None, "token_count": None,
                     "event": event, "status": type(exc).__name__, "error": str(exc),
@@ -88,11 +88,11 @@ class ToyBackend:
     def _candidate_tokens(self, anchor: Anchor, event: Event, text_bytes: int,
                           bridge: Bridge) -> list[int]:
         if any(token in anchor.surface for token in ("<|", "<think>", "</think>")):
-            raise VLanchorError("Model control tokens are not valid anchor surfaces.")
+            raise OmniAnchorError("Model control tokens are not valid anchor surfaces.")
         try:
             tokens = list(anchor.surface.encode("utf-8", errors="strict"))
         except UnicodeEncodeError as exc:
-            raise VLanchorError("Anchor contains invalid Unicode surrogate code points.") from exc
+            raise OmniAnchorError("Anchor contains invalid Unicode surrogate code points.") from exc
         if len(tokens) > self.resources.limits.anchor_continuation_tokens:
             raise BudgetExceeded(f"Anchor {anchor.id} exceeds its byte-token budget.")
         if event == "turn_terminated":

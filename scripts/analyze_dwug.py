@@ -11,11 +11,11 @@ from sklearn.cluster import KMeans
 from threadpoolctl import threadpool_limits
 
 from dwug_statistics import source_shift
-from vlanchor.analysis import bh_fdr
-from vlanchor.evaluation import group_bootstrap
-from vlanchor.campaign import append_event, create_run
-from vlanchor.io import load_samples, read_json, write_json
-from vlanchor.provenance import file_hash
+from omnianchor.analysis import bh_fdr
+from omnianchor.evaluation import group_bootstrap
+from omnianchor.campaign import append_event, create_run
+from omnianchor.io import load_samples, read_json, write_json
+from omnianchor.provenance import file_hash
 
 
 def main():

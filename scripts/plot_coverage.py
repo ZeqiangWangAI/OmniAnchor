@@ -12,7 +12,7 @@ import scienceplots  # noqa: F401
 
 
 def family(method):
-    if method.startswith('native') or method == 'VLanchor' or method.startswith('qwen35-'):
+    if method.startswith('native') or method == 'OmniAnchor' or method.startswith('qwen35-'):
         return 'Qwen3.5-4B'
     if method.startswith('qwen3vl-'):
         return 'Qwen3-VL-4B'

@@ -1,7 +1,7 @@
 import pytest
 
 from scripts.viva_conditions import condition_sample
-from vlanchor.types import Part, Sample
+from omnianchor.types import Part, Sample
 
 
 def test_viva_controls_preserve_recipient_action_and_remove_named_modalities():

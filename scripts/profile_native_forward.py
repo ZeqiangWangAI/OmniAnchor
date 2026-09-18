@@ -6,9 +6,9 @@ import os
 import pstats
 from pathlib import Path
 
-from vlanchor.backends.hf import HFBackend
-from vlanchor.campaign import create_run
-from vlanchor.io import load_samples, load_spec, write_json
+from omnianchor.backends.hf import HFBackend
+from omnianchor.campaign import create_run
+from omnianchor.io import load_samples, load_spec, write_json
 
 
 def main():

@@ -9,7 +9,7 @@ from typing import Protocol, Sequence
 
 import pandas as pd
 
-from .errors import MissingMedia, ResourceUnavailable, VLanchorError
+from .errors import MissingMedia, ResourceUnavailable, OmniAnchorError
 from .io import read_json, write_json
 from .provenance import file_hash, runtime_manifest, stable_hash
 from .types import Anchor, Bridge, Event, ResourceProfile, Sample, ScoreTable, StudySpec
@@ -82,7 +82,7 @@ def score(samples: Sequence[Sample], anchors: Sequence[Anchor], bridges: Sequenc
         sample_error = None
         try:
             content_hash = sample_fingerprint(sample)
-        except VLanchorError as exc:
+        except OmniAnchorError as exc:
             content_hash, sample_error = None, exc
         manifest["samples"].append({**sample.model_dump(mode="json"), "content_hash": content_hash})
         for bridge in bridges:
@@ -113,7 +113,7 @@ def score(samples: Sequence[Sample], anchors: Sequence[Anchor], bridges: Sequenc
                     for item in output:
                         item["_preparation"] = getattr(backend, "last_preparation", {})
                     found.update({r["anchor_id"]: r for r in output})
-                except (VLanchorError, FileNotFoundError, FloatingPointError) as exc:
+                except (OmniAnchorError, FileNotFoundError, FloatingPointError) as exc:
                     if isinstance(exc, ResourceUnavailable):
                         fatal_resource_error = exc
                     found.update({a.id: {"anchor_id": a.id, "status": type(exc).__name__,

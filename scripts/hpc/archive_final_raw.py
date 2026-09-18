@@ -1,6 +1,6 @@
 from pathlib import Path
 import subprocess,json,tarfile,hashlib
-root=Path('/mnt/fast/nobackup/scratch4weeks/zw00924/VLanchor-20260910')
+root=Path('/mnt/fast/nobackup/scratch4weeks/zw00924/OmniAnchor-20260910')
 requests={'viva':['46833','47086','45850','47259','47275','47122'],'dwug':['46170','46171'],'bridges':['46394'],'e3-emobank':['47418']}
 archive=root/'final-raw-evidence-20260911-01.tgz'
 assert not archive.exists()

@@ -5,8 +5,8 @@ import shutil
 from datetime import datetime, timezone
 from pathlib import Path
 
-from vlanchor.io import load_samples, read_json, write_json
-from vlanchor.provenance import file_hash
+from omnianchor.io import load_samples, read_json, write_json
+from omnianchor.provenance import file_hash
 
 
 def main():
@@ -71,8 +71,8 @@ def main():
     else:
         shutil.copyfile(args.test/"samples.json", args.output/"samples.json")
     shutil.copyfile(args.test/"labels.csv", args.output/"labels.csv")
-    sources = ["src/vlanchor/engine.py", "src/vlanchor/backends/hf.py", "src/vlanchor/backends/media.py",
-        "src/vlanchor/backends/vision_reuse.py", "src/vlanchor/official_baselines.py",
+    sources = ["src/omnianchor/engine.py", "src/omnianchor/backends/hf.py", "src/omnianchor/backends/media.py",
+        "src/omnianchor/backends/vision_reuse.py", "src/omnianchor/official_baselines.py",
         "scripts/run_measurement_shard.py", "scripts/run_baseline_shard.py", "scripts/frozen_evaluation.py",
         "configs/models-20260910.json"]
     artifacts = [args.features/"calibration.json", args.features/"features.json", args.probes/"selection.json",
@@ -100,7 +100,7 @@ def main():
         "method_adaptation": "none using protected scores; no adaptation from OASIS final into text studies",
         "timing_disclosure": timing,
         "analysis_source_sha256": {p: file_hash(root/p) for p in ["scripts/evaluate_text_final.py",
-            "src/vlanchor/calibration.py", "src/vlanchor/evaluation.py", "src/vlanchor/analysis.py"]},
+            "src/omnianchor/calibration.py", "src/omnianchor/evaluation.py", "src/omnianchor/analysis.py"]},
         "budget": {"native_max_wall_hours": 3, "baseline_max_wall_hours": 3, "gpu_per_job": 1},
         "run_policy": "one completed evaluation per method; preserve failures and disclose identical-protocol retries"})
 

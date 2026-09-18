@@ -7,9 +7,9 @@ from pathlib import Path
 
 import pandas as pd
 
-from vlanchor.datasets import load_dwug
-from vlanchor.io import write_json
-from vlanchor.provenance import file_hash
+from omnianchor.datasets import load_dwug
+from omnianchor.io import write_json
+from omnianchor.provenance import file_hash
 
 
 def main():

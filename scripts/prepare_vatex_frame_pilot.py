@@ -4,8 +4,8 @@ from datetime import datetime, timezone
 from pathlib import Path
 import shutil
 
-from vlanchor.io import load_samples, load_spec, write_json
-from vlanchor.provenance import file_hash
+from omnianchor.io import load_samples, load_spec, write_json
+from omnianchor.provenance import file_hash
 
 
 def main():

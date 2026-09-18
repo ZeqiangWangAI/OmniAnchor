@@ -11,7 +11,7 @@ The accepted paper experiment numbers have the following meaning. The previous n
 | E5 | Semantic shift using DWUG and WiC with a fixed anchor bank | `semantic_structure.yaml` |
 | E6 | Semantic networks and clustering: ValueEval annotation network and DWUG sample graph | `valueeval_validity.yaml`, `semantic_structure.yaml`; use the analysis/network and clustering APIs |
 
-Each `inputs` entry maps directly to `vlanchor.datasets.load_dataset(adapter, **kwargs)`. That returns `DatasetBundle(samples, labels, manifest, candidates)`. The bundle includes file SHA256 values, original source and license notes, split assignments, and missing-media counts. The SHA256 values establish the exact local artifact, not its authenticity; pass `expected_sha256` to an adapter to verify trusted checksums. Data adapters never download or redistribute upstream datasets.
+Each `inputs` entry maps directly to `omnianchor.datasets.load_dataset(adapter, **kwargs)`. That returns `DatasetBundle(samples, labels, manifest, candidates)`. The bundle includes file SHA256 values, original source and license notes, split assignments, and missing-media counts. The SHA256 values establish the exact local artifact, not its authenticity; pass `expected_sha256` to an adapter to verify trusted checksums. Data adapters never download or redistribute upstream datasets.
 
 `samples` contain only inputs. Each sample carries `metadata['split']`. `labels` are separate pandas tables. ValueEval, EmoBank, Chinese EmoBank and OASIS labels use a sample-ID index. VIVA uses a `(sample_id, anchor_id)` index and its candidate banks are per-instance. WiC uses a pair-ID index with two referenced sample IDs. DWUG retains individual pair judgments, including explicit undecidable indicators. VATEX stores video/caption relevance edges and represents video and caption as separate samples. FMAT imports stored model probabilities and must not be mistaken for independent human labels.
 
@@ -29,7 +29,7 @@ For OASIS, the adapter expects the image-level `OASIS.csv` contained in the orig
 
 Preserve published train/dev/test assignments by passing `split` where the original format lacks a split field. Without one, the default is SHA256 of seed and group identifier with expected 60/20/20 proportions; it is order-independent but does not guarantee exact row counts. Official splits are never silently changed to enforce group separation. Crossings are reported in the manifest. Real evaluation must inspect these crossings and protect test data before fitting calibration, a prompt optimizer, a scaler, or a probe.
 
-Evaluation APIs in `vlanchor.evaluation` are independent of model execution:
+Evaluation APIs in `omnianchor.evaluation` are independent of model execution:
 
 - `evaluate_multilabel(labels, scores, anchor_ids=None)` ranks samples within each anchor; returns macro/micro AP.
 - `evaluate_candidates(labels_by_sample, scores_by_sample)` ranks each sample's local candidates; returns mean per-instance AP and MRR.
@@ -39,6 +39,6 @@ Evaluation APIs in `vlanchor.evaluation` are independent of model execution:
 - `group_bootstrap(statistic_of_row_indices, groups)` resamples intact groups; use a paired method-difference statistic for paired intervals.
 - `compare_networks(predicted, reference)` requires identical node order and compares undirected off-diagonal weights.
 
-Optional baselines are explicitly text-only: `HFMeanEmbedding`, `HFCrossEncoder`, and `HFSingleTokenMLM` in `vlanchor.baselines`. Their constructors require model ID and revision. Model loading is lazy and local-only by default; CUDA failures do not trigger CPU fallback. Generic mean pooling is a named baseline, not a reproduction of every embedding model's custom recipe. MLM rejects multi-token anchors instead of silently substituting pseudo-likelihood.
+Optional baselines are explicitly text-only: `HFMeanEmbedding`, `HFCrossEncoder`, and `HFSingleTokenMLM` in `omnianchor.baselines`. Their constructors require model ID and revision. Model loading is lazy and local-only by default; CUDA failures do not trigger CPU fallback. Generic mean pooling is a named baseline, not a reproduction of every embedding model's custom recipe. MLM rejects multi-token anchors instead of silently substituting pseudo-likelihood.
 
 Small fixture tests verify published schemas and evaluation mechanics without downloading models or datasets. They do not establish benchmark accuracy or reproduce a paper's numerical results. Full E1–E6 execution, plots and statistical interpretation belong to the subsequent experiment session.

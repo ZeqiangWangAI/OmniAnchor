@@ -9,10 +9,10 @@ import pandas as pd
 from sklearn.exceptions import ConvergenceWarning
 from threadpoolctl import threadpool_limits
 
-from vlanchor.campaign import append_event, create_run
-from vlanchor.evaluation import evaluate_candidates, evaluate_multilabel, evaluate_vad, fit_linear_probe
-from vlanchor.io import load_samples, read_json, write_json
-from vlanchor.provenance import file_hash, runtime_manifest
+from omnianchor.campaign import append_event, create_run
+from omnianchor.evaluation import evaluate_candidates, evaluate_multilabel, evaluate_vad, fit_linear_probe
+from omnianchor.io import load_samples, read_json, write_json
+from omnianchor.provenance import file_hash, runtime_manifest
 
 
 def main():

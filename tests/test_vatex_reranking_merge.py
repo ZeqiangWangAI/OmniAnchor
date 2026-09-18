@@ -4,7 +4,7 @@ import numpy as np
 import pytest
 
 from scripts.merge_vatex_reranking import merge_shards
-from vlanchor.provenance import file_hash
+from omnianchor.provenance import file_hash
 
 
 def test_full_top100_merge_rejects_incomplete_duplicate_and_changed_support(tmp_path):

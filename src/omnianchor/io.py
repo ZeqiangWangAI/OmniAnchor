@@ -45,7 +45,7 @@ def write_json(path: str | Path, value: Any) -> None:
     path = Path(path)
     path.parent.mkdir(parents=True, exist_ok=True)
     payload = json.dumps(jsonable(value), ensure_ascii=False, indent=2, allow_nan=False)
-    fd, name = tempfile.mkstemp(dir=path.parent, prefix=".vlanchor-", suffix=".tmp")
+    fd, name = tempfile.mkstemp(dir=path.parent, prefix=".omnianchor-", suffix=".tmp")
     try:
         with os.fdopen(fd, "w", encoding="utf-8") as stream:
             stream.write(payload + "\n")

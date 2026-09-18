@@ -1,5 +1,5 @@
 """Explicit input removals for VIVA; recipient labels never enter model parts."""
-from vlanchor.types import Part, Sample
+from omnianchor.types import Part, Sample
 
 
 def condition_sample(sample: Sample, condition: str, donor: Sample | None = None) -> Sample:

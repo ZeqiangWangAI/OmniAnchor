@@ -4,10 +4,10 @@ from pathlib import Path
 
 import numpy as np
 
-from vlanchor import fit_reference, to_matrix, transform
-from vlanchor.campaign import append_event, combine_bridge_tables, create_run, merge_score_shards
-from vlanchor.io import load_samples, load_scores, read_json, save_calibration, write_json
-from vlanchor.provenance import file_hash
+from omnianchor import fit_reference, to_matrix, transform
+from omnianchor.campaign import append_event, combine_bridge_tables, create_run, merge_score_shards
+from omnianchor.io import load_samples, load_scores, read_json, save_calibration, write_json
+from omnianchor.provenance import file_hash
 
 
 def main():

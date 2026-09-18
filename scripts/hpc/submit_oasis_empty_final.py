@@ -1,6 +1,6 @@
 from pathlib import Path
 import os,json,subprocess
-root=Path('/mnt/fast/nobackup/scratch4weeks/zw00924/VLanchor-20260910')
+root=Path('/mnt/fast/nobackup/scratch4weeks/zw00924/OmniAnchor-20260910')
 release=root/'releases/oasis-affect12-final-fc2e398-02'
 python=root/'runs/smoke-44672/venv/bin/python'
 contract=release/'research/contracts/oasis-affect12-final-20260911-01.json'
@@ -17,7 +17,7 @@ contract=release/'research/contracts/oasis-affect12-final-20260911-01.json'
 empty=root/'runs/oasis12-empty-predictions-20260911-01'
 subprocess.run(["'''+str(python)+'''",str(release/'scripts/prepare_empty_predictions.py'),'--contract',str(contract),'--empty-native-run',str(root/'runs/development-47101'),'--empty-baseline-run',str(root/'runs/baseline-development-47102'),'--output',str(empty)],check=True)
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
-record=dict(status='frozen',created_utc=datetime.now(timezone.utc).isoformat(),scoring_contract=str(contract),scoring_contract_sha256=sha(contract),analyzer_sha256=sha(release/'scripts/evaluate_empty_controls.py'),final_evaluator_sha256=sha(release/'scripts/evaluate_text_final.py'),statistics_source_sha256={p:sha(release/p) for p in ['src/vlanchor/evaluation.py','src/vlanchor/analysis.py']},empty_files_sha256={p.name:sha(p) for p in empty.iterdir() if p.is_file()},inference='1000 source-group paired bootstrap; six-method MSE-reduction family BHq.05; constant correlations undefined; label shuffle diagnostic only',timing='Previously specified OASIS controls; no refit. Existing direct OASIS results known; affect12 final metrics not inspected when this orchestration was submitted.')
+record=dict(status='frozen',created_utc=datetime.now(timezone.utc).isoformat(),scoring_contract=str(contract),scoring_contract_sha256=sha(contract),analyzer_sha256=sha(release/'scripts/evaluate_empty_controls.py'),final_evaluator_sha256=sha(release/'scripts/evaluate_text_final.py'),statistics_source_sha256={p:sha(release/p) for p in ['src/omnianchor/evaluation.py','src/omnianchor/analysis.py']},empty_files_sha256={p.name:sha(p) for p in empty.iterdir() if p.is_file()},inference='1000 source-group paired bootstrap; six-method MSE-reduction family BHq.05; constant correlations undefined; label shuffle diagnostic only',timing='Previously specified OASIS controls; no refit. Existing direct OASIS results known; affect12 final metrics not inspected when this orchestration was submitted.')
 (root/'oasis12-empty-final-control-20260911-01.json').write_text(json.dumps(record,indent=2))
 ''')
 env={k:v for k,v in os.environ.items() if not k.startswith('VL_')}

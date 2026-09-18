@@ -2,8 +2,8 @@ import numpy as np
 import pytest
 from scipy.spatial.distance import cdist
 
-from vlanchor.calibration import to_matrix
-from vlanchor.reliability import bridge_reliability, cronbach_alpha, template_radii
+from omnianchor.calibration import to_matrix
+from omnianchor.reliability import bridge_reliability, cronbach_alpha, template_radii
 from test_calibration import make_scores
 
 

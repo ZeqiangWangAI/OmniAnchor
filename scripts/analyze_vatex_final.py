@@ -9,11 +9,11 @@ if __package__:
     from .analyze_vatex import align_scores, retrieval_rows
 else:
     from analyze_vatex import align_scores, retrieval_rows
-from vlanchor.analysis import bh_fdr
-from vlanchor.campaign import append_event, create_run
-from vlanchor.evaluation import group_bootstrap
-from vlanchor.io import load_samples, read_json
-from vlanchor.provenance import file_hash
+from omnianchor.analysis import bh_fdr
+from omnianchor.campaign import append_event, create_run
+from omnianchor.evaluation import group_bootstrap
+from omnianchor.io import load_samples, read_json
+from omnianchor.provenance import file_hash
 
 
 def paired_interval(values, groups):
@@ -63,7 +63,7 @@ def main():
     for name in ['primary_method', 'methods', 'caption_only_methods', 'primary_family']:
         if contract[name] != plan[name]:
             raise ValueError('Final admission differs from earlier analysis plan: '+name)
-    required_sources = {'src/vlanchor/evaluation.py', 'src/vlanchor/analysis.py'}
+    required_sources = {'src/omnianchor/evaluation.py', 'src/omnianchor/analysis.py'}
     if not required_sources <= set(contract['source_sha256']):
         raise ValueError('Missing frozen statistical dependencies.')
     methods = contract['methods']

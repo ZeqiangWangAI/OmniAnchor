@@ -2,7 +2,7 @@ from types import SimpleNamespace
 
 import pytest
 
-from vlanchor.backends.vision_reuse import reuse_vision_outputs
+from omnianchor.backends.vision_reuse import reuse_vision_outputs
 
 
 def test_vision_reuse_checks_inputs_isolates_mutation_and_restores_after_error():

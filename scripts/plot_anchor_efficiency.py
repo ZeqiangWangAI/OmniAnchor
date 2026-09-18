@@ -10,9 +10,9 @@ import scienceplots  # noqa: F401 -- registers the requested scientific styles
 import numpy as np
 import pandas as pd
 
-from vlanchor.campaign import create_run, append_event
-from vlanchor.io import read_json
-from vlanchor.provenance import file_hash
+from omnianchor.campaign import create_run, append_event
+from omnianchor.io import read_json
+from omnianchor.provenance import file_hash
 
 
 def main():
@@ -48,7 +48,7 @@ def main():
             raise ValueError('Require the frozen nested anchor sequence.')
         identities.append(dict(spec=spec, ids=ids, hardware=hardware, samples=m['samples_sha256'],
             batch=m['batch_size'], core={k:m['source_hashes'][k] for k in
-                ['src/vlanchor/engine.py','src/vlanchor/backends/hf.py','src/vlanchor/backends/media.py']}))
+                ['src/omnianchor/engine.py','src/omnianchor/backends/hf.py','src/omnianchor/backends/media.py']}))
         if identities[-1] != identities[0]:
             raise ValueError('Cost runs changed inputs, core scoring, hardware or non-anchor configuration.')
         hashes.update({str(p):file_hash(p) for p in [folder/n for n in

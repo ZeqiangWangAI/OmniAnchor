@@ -5,9 +5,9 @@ from pathlib import Path
 
 import pandas as pd
 
-from vlanchor.datasets.common import grouped_hash_splits
-from vlanchor.io import load_samples, read_json, write_json
-from vlanchor.provenance import file_hash
+from omnianchor.datasets.common import grouped_hash_splits
+from omnianchor.io import load_samples, read_json, write_json
+from omnianchor.provenance import file_hash
 
 
 def main():

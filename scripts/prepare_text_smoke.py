@@ -4,10 +4,10 @@ from __future__ import annotations
 import argparse
 from pathlib import Path
 
-from vlanchor.campaign import save_bundle, select_smoke
-from vlanchor.datasets import load_chinese_emobank, load_emobank
-from vlanchor.io import write_json
-from vlanchor.provenance import file_hash
+from omnianchor.campaign import save_bundle, select_smoke
+from omnianchor.datasets import load_chinese_emobank, load_emobank
+from omnianchor.io import write_json
+from omnianchor.provenance import file_hash
 
 
 def main():

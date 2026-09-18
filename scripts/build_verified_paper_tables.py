@@ -5,9 +5,9 @@ from pathlib import Path
 
 import pandas as pd
 
-from vlanchor.campaign import append_event, create_run
-from vlanchor.io import write_json
-from vlanchor.provenance import file_hash
+from omnianchor.campaign import append_event, create_run
+from omnianchor.io import write_json
+from omnianchor.provenance import file_hash
 
 
 def emit_table(folder, name, caption, columns, rows):
@@ -58,7 +58,7 @@ def main():
         for metric in ["Pearson", "Spearman"]:
             o = oasis[oasis.metric == metric].set_index(["method", "dimension"])
             rows = [[label, *[interval(o.loc[(name, dimension)], "correlation") for dimension in ["V", "A"]]]
-                for name, label in [("VLanchor", "VLanchor / Qwen3.5-4B"), ("qwen-embedding", "Official embedding"), ("qwen-reranker", "Official reranker")]]
+                for name, label in [("OmniAnchor", "OmniAnchor / Qwen3.5-4B"), ("qwen-embedding", "Official embedding"), ("qwen-reranker", "Official reranker")]]
             emit_table(args.output, "oasis-"+metric.lower(), f"OASIS protected201 images: direct {metric} correlation [95% image-bootstrap CI]. Four fixed affect anchors; no trained predictor.",
                 ["Method", "Valence", "Arousal"], rows)
         paired = oa_pair[oa_pair.metric == "Pearson"]

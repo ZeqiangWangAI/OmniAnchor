@@ -4,8 +4,8 @@ from datetime import datetime, timezone
 from pathlib import Path
 import shutil
 
-from vlanchor.io import load_samples, load_spec, read_json, write_json
-from vlanchor.provenance import file_hash
+from omnianchor.io import load_samples, load_spec, read_json, write_json
+from omnianchor.provenance import file_hash
 
 
 def main():
@@ -58,7 +58,7 @@ def main():
     write_json(args.contract, {"status": "frozen", "frozen_utc": datetime.now(timezone.utc).isoformat(),
         "purpose": "E3 complete held-out train-selected bridge comparison; all six sets, no test tuning",
         "analysis_source_sha256": file_hash(root/"scripts/analyze_selected_bridges.py"),
-        "statistics_source_sha256": {p: file_hash(root/p) for p in ["src/vlanchor/evaluation.py", "src/vlanchor/analysis.py", "src/vlanchor/calibration.py", "src/vlanchor/reliability.py", "src/vlanchor/campaign.py"]},
+        "statistics_source_sha256": {p: file_hash(root/p) for p in ["src/omnianchor/evaluation.py", "src/omnianchor/analysis.py", "src/omnianchor/calibration.py", "src/omnianchor/reliability.py", "src/omnianchor/campaign.py"]},
         "evaluation_files": {p: file_hash(args.output/p) for p in ["samples.json", "labels.csv"]},
         "bank_files": {str(p.relative_to(bank)): file_hash(p) for p in bank.rglob("*") if p.is_file()},
         "selection_sha256": file_hash(selection), "admitted_scoring_contract_sha256": admissions,

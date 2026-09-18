@@ -4,8 +4,8 @@ import shutil
 from datetime import datetime,timezone
 from pathlib import Path
 
-from vlanchor.io import load_samples,write_json
-from vlanchor.provenance import file_hash
+from omnianchor.io import load_samples,write_json
+from omnianchor.provenance import file_hash
 
 
 def main():
@@ -45,8 +45,8 @@ def main():
     shutil.copyfile(args.data/"test/labels.csv",args.output/"labels.csv")
     config=root/"configs/studies/oasis_direct_va.json"
     verification="data/prepared/oasis-affect-20260910-01/smoke32.json"
-    sources=["src/vlanchor/engine.py","src/vlanchor/backends/hf.py","src/vlanchor/backends/media.py",
-        "src/vlanchor/backends/vision_reuse.py","src/vlanchor/official_baselines.py",
+    sources=["src/omnianchor/engine.py","src/omnianchor/backends/hf.py","src/omnianchor/backends/media.py",
+        "src/omnianchor/backends/vision_reuse.py","src/omnianchor/official_baselines.py",
         "scripts/run_measurement_shard.py","scripts/run_baseline_shard.py","scripts/frozen_evaluation.py",
         "scripts/vision_reuse_admission.py","configs/models-20260910.json"]
     write_json(args.contract,{"status":"frozen","frozen_utc":datetime.now(timezone.utc).isoformat(),

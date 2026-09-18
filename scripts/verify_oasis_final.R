@@ -8,7 +8,7 @@ stopifnot(!anyDuplicated(raw[c("sample_id", "anchor_id", "bridge_id")]))
 avg <- aggregate(raw_logp ~ sample_id + anchor_id, data=raw, FUN=mean)
 native <- reshape(avg, idvar="sample_id", timevar="anchor_id", direction="wide")
 names(native) <- sub("^raw_logp\\.", "", names(native))
-inputs <- list(VLanchor=native,
+inputs <- list(OmniAnchor=native,
   `qwen-embedding`=read.csv(file.path(folder,"qwen-embedding.csv"), check.names=FALSE),
   `qwen-reranker`=read.csv(file.path(folder,"qwen-reranker.csv"), check.names=FALSE))
 checks <- list()

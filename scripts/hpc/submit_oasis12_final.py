@@ -7,11 +7,11 @@ import shutil
 import hashlib
 from datetime import datetime, timezone
 
-root = Path("/mnt/fast/nobackup/scratch4weeks/zw00924/VLanchor-20260910")
+root = Path("/mnt/fast/nobackup/scratch4weeks/zw00924/OmniAnchor-20260910")
 release = root / "releases/oasis-affect12-final-fc2e398"
 assert not release.exists()
 shutil.copytree(root / "releases/oasis-vatex-full-5b999b5", release)
-with tarfile.open(root / "vlanchor-final-drivers-fc2e398.tgz") as t:
+with tarfile.open(root / "omnianchor-final-drivers-fc2e398.tgz") as t:
     t.extractall(release, filter="data")
 python = root / "runs/smoke-44672/venv/bin/python"
 env = os.environ.copy()

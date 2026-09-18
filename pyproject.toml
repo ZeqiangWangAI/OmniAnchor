@@ -3,7 +3,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "vlanchor"
+name = "omnianchor"
 version = "0.1.0"
 description = "Reproducible probabilistic anchor representations for multimodal measurement"
 readme = "README.md"
@@ -22,10 +22,10 @@ dev = ["pytest>=8", "ruff>=0.9", "build>=1.2"]
 notebooks = ["jupyter>=1.0", "matplotlib>=3.8", "SciencePlots==2.2.2"]
 
 [project.scripts]
-vlanchor = "vlanchor.cli:main"
+omnianchor = "omnianchor.cli:main"
 
 [tool.hatch.build.targets.wheel]
-packages = ["src/vlanchor"]
+packages = ["src/omnianchor"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

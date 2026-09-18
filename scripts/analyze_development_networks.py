@@ -7,11 +7,11 @@ import networkx as nx
 import numpy as np
 import pandas as pd
 
-from vlanchor.analysis import bh_fdr
-from vlanchor.campaign import append_event, create_run
-from vlanchor.evaluation import compare_networks
-from vlanchor.io import load_samples, read_json, write_json
-from vlanchor.provenance import file_hash
+from omnianchor.analysis import bh_fdr
+from omnianchor.campaign import append_event, create_run
+from omnianchor.evaluation import compare_networks
+from omnianchor.io import load_samples, read_json, write_json
+from omnianchor.provenance import file_hash
 
 
 def main():

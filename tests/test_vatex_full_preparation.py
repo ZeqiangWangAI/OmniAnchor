@@ -1,8 +1,8 @@
 from pathlib import Path
 
 from scripts.prepare_vatex_full import stage
-from vlanchor.io import load_samples, read_json
-from vlanchor.types import Part, Sample
+from omnianchor.io import load_samples, read_json
+from omnianchor.types import Part, Sample
 
 
 def test_staging_resolves_identical_media_from_deeper_shards(tmp_path):

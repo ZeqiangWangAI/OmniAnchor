@@ -11,7 +11,7 @@ import re
 from typing import Any, Sequence
 from urllib.parse import urlsplit
 
-from ..errors import BoundaryError, BudgetExceeded, ResourceUnavailable, VLanchorError
+from ..errors import BoundaryError, BudgetExceeded, ResourceUnavailable, OmniAnchorError
 from ..types import Anchor, Bridge, Event, ModelSpec, ResourceProfile, Sample
 from .media import FrozenMedia, freeze_media, processor_media_kwargs
 
@@ -34,7 +34,7 @@ def _torch():
     try:
         import torch
     except ImportError as exc:
-        raise ResourceUnavailable("HF scoring requires torch: install vlanchor[hf].") from exc
+        raise ResourceUnavailable("HF scoring requires torch: install omnianchor[hf].") from exc
     return torch
 
 
@@ -87,16 +87,16 @@ def reference_token_logps(model: Any, item: PreparedCandidate) -> list[float]:
     ids = item.inputs["input_ids"]
     attention = item.inputs["attention_mask"]
     if getattr(model, "training", False):
-        raise VLanchorError("Scoring requires model.eval().")
+        raise OmniAnchorError("Scoring requires model.eval().")
     if ids.ndim != 2 or ids.shape[0] != 1 or attention.shape != ids.shape:
-        raise VLanchorError("Reference scoring requires one unpadded sequence.")
+        raise OmniAnchorError("Reference scoring requires one unpadded sequence.")
     if not bool(attention.eq(1).all()):
-        raise VLanchorError("Padding is not supported by the reference scorer.")
+        raise OmniAnchorError("Padding is not supported by the reference scorer.")
     p, length = item.prefix_length, ids.shape[1]
     if not 1 <= p < length:
         raise BoundaryError("Invalid prefix or empty candidate continuation.")
     if set(item.inputs) - _MODEL_INPUTS:
-        raise VLanchorError("Unexpected model inputs in reference scoring.")
+        raise OmniAnchorError("Unexpected model inputs in reference scoring.")
     target_positions = torch.arange(p, length, device=ids.device)
     # Some Transformers versions keep M-RoPE state on the model, outside Cache.
     base = getattr(model, "model", None)
@@ -107,11 +107,11 @@ def reference_token_logps(model: Any, item: PreparedCandidate) -> list[float]:
                     logits_to_keep=target_positions - 1)
         logits = out.logits[0].float()
         if logits.ndim != 2 or logits.shape[0] != target_positions.numel():
-            raise VLanchorError("Backend did not honor selected-logit positions.")
+            raise OmniAnchorError("Backend did not honor selected-logit positions.")
         targets = ids[0, target_positions]
         logps = logits.log_softmax(-1).gather(-1, targets[:, None]).squeeze(-1)
         if not bool(torch.isfinite(logps).all()):
-            raise VLanchorError("Non-finite anchor log probabilities.")
+            raise OmniAnchorError("Non-finite anchor log probabilities.")
         return [float(value) for value in logps.cpu().tolist()]
 
 
@@ -129,7 +129,7 @@ class HFBackend:
         shared_prefill: bool = False,
     ):
         if (model is None) != (processor is None):
-            raise VLanchorError("Inject both model and processor, or neither.")
+            raise OmniAnchorError("Inject both model and processor, or neither.")
         self.model_spec = model_spec
         self.resources = resources
         self.system_prompt = system_prompt
@@ -168,7 +168,7 @@ class HFBackend:
         if spec.id not in SUPPORTED_MODELS:
             raise ResourceUnavailable(f"No validated native adapter for {spec.id}.")
         if not re.fullmatch(r"[a-fA-F0-9]{40}", spec.revision):
-            raise VLanchorError("Real model revisions must be immutable 40-character commit hashes.")
+            raise OmniAnchorError("Real model revisions must be immutable 40-character commit hashes.")
         try:
             device = torch.device(spec.device)
         except (RuntimeError, ValueError) as exc:
@@ -187,7 +187,7 @@ class HFBackend:
         try:
             import transformers
         except ImportError as exc:
-            raise ResourceUnavailable("HF scoring requires transformers: install vlanchor[hf].") from exc
+            raise ResourceUnavailable("HF scoring requires transformers: install omnianchor[hf].") from exc
         cls = getattr(transformers, SUPPORTED_MODELS[spec.id], None)
         if cls is None:
             raise ResourceUnavailable("Installed Transformers lacks this Qwen model architecture.")
@@ -223,19 +223,19 @@ class HFBackend:
         except RuntimeError as exc:
             raise ResourceUnavailable(f"Native processor runtime failed: {exc}") from exc
         except Exception as exc:
-            raise VLanchorError(f"Native processor failed: {exc}") from exc
+            raise OmniAnchorError(f"Native processor failed: {exc}") from exc
         inputs = {name: encoded[name] for name in _MODEL_INPUTS if name in encoded}
         ids = inputs.get("input_ids")
         attention = inputs.get("attention_mask")
         if ids is None or attention is None or ids.ndim != 2 or ids.shape[0] != 1:
-            raise VLanchorError("Processor must return one sequence with an attention mask.")
+            raise OmniAnchorError("Processor must return one sequence with an attention mask.")
         if attention.shape != ids.shape or not bool(attention.eq(1).all()):
-            raise VLanchorError("Processor unexpectedly padded or masked the sequence.")
+            raise OmniAnchorError("Processor unexpectedly padded or masked the sequence.")
         if ids.shape[1] > self.resources.limits.total_postprocessor_tokens:
             raise BudgetExceeded("Full processor-expanded sequence exceeds its token budget.")
         if frozen.images or frozen.videos:
             if "mm_token_type_ids" not in inputs or inputs["mm_token_type_ids"].shape != ids.shape:
-                raise VLanchorError("Native multimodal scoring requires matching mm_token_type_ids.")
+                raise OmniAnchorError("Native multimodal scoring requires matching mm_token_type_ids.")
         for kind, pixel_key, grid_key, max_pixels in (
             ("image", "pixel_values", "image_grid_thw", self.resources.image.max_pixels),
             ("video", "pixel_values_videos", "video_grid_thw",
@@ -245,19 +245,19 @@ class HFBackend:
             if not media:
                 continue
             if pixel_key not in inputs or grid_key not in inputs:
-                raise VLanchorError(f"Processor dropped {kind} tensors or spatial grids.")
+                raise OmniAnchorError(f"Processor dropped {kind} tensors or spatial grids.")
             native = processor.image_processor if kind == "image" else video_processor
             patch = getattr(native, "patch_size", None)
             if not isinstance(patch, int) or patch <= 0:
-                raise VLanchorError("Native processor must declare its actual spatial patch size.")
+                raise OmniAnchorError("Native processor must declare its actual spatial patch size.")
             grid = inputs[grid_key]
             if grid.ndim != 2 or grid.shape != (len(media), 3) or not bool(grid.gt(0).all()):
-                raise VLanchorError(f"Invalid {kind} grid shape or media count.")
+                raise OmniAnchorError(f"Invalid {kind} grid shape or media count.")
             areas = grid[:, 1] * grid[:, 2] * patch * patch
             if bool(areas.gt(max_pixels).any()):
                 raise BudgetExceeded(f"Native {kind} resizing exceeds the actual pixel budget.")
         if not all(isinstance(value, torch.Tensor) for value in inputs.values()):
-            raise VLanchorError("Native model inputs must be tensors.")
+            raise OmniAnchorError("Native model inputs must be tensors.")
         return inputs
 
     def _device_inputs(self, inputs: dict[str, Any]) -> dict[str, Any]:
@@ -295,11 +295,11 @@ class HFBackend:
         if any(token and token in surface for token in special) or any(
             token in surface for token in ("<|", "<think>", "</think>", "<tool_call>")
         ):
-            raise VLanchorError("Anchor contains a model control token.")
+            raise OmniAnchorError("Anchor contains a model control token.")
         try:
             surface.encode("utf-8", errors="strict")
         except UnicodeEncodeError as exc:
-            raise VLanchorError("Anchor contains invalid Unicode surrogate code points.") from exc
+            raise OmniAnchorError("Anchor contains invalid Unicode surrogate code points.") from exc
 
     def _compile(
         self, prefix_text: str, prefix: dict[str, Any], frozen: FrozenMedia,
@@ -312,7 +312,7 @@ class HFBackend:
         n = self._check_prefix(prefix, full)
         continuation = full["input_ids"][0, n:].tolist()
         if any(token in set(getattr(tokenizer, "all_special_ids", [])) for token in continuation):
-            raise VLanchorError("Anchor continuation includes reserved model tokens.")
+            raise OmniAnchorError("Anchor continuation includes reserved model tokens.")
         if tokenizer.decode(continuation, skip_special_tokens=False,
                             clean_up_tokenization_spaces=False) != anchor.surface:
             raise BoundaryError("Tokenizer does not preserve the exact Unicode anchor surface.")
@@ -321,7 +321,7 @@ class HFBackend:
         if event == "turn_terminated":
             end_token = "<|im_end|>"
             if end_token not in getattr(tokenizer, "all_special_tokens", []):
-                raise VLanchorError("Tokenizer does not declare the Qwen turn-end token.")
+                raise OmniAnchorError("Tokenizer does not declare the Qwen turn-end token.")
             end_id = tokenizer.convert_tokens_to_ids(end_token)
             terminated = self._encode(prefix_text + anchor.surface + end_token, frozen)
             end_start = self._check_prefix(full, terminated)
@@ -366,7 +366,7 @@ class HFBackend:
             if not self.shared_prefill_validation["passed"]:
                 return references
         if not all(math.isfinite(value[0]) for value in candidates.values()):
-            raise VLanchorError("Non-finite shared-prefix log probabilities.")
+            raise OmniAnchorError("Non-finite shared-prefix log probabilities.")
         return candidates
 
     def score_candidates(
@@ -374,9 +374,9 @@ class HFBackend:
         *, event: Event = "token_prefix",
     ) -> list[dict[str, Any]]:
         if event not in ("token_prefix", "turn_terminated"):
-            raise VLanchorError(f"Unsupported score event: {event}")
+            raise OmniAnchorError(f"Unsupported score event: {event}")
         if len({anchor.id for anchor in anchors}) != len(anchors):
-            raise VLanchorError("Duplicate anchor IDs.")
+            raise OmniAnchorError("Duplicate anchor IDs.")
         if not anchors:
             return []
         self._ensure_loaded()
@@ -401,7 +401,7 @@ class HFBackend:
                 items.append(self._compile(prefix_text, prefix, frozen, anchor, event))
             except (ResourceUnavailable, _MediaPrefixError):
                 raise
-            except VLanchorError as exc:
+            except OmniAnchorError as exc:
                 failures[anchor.id] = {
                     "anchor_id": anchor.id, "raw_logp": None, "token_count": None,
                     "event": event, "status": type(exc).__name__, "error": str(exc),
@@ -439,7 +439,7 @@ class HFBackend:
             by_id = {result["anchor_id"]: result for result in results}
             by_id.update(failures)
             return [by_id[anchor.id] for anchor in anchors]
-        except VLanchorError:
+        except OmniAnchorError:
             raise
         except RuntimeError as exc:
             raise ResourceUnavailable(

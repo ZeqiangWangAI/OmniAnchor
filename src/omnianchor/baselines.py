@@ -50,7 +50,7 @@ class HFBaseline:
             import torch
             import transformers
         except ImportError as exc:
-            raise ImportError("Install vlanchor[hf] to use Hugging Face baselines.") from exc
+            raise ImportError("Install omnianchor[hf] to use Hugging Face baselines.") from exc
         if self.device.startswith("cuda") and not torch.cuda.is_available():
             raise ResourceUnavailable("CUDA was requested but is unavailable; no CPU fallback performed.")
         if self.device == "mps" and not torch.backends.mps.is_available():

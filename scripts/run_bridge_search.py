@@ -9,13 +9,13 @@ from time import perf_counter
 
 import pandas as pd
 
-from vlanchor import fit_reference, measure, to_matrix, transform
-from vlanchor.backends import HFBackend
-from vlanchor.campaign import append_event, create_run
-from vlanchor.io import load_samples, load_scores, load_spec, read_json, save_calibration, save_matrix, save_scores, write_json
-from vlanchor.optimization import OptimizationConfig, OptimizationData, optimize_bridges
-from vlanchor.provenance import file_hash
-from vlanchor.types import Bridge, ModelSpec
+from omnianchor import fit_reference, measure, to_matrix, transform
+from omnianchor.backends import HFBackend
+from omnianchor.campaign import append_event, create_run
+from omnianchor.io import load_samples, load_scores, load_spec, read_json, save_calibration, save_matrix, save_scores, write_json
+from omnianchor.optimization import OptimizationConfig, OptimizationData, optimize_bridges
+from omnianchor.provenance import file_hash
+from omnianchor.types import Bridge, ModelSpec
 
 
 def main():

@@ -11,7 +11,7 @@ from typing import Any
 import numpy as np
 from PIL import Image, ImageOps, UnidentifiedImageError
 
-from ..errors import MissingMedia, ResourceUnavailable, VLanchorError
+from ..errors import MissingMedia, ResourceUnavailable, OmniAnchorError
 from ..types import Part, ResourceProfile, Sample
 
 
@@ -55,7 +55,7 @@ def _load_video(
     try:
         import av
     except ImportError as exc:
-        raise ResourceUnavailable("Video decoding requires PyAV: install vlanchor[hf].") from exc
+        raise ResourceUnavailable("Video decoding requires PyAV: install omnianchor[hf].") from exc
 
     # First pass retains timestamps only, not all decoded RGB frames in RAM.
     timestamps: list[float] = []
@@ -100,7 +100,7 @@ def _load_video(
         if set(decoded) != wanted:
             raise MissingMedia(f"Video changed or failed during second decoding pass: {path}")
         frames = np.stack([decoded[index] for index in indices])
-    except VLanchorError:
+    except OmniAnchorError:
         raise
     except Exception as exc:
         raise MissingMedia(f"Cannot decode video {path}: {exc}") from exc
@@ -171,13 +171,13 @@ def processor_media_kwargs(
         }}
     if frozen.videos:
         if any(not r["constant_frame_rate"] for r in frozen.records if r["type"] == "video"):
-            raise VLanchorError(
+            raise OmniAnchorError(
                 "Variable-frame-rate timestamps cannot be faithfully rendered by this native "
                 "Qwen adapter. Convert explicitly to constant frame rate and record that transform."
             )
         frames = resources.video.sampled_frames
         if frames < temporal_patch_size:
-            raise VLanchorError("sampled_frames is smaller than the native temporal patch size.")
+            raise OmniAnchorError("sampled_frames is smaller than the native temporal patch size.")
         kwargs["videos"] = [video.copy() for video in frozen.videos]
         video_kwargs: dict[str, Any] = {
             "do_resize": True, "do_sample_frames": False, "return_metadata": True,

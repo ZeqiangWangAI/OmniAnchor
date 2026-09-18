@@ -5,9 +5,9 @@ import os
 import json
 from pathlib import Path
 
-from vlanchor.campaign import create_run, append_event
-from vlanchor.io import load_samples, read_json, write_json
-from vlanchor.provenance import file_hash
+from omnianchor.campaign import create_run, append_event
+from omnianchor.io import load_samples, read_json, write_json
+from omnianchor.provenance import file_hash
 
 
 def stage(samples, path):
@@ -60,8 +60,8 @@ def main():
     reference_manifest = read_json(args.reference/'measurement/manifest.json')
     if reference_manifest['samples_sha256'] != file_hash(data/'reference64.json') or reference_manifest['spec_sha256'] != file_hash(config):
         raise ValueError('Reference input or instrument changed.')
-    sources = ['src/vlanchor/engine.py','src/vlanchor/backends/hf.py','src/vlanchor/backends/media.py',
-        'src/vlanchor/backends/vision_reuse.py','src/vlanchor/official_baselines.py',
+    sources = ['src/omnianchor/engine.py','src/omnianchor/backends/hf.py','src/omnianchor/backends/media.py',
+        'src/omnianchor/backends/vision_reuse.py','src/omnianchor/official_baselines.py',
         'scripts/run_measurement_shard.py','scripts/run_baseline_shard.py','scripts/frozen_evaluation.py',
         'scripts/vision_reuse_admission.py','scripts/verify_native.py','configs/models-20260910.json']
     populations = {split: {role: load_samples(data/f'{split}-{role}.json') for role in ['videos','en','zh']} for split in ['dev','test']}

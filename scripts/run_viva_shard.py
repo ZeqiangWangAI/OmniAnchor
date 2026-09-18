@@ -7,13 +7,13 @@ from time import perf_counter
 
 import numpy as np
 
-from vlanchor import measure
-from vlanchor.backends.vision_reuse import reuse_vision_outputs
-from vlanchor.campaign import create_run, append_event
-from vlanchor.io import load_samples,load_spec,read_json,save_scores,write_json
-from vlanchor.official_baselines import QwenRetrieval
-from vlanchor.provenance import file_hash,runtime_manifest
-from vlanchor.types import Anchor,Sample,Part
+from omnianchor import measure
+from omnianchor.backends.vision_reuse import reuse_vision_outputs
+from omnianchor.campaign import create_run, append_event
+from omnianchor.io import load_samples,load_spec,read_json,save_scores,write_json
+from omnianchor.official_baselines import QwenRetrieval
+from omnianchor.provenance import file_hash,runtime_manifest
+from omnianchor.types import Anchor,Sample,Part
 from run_measurement_shard import TimedBackend
 from verify_native import verify_native
 from vision_reuse_admission import admit_vision_reuse
@@ -91,7 +91,7 @@ def main():
         "runtime":runtime_manifest(),"precision":"BF16;FP32pooling/normalization",
         "preprocessing":"strictbudget-controlledofficialrecipe,noNULLfallback/noimplicittruncation",
         "source_hashes":{str(p.relative_to(root)):file_hash(p) for p in
-            [root/"src/vlanchor/official_baselines.py",root/"src/vlanchor/backends/vision_reuse.py"]}})
+            [root/"src/omnianchor/official_baselines.py",root/"src/omnianchor/backends/vision_reuse.py"]}})
     started=perf_counter()
     costs={c:0. for c in conditions}
     try:

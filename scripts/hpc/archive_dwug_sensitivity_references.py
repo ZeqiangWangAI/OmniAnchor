@@ -5,7 +5,7 @@ from pathlib import Path
 import subprocess
 import tarfile
 
-root = Path('/mnt/fast/nobackup/scratch4weeks/zw00924/VLanchor-20260910')
+root = Path('/mnt/fast/nobackup/scratch4weeks/zw00924/OmniAnchor-20260910')
 jobs = ['47248', '47262', '47265', '47274', '47117']
 archive = root/'dwug-sensitivity-reference-evidence-20260911-01.tgz'
 record_path = archive.with_suffix('.json')

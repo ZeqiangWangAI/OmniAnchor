@@ -6,12 +6,12 @@ from time import perf_counter
 
 import pandas as pd
 
-from vlanchor import measure
-from vlanchor.backends.hf import HFBackend
-from vlanchor.campaign import create_run, append_event
-from vlanchor.io import load_spec, save_scores, write_json
-from vlanchor.provenance import file_hash
-from vlanchor.types import Anchor, Bridge, Part, Sample
+from omnianchor import measure
+from omnianchor.backends.hf import HFBackend
+from omnianchor.campaign import create_run, append_event
+from omnianchor.io import load_spec, save_scores, write_json
+from omnianchor.provenance import file_hash
+from omnianchor.types import Anchor, Bridge, Part, Sample
 from verify_native import verify_native
 
 

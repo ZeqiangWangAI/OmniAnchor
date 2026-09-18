@@ -2,7 +2,7 @@
 
 import pytest
 
-from vlanchor.datasets import DatasetBundle, build_general_anchors, load_wic
+from omnianchor.datasets import DatasetBundle, build_general_anchors, load_wic
 
 
 def wic_bundle(tmp_path, lemmas, split="train"):

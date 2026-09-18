@@ -4,9 +4,9 @@ import numpy as np
 import pandas as pd
 
 from scripts.evaluate_empty_controls import main
-from vlanchor.io import read_json, write_json
-from vlanchor.provenance import file_hash
-from vlanchor.types import Part, Sample
+from omnianchor.io import read_json, write_json
+from omnianchor.provenance import file_hash
+from omnianchor.types import Part, Sample
 
 
 def test_constant_no_content_predictor_has_undefined_correlation(tmp_path, monkeypatch):

@@ -6,10 +6,10 @@ import numpy as np
 import pandas as pd
 
 from analyze_viva import aligned_scores
-from vlanchor.campaign import append_event, create_run
-from vlanchor.evaluation import group_bootstrap
-from vlanchor.io import load_samples, read_json, write_json
-from vlanchor.provenance import file_hash
+from omnianchor.campaign import append_event, create_run
+from omnianchor.evaluation import group_bootstrap
+from omnianchor.io import load_samples, read_json, write_json
+from omnianchor.provenance import file_hash
 
 
 def interaction_scores(image_text, image, text, empty):

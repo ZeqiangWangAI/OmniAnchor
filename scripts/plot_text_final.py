@@ -20,7 +20,7 @@ def main():
     plt.style.use(['science', 'no-latex', 'bright'])
     plt.rcParams.update({'font.family': 'STIXGeneral', 'mathtext.fontset': 'stix', 'font.size': 10})
     fig, axes = plt.subplots(2, 2, figsize=(10, 7))
-    labels = ['VLanchor', 'E5', 'Qwen embedding', 'Qwen reranker']
+    labels = ['OmniAnchor', 'E5', 'Qwen embedding', 'Qwen reranker']
     colors = ['#4477AA', '#228833', '#CCBB44', '#EE6677']
     original = ['native-raw_logp', 'e5-original', 'qwen-embedding-original', 'qwen-reranker-anchor']
     anchor = ['native-raw_logp', 'e5-anchor', 'qwen-embedding-anchor', 'qwen-reranker-anchor']

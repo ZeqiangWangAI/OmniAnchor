@@ -4,10 +4,10 @@ from datetime import datetime, timezone
 import hashlib
 from pathlib import Path
 
-from vlanchor.campaign import select_smoke
-from vlanchor.io import load_samples, load_spec, read_json, write_json
-from vlanchor.provenance import file_hash
-from vlanchor.types import Anchor
+from omnianchor.campaign import select_smoke
+from omnianchor.io import load_samples, load_spec, read_json, write_json
+from omnianchor.provenance import file_hash
+from omnianchor.types import Anchor
 
 
 ALIASES = dict(joy="happiness", sadness="sorrow", fear="fearfulness", anger="rage",

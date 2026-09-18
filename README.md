@@ -3,7 +3,7 @@
 OmniAnchor is the measurement toolkit described in the manuscript *OmniAnchor turns a
 frozen multimodal generative model into a measurement instrument for psychological
 constructs* (Nature Communications, submitted 2026). The Python package and command-line
-entry point keep their development name `vlanchor`; the import path and the frozen study
+entry point keep their development name `omnianchor`; the import path and the frozen study
 configurations below are unchanged from the runs reported in the paper.
 
 This repository holds the source, tests, frozen study configurations, analysis scripts,
@@ -12,7 +12,7 @@ separately on acceptance, as stated in the manuscript's Data availability sectio
 
 ---
 
-# VLanchor
+# OmniAnchor
 
 Probabilistic anchor representations for text, images, video and combined input.
 An anchor coordinate is a model-conditioned continuation score, not a calibrated
@@ -23,7 +23,7 @@ probability that a document has a value. Anchors are arbitrary and need not be p
 ```bash
 python -m pip install -e '.[dev]'
 python -m pytest
-python -m vlanchor --help
+python -m omnianchor --help
 ```
 
 Real Qwen inference additionally needs `.[hf]` on CUDA. The research reference pins
@@ -34,8 +34,8 @@ The deterministic toy backend is only a software fixture and has no scientific v
 ## Minimal Python workflow
 
 ```python
-from vlanchor import Anchor, Bridge, Sample, Part, score, fit_reference, transform, to_matrix
-from vlanchor.backends import ToyBackend
+from omnianchor import Anchor, Bridge, Sample, Part, score, fit_reference, transform, to_matrix
+from omnianchor.backends import ToyBackend
 
 samples = [
     Sample(id='a', parts=(Part(type='text', text='Neighbors share food.'),), metadata={'split': 'train'}),
@@ -76,8 +76,8 @@ software path. It is not a benchmark of psychological or semantic accuracy.
 `optimize-bridges` all use the same library APIs. Run each command with `--help`.
 
 ```bash
-vlanchor validate --config configs/studies/toy_en.yaml --samples examples/samples.json
-vlanchor measure --config configs/studies/toy_en.yaml --samples examples/samples.json --output runs/example.parquet
+omnianchor validate --config configs/studies/toy_en.yaml --samples examples/samples.json
+omnianchor measure --config configs/studies/toy_en.yaml --samples examples/samples.json --output runs/example.parquet
 ```
 
 The walkthrough is in `notebooks/01_measurement_walkthrough.ipynb`; reusable anchor

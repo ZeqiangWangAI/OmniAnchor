@@ -7,11 +7,11 @@ from time import perf_counter
 import numpy as np
 import pandas as pd
 
-from vlanchor.backends.hf import HFBackend, PreparedCandidate, reference_token_logps
-from vlanchor.campaign import append_event, create_run
-from vlanchor.io import load_spec, write_json
-from vlanchor.provenance import file_hash, runtime_manifest
-from vlanchor.types import Anchor
+from omnianchor.backends.hf import HFBackend, PreparedCandidate, reference_token_logps
+from omnianchor.campaign import append_event, create_run
+from omnianchor.io import load_spec, write_json
+from omnianchor.provenance import file_hash, runtime_manifest
+from omnianchor.types import Anchor
 
 
 def main():

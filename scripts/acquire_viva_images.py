@@ -7,8 +7,8 @@ from pathlib import Path
 from PIL import Image
 
 from acquire_text_data import fetch
-from vlanchor.datasets.common import local_media
-from vlanchor.io import write_json
+from omnianchor.datasets.common import local_media
+from omnianchor.io import write_json
 
 
 def main():

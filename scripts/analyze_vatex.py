@@ -5,10 +5,10 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
-from vlanchor.campaign import append_event, create_run
-from vlanchor.evaluation import group_bootstrap, retrieval_metrics
-from vlanchor.io import load_samples, write_json
-from vlanchor.provenance import file_hash
+from omnianchor.campaign import append_event, create_run
+from omnianchor.evaluation import group_bootstrap, retrieval_metrics
+from omnianchor.io import load_samples, write_json
+from omnianchor.provenance import file_hash
 
 
 def two_stage_priority(embedding_scores, probabilities, selected):

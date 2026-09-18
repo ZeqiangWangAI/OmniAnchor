@@ -4,8 +4,8 @@ from types import SimpleNamespace
 import numpy as np
 import pytest
 
-from vlanchor.baselines import HFCrossEncoder, HFMeanEmbedding, HFSingleTokenMLM, cosine_scores
-from vlanchor.errors import ResourceUnavailable
+from omnianchor.baselines import HFCrossEncoder, HFMeanEmbedding, HFSingleTokenMLM, cosine_scores
+from omnianchor.errors import ResourceUnavailable
 
 
 def test_cosine_baseline_axis_and_zero_vector_failure():

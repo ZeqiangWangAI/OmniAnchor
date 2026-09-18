@@ -3,8 +3,8 @@ import sys
 import numpy as np
 
 from scripts.build_development_features import main
-from vlanchor.io import read_json, write_json
-from vlanchor.types import Part, Sample
+from omnianchor.io import read_json, write_json
+from omnianchor.types import Part, Sample
 
 
 def test_image_baselines_assemble_without_imputing_text_only_e5(tmp_path, monkeypatch):

@@ -9,8 +9,8 @@ import scienceplots  # noqa: F401
 import numpy as np
 import pandas as pd
 
-from vlanchor.campaign import create_run, append_event
-from vlanchor.provenance import file_hash
+from omnianchor.campaign import create_run, append_event
+from omnianchor.provenance import file_hash
 
 
 def main():
@@ -37,7 +37,7 @@ def main():
     fig,axes=plt.subplots(1,2,figsize=(9,3.9),layout='constrained',gridspec_kw={'width_ratios':[1,1.15]})
     conditions=['action_only','image_action','mismatched_image_action']
     colors=['#176B87','#929DA6','#B16A36']
-    for index,(method,label) in enumerate([('native','VLanchor'),('qwen-embedding','Embedding'),('qwen-reranker','Reranker')]):
+    for index,(method,label) in enumerate([('native','OmniAnchor'),('qwen-embedding','Embedding'),('qwen-reranker','Reranker')]):
         d=metrics[(metrics.method==method)&(metrics.metric=='AP')].set_index('condition').loc[conditions]
         x=np.arange(3)+(index-1)*.12
         axes[0].errorbar(x,d.value,yerr=[d.value-d.ci_lower,d.ci_upper-d.value],fmt=['o','s','^'][index],
@@ -46,7 +46,7 @@ def main():
     axes[0].legend(frameon=False,loc='upper center',bbox_to_anchor=(.5,1.10),ncol=3,fontsize=8)
     axes[0].set_title('A  Value ranking on 216 images',pad=34)
     contrasts=paired[paired.metric=='AP'].reset_index(drop=True)
-    labels=['Image − text only','Correct − wrong image','VLanchor − embedding','VLanchor − reranker']
+    labels=['Image − text only','Correct − wrong image','OmniAnchor − embedding','OmniAnchor − reranker']
     for i,r in enumerate(contrasts.itertuples()):
         axes[1].errorbar(r.difference,i,xerr=[[r.difference-r.ci_lower],[r.ci_upper-r.difference]],fmt='o',color='#176B87',capsize=3,ms=5)
         axes[1].text(.235,i,f'q={r.primary_family_bh_q:.3f}',va='center',ha='right',fontsize=9)

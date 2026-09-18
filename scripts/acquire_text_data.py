@@ -8,12 +8,12 @@ from datetime import datetime, timezone
 from pathlib import Path
 from urllib.request import Request, urlopen
 
-from vlanchor.io import write_json
+from omnianchor.io import write_json
 
 
 def fetch(url: str, path: Path) -> dict:
     path.parent.mkdir(parents=True, exist_ok=True)
-    with urlopen(Request(url, headers={"User-Agent": "VLanchor-research/0.1"}), timeout=45) as response:
+    with urlopen(Request(url, headers={"User-Agent": "OmniAnchor-research/0.1"}), timeout=45) as response:
         with path.open("xb") as output:
             while block := response.read(1024 * 1024):
                 output.write(block)

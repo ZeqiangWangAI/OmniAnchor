@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --job-name=vlanchor-demo
+#SBATCH --job-name=omnianchor-demo
 #SBATCH --partition=debug
 #SBATCH --gres=gpu:1
 #SBATCH --cpus-per-task=4
@@ -10,8 +10,8 @@
 
 set -euo pipefail
 
-VL_SOURCE_DIR="${SLURM_SUBMIT_DIR:?Submit from the VLanchor checkout}"
-VL_RUN_DIR="/var/tmp/${USER}/vlanchor/${SLURM_JOB_ID}"
+VL_SOURCE_DIR="${SLURM_SUBMIT_DIR:?Submit from the OmniAnchor checkout}"
+VL_RUN_DIR="/var/tmp/${USER}/omnianchor/${SLURM_JOB_ID}"
 VL_RESULTS="${VL_SOURCE_DIR}/runs/surrey-${SLURM_JOB_ID}"
 VL_BASE_PYTHON="${VL_BASE_PYTHON:-/mnt/fast/nobackup/users/zw00924/miniforge3/envs/dapo-py311/bin/python}"
 mkdir -p "$VL_RUN_DIR" "$VL_RESULTS"

@@ -1,8 +1,8 @@
 import numpy as np
 import pytest
 
-from vlanchor.errors import BudgetExceeded
-from vlanchor.official_baselines import E5Embedding, require_cuda
+from omnianchor.errors import BudgetExceeded
+from omnianchor.official_baselines import E5Embedding, require_cuda
 
 
 def test_requires_immutable_revision_before_loading():

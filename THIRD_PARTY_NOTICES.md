@@ -1,6 +1,6 @@
 # Third-party source and data boundaries
 
-VLanchor's repository license does not relicense third-party model weights, datasets,
+OmniAnchor's repository license does not relicense third-party model weights, datasets,
 images, video, annotations or dependencies.
 
 ## Qwen embedding and reranking implementation
@@ -16,8 +16,8 @@ The directory retains the upstream Apache License 2.0 text in `LICENSE` and
 individual retrieval URLs and SHA256 values in `provenance.json`. An integrity
 check on 11 September 2026 found these source and license bytes unchanged from
 the recorded upstream copies. Preserve this directory's license and provenance
-when packaging the vendored source. VLanchor's wrapper in
-`src/vlanchor/official_baselines.py` implements its own strict budget and media
+when packaging the vendored source. OmniAnchor's wrapper in
+`src/omnianchor/official_baselines.py` implements its own strict budget and media
 handling; those wrapper choices must not be attributed to unmodified upstream
 preprocessing.
 

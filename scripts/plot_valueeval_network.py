@@ -10,10 +10,10 @@ import networkx as nx
 import numpy as np
 import pandas as pd
 
-from vlanchor.campaign import append_event, create_run
-from vlanchor.evaluation import compare_networks
-from vlanchor.io import read_json
-from vlanchor.provenance import file_hash
+from omnianchor.campaign import append_event, create_run
+from omnianchor.evaluation import compare_networks
+from omnianchor.io import read_json
+from omnianchor.provenance import file_hash
 
 
 def main():

@@ -79,7 +79,7 @@ def main():
         "measurement_definition": "Driver cost.json times are retained separately; nested timing fields overlap and must not be summed as GPU billing.",
         "hardware_definition": "hardware.json/cost.gpu are direct run evidence. Current node features only support explicitly labeled inference; not direct historical hardware records.",
         "unknown_memory": "Missing peak GPU allocation/reservation or MaxRSS remains unknown, never zero.",
-        "scope": "Only job IDs identified by numeric VLanchor run directories; no unrelated job costs included; no scientific scores or labels opened.",
+        "scope": "Only job IDs identified by numeric OmniAnchor run directories; no unrelated job costs included; no scientific scores or labels opened.",
         "root_storage": subprocess.check_output(["df", "-h", str(args.root)], text=True)})
     print(f"Collected {len(accounting)} job records and {len(telemetry)} telemetry files.", flush=True)
 

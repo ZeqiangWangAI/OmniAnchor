@@ -8,7 +8,7 @@ import numpy as np
 import pandas as pd
 from scipy.stats import spearmanr
 
-from vlanchor.provenance import file_hash
+from omnianchor.provenance import file_hash
 
 
 def main():

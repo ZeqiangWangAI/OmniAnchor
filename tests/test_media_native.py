@@ -4,9 +4,9 @@ import numpy as np
 from PIL import Image
 import pytest
 
-from vlanchor.backends.media import FrozenMedia, freeze_media, processor_media_kwargs
-from vlanchor.errors import MissingMedia, VLanchorError
-from vlanchor.types import Part, ResourceProfile, Sample, VideoBudget
+from omnianchor.backends.media import FrozenMedia, freeze_media, processor_media_kwargs
+from omnianchor.errors import MissingMedia, OmniAnchorError
+from omnianchor.types import Part, ResourceProfile, Sample, VideoBudget
 
 
 def test_image_orientation_order_and_path_independent_pixel_fingerprint(tmp_path):
@@ -64,7 +64,7 @@ def test_temporal_padding_budget_and_vfr_fail_closed():
     kwargs = processor_media_kwargs(frozen_video(7), resources)
     assert kwargs["videos_kwargs"]["size"]["longest_edge"] == 7 * 65536
     assert "cap_pixels_per_frame" not in kwargs["videos_kwargs"]
-    with pytest.raises(VLanchorError, match="Variable-frame-rate"):
+    with pytest.raises(OmniAnchorError, match="Variable-frame-rate"):
         processor_media_kwargs(frozen_video(constant_rate=False), ResourceProfile())
 
 

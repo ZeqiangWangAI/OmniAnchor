@@ -1,12 +1,12 @@
 #!/bin/bash
-#SBATCH --job-name=vlanchor-baselines32
+#SBATCH --job-name=omnianchor-baselines32
 #SBATCH --partition=debug
 #SBATCH --gres=gpu:1
 #SBATCH --cpus-per-task=4
 #SBATCH --mem=48G
 #SBATCH --time=02:00:00
 set -euo pipefail
-VL_CAMPAIGN=/mnt/fast/nobackup/scratch4weeks/zw00924/VLanchor-20260910
+VL_CAMPAIGN=/mnt/fast/nobackup/scratch4weeks/zw00924/OmniAnchor-20260910
 VL_RUN="$VL_CAMPAIGN/runs/baselines-${SLURM_JOB_ID}"
 mkdir "$VL_RUN"
 export HF_HOME="$VL_CAMPAIGN/hf-home"

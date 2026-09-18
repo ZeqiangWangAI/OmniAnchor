@@ -6,10 +6,10 @@ import numpy as np
 import pandas as pd
 from scipy.stats import pearsonr
 
-from vlanchor.analysis import bh_fdr
-from vlanchor.campaign import append_event, create_run
-from vlanchor.io import read_json, write_json
-from vlanchor.provenance import file_hash
+from omnianchor.analysis import bh_fdr
+from omnianchor.campaign import append_event, create_run
+from omnianchor.io import read_json, write_json
+from omnianchor.provenance import file_hash
 
 
 def main():

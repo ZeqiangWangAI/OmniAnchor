@@ -1,12 +1,12 @@
 #!/bin/bash
-#SBATCH --job-name=vlanchor-dev
+#SBATCH --job-name=omnianchor-dev
 #SBATCH --partition=debug
 #SBATCH --gres=gpu:1
 #SBATCH --cpus-per-task=4
 #SBATCH --mem=48G
 #SBATCH --time=04:00:00
 set -euo pipefail
-VL_CAMPAIGN=/mnt/fast/nobackup/scratch4weeks/zw00924/VLanchor-20260910
+VL_CAMPAIGN=/mnt/fast/nobackup/scratch4weeks/zw00924/OmniAnchor-20260910
 VL_RUN="$VL_CAMPAIGN/runs/development-${SLURM_JOB_ID}"
 mkdir "$VL_RUN"
 trap 'VL_EXIT=$?; printf "%s\n" "$VL_EXIT" > "$VL_RUN/exit_code.txt"' EXIT

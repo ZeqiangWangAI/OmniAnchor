@@ -8,11 +8,11 @@ from scipy.spatial.distance import cdist
 from threadpoolctl import threadpool_limits
 
 from sensitivity_statistics import geometry_agreement, interval_or_undefined, rank_agreement, template_clusters
-from vlanchor import fit_reference, transform
-from vlanchor.calibration import _grid
-from vlanchor.campaign import append_event, create_run, merge_score_shards
-from vlanchor.io import load_samples, load_scores, read_json, save_calibration, write_json
-from vlanchor.provenance import file_hash
+from omnianchor import fit_reference, transform
+from omnianchor.calibration import _grid
+from omnianchor.campaign import append_event, create_run, merge_score_shards
+from omnianchor.io import load_samples, load_scores, read_json, save_calibration, write_json
+from omnianchor.provenance import file_hash
 
 
 def read_instrument(roots, ids, spec_hash, accepted=None):

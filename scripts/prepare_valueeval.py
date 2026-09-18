@@ -10,10 +10,10 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
-from vlanchor.campaign import save_bundle
-from vlanchor.datasets.common import DatasetBundle, build_manifest
-from vlanchor.datasets.text import VALUEEVAL_LABELS, load_valueeval
-from vlanchor.io import write_json
+from omnianchor.campaign import save_bundle
+from omnianchor.datasets.common import DatasetBundle, build_manifest
+from omnianchor.datasets.text import VALUEEVAL_LABELS, load_valueeval
+from omnianchor.io import write_json
 
 
 def main():

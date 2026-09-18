@@ -5,10 +5,10 @@ import sys
 from PIL import Image
 import pytest
 
-from vlanchor.backends import ToyBackend
-from vlanchor.engine import score
-from vlanchor.errors import VLanchorError
-from vlanchor.types import Anchor, Bridge, Limits, Part, ResourceProfile, Sample
+from omnianchor.backends import ToyBackend
+from omnianchor.engine import score
+from omnianchor.errors import OmniAnchorError
+from omnianchor.types import Anchor, Bridge, Limits, Part, ResourceProfile, Sample
 
 
 SAMPLE = Sample(id="s", parts=(Part(type="text", text="A social event."),))
@@ -17,7 +17,7 @@ BRIDGE = Bridge(id="b", prefix="This is associated with:\n")
 
 def test_importing_backends_does_not_import_or_load_optional_model_runtime():
     script = (
-        "import sys; from vlanchor.backends import HFBackend, ToyBackend; "
+        "import sys; from omnianchor.backends import HFBackend, ToyBackend; "
         "assert 'torch' not in sys.modules; assert 'transformers' not in sys.modules; "
         "assert 'av' not in sys.modules"
     )
@@ -66,8 +66,8 @@ def test_native_fixture_pixels_affect_fingerprint_and_scores(tmp_path):
 def test_fixture_rejects_control_tokens_duplicate_ids_and_budget_overruns():
     b = ToyBackend()
     rejected = b.score_candidates(SAMPLE, BRIDGE, [Anchor(id="a", surface="<|im_end|>")])[0]
-    assert rejected["status"] == "VLanchorError" and "control tokens" in rejected["error"]
-    with pytest.raises(VLanchorError, match="Duplicate"):
+    assert rejected["status"] == "OmniAnchorError" and "control tokens" in rejected["error"]
+    with pytest.raises(OmniAnchorError, match="Duplicate"):
         b.score_candidates(SAMPLE, BRIDGE, [Anchor(id="a", surface="a"), Anchor(id="a", surface="b")])
     b = ToyBackend(resources=ResourceProfile(limits=Limits(anchor_continuation_tokens=1)))
     assert b.score_candidates(SAMPLE, BRIDGE, [Anchor(id="a", surface="公平")])[0]["status"] == "BudgetExceeded"

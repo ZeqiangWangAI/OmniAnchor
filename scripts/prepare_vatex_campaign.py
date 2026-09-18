@@ -4,9 +4,9 @@ import hashlib
 import os
 from pathlib import Path
 
-from vlanchor.datasets import load_vatex
-from vlanchor.io import read_json, write_json
-from vlanchor.provenance import file_hash
+from omnianchor.datasets import load_vatex
+from omnianchor.io import read_json, write_json
+from omnianchor.provenance import file_hash
 
 
 def main():

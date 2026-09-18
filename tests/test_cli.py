@@ -7,9 +7,9 @@ import pandas as pd
 import pytest
 import yaml
 
-from vlanchor.cli import main
-from vlanchor.io import load_calibration, load_matrix, load_samples, load_scores, read_json, write_json
-from vlanchor.types import Anchor, Bridge, ModelSpec, Part, Sample, StudySpec
+from omnianchor.cli import main
+from omnianchor.io import load_calibration, load_matrix, load_samples, load_scores, read_json, write_json
+from omnianchor.types import Anchor, Bridge, ModelSpec, Part, Sample, StudySpec
 
 
 def command(capsys, *args, expected_exit=0):

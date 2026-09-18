@@ -1,4 +1,4 @@
-# 下一個 session：VLanchor 完整實驗與論文交接
+# 下一個 session：OmniAnchor 完整實驗與論文交接
 
 執行更新：本交接的研究協議繼續有效；原始demo交付狀態屬歷史記錄。
 正式研究正在進行，最新已完成/待完成證據見[完整研究執行狀態](RESEARCH_STATUS.md)。
@@ -15,22 +15,22 @@
 
 ## 1. 進場資訊與最小啟動
 
-本機專案 `/Volumes/OutsourceData/VLanchor`。
+本機專案 `/Volumes/OutsourceData/OmniAnchor`。
 Surrey SSH alias `surrey-aisurrey`；遠端專案
-`/mnt/fast/nobackup/users/zw00924/VLanchor`，透過既有 gateway 設定連線。
+`/mnt/fast/nobackup/users/zw00924/OmniAnchor`，透過既有 gateway 設定連線。
 本次以 Slurm `debug` 分配 1×RTX A5000 24GB；作業與結果詳见 VALIDATION。
 本機 Python 3.11 `.venv` 可跑測試及 toy；正式 4B 推論在已分配 CUDA 節點執行。
 
 ```bash
-cd /Volumes/OutsourceData/VLanchor
+cd /Volumes/OutsourceData/OmniAnchor
 .venv/bin/python -m pytest -q
-.venv/bin/python -m vlanchor --help
+.venv/bin/python -m omnianchor --help
 PYTHONPATH=src .venv/bin/python scripts/run_demo.py --backend toy --output runs/local-check
 ssh -o BatchMode=yes surrey-aisurrey 'squeue -u "$USER"'
 ```
 
 目前共享 home 接近配額，不能在其內下載模型或完整資料。Slurm demo 將模型與
-環境放 `/var/tmp/$USER/vlanchor/$SLURM_JOB_ID`，只回傳小結果。這是 node-local
+環境放 `/var/tmp/$USER/omnianchor/$SLURM_JOB_ID`，只回傳小結果。這是 node-local
 暫存，不能視為持久保存；正式全量資料需先確認專案/parallel scratch 配額與保留期，
 記錄路徑後再配置批量任務。不要清理使用者別的專案或終止他人 GPU 作業。
 詳見 [Surrey runbook](SURREY_RUNBOOK.md)。
@@ -114,9 +114,9 @@ adapter_kwargs:
 ```
 
 ```bash
-python -m vlanchor prepare --config configs/prepare-valueeval.yaml --output data/prepared/train
-python -m vlanchor validate --config configs/study.yaml --samples data/prepared/train/samples.json
-python -m vlanchor measure --config configs/study.yaml --samples data/prepared/train/samples.json --output runs/train.parquet --cache runs/cache
+python -m omnianchor prepare --config configs/prepare-valueeval.yaml --output data/prepared/train
+python -m omnianchor validate --config configs/study.yaml --samples data/prepared/train/samples.json
+python -m omnianchor measure --config configs/study.yaml --samples data/prepared/train/samples.json --output runs/train.parquet --cache runs/cache
 ```
 
 正式driver將 train 分成不重疊群組：reference、橋接搜尋約256樣本、其餘訓練。
@@ -266,10 +266,10 @@ M×B×N次forward；先實測32樣本，再估完整GPU小時與排隊預算。�
 
 ## 9. 論文故事線與必交圖表
 
-暫名 **VLanchor: Probabilistic Anchor Representations for Multimodal Measurement**。
+暫名 **OmniAnchor: Probabilistic Anchor Representations for Multimodal Measurement**。
 問題是研究者需要任意概念、不同模態、可追蹤的測量工具；核心貢獻是明確條件事件
 和可重用分析鏈，而非宣稱讀取真實內部心理。FMAT支持命題測量框架；PMPO把探針
-集合視為可優化工具；VLanchor延伸至輸入條件化、任意N座標、多模態與經驗分析。
+集合視為可優化工具；OmniAnchor延伸至輸入條件化、任意N座標、多模態與經驗分析。
 
 | 論文段落/RQ | 要證明的事 | 證據 |
 |---|---|---|

@@ -5,8 +5,8 @@ from pathlib import Path
 import subprocess
 import sys
 
-from vlanchor.io import read_json, write_json
-from vlanchor.provenance import file_hash, runtime_manifest
+from omnianchor.io import read_json, write_json
+from omnianchor.provenance import file_hash, runtime_manifest
 
 
 def completed_array_runs(job_id, expected_tasks, prefix, runs_root):

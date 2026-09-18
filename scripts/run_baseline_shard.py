@@ -7,12 +7,12 @@ from time import perf_counter
 
 import numpy as np
 
-from vlanchor.campaign import append_event, create_run
-from vlanchor.io import load_samples, load_spec, read_json, write_json
-from vlanchor.official_baselines import E5Embedding, QwenRetrieval
-from vlanchor.provenance import file_hash, runtime_manifest
-from vlanchor.types import Part, Sample
-from vlanchor.backends.vision_reuse import reuse_vision_outputs
+from omnianchor.campaign import append_event, create_run
+from omnianchor.io import load_samples, load_spec, read_json, write_json
+from omnianchor.official_baselines import E5Embedding, QwenRetrieval
+from omnianchor.provenance import file_hash, runtime_manifest
+from omnianchor.types import Part, Sample
+from omnianchor.backends.vision_reuse import reuse_vision_outputs
 from vision_reuse_admission import admit_vision_reuse
 from frozen_evaluation import validate_frozen_evaluation
 
@@ -51,7 +51,7 @@ def main():
                                 "query: " if args.method == "e5" else "Represent the user's input."),
                 "e5_roles": {"material": "query", "anchor": "query"} if args.method == "e5" else None,
                 "precision": "bf16; FP32 pooling/normalization", "batch_size": 1,
-                "preprocessing": "shared VLanchor strict native media budget; no truncation or NULL fallback",
+                "preprocessing": "shared OmniAnchor strict native media budget; no truncation or NULL fallback",
                 "purpose": "development_only_no_final_test", "source_hashes": {
                     str(p.relative_to(root)): file_hash(p) for folder in ["src", "scripts", "research/upstream"]
                     for p in (root / folder).rglob("*.py")}}

@@ -5,9 +5,9 @@ from pathlib import Path
 import shutil
 import math
 
-from vlanchor.campaign import create_run, append_event
-from vlanchor.io import load_samples, read_json, write_json
-from vlanchor.provenance import file_hash
+from omnianchor.campaign import create_run, append_event
+from omnianchor.io import load_samples, read_json, write_json
+from omnianchor.provenance import file_hash
 
 
 def main():
@@ -46,11 +46,11 @@ def main():
         wall_hours[name]=max(1,math.ceil((3*seconds+120)/3600))
         if wall_hours[name]>4:
             raise ValueError('Measured cost needs explicit smaller shards; no silent budget reduction.')
-    sources=['src/vlanchor/engine.py','src/vlanchor/backends/hf.py','src/vlanchor/backends/media.py',
-        'src/vlanchor/backends/vision_reuse.py','scripts/run_measurement_shard.py','scripts/frozen_evaluation.py',
+    sources=['src/omnianchor/engine.py','src/omnianchor/backends/hf.py','src/omnianchor/backends/media.py',
+        'src/omnianchor/backends/vision_reuse.py','scripts/run_measurement_shard.py','scripts/frozen_evaluation.py',
         'scripts/verify_native.py','configs/models-20260910.json']
     analysis_sources=['scripts/analyze_sensitivity.py','scripts/sensitivity_statistics.py',
-        'src/vlanchor/calibration.py','src/vlanchor/evaluation.py','src/vlanchor/analysis.py']
+        'src/omnianchor/calibration.py','src/omnianchor/evaluation.py','src/omnianchor/analysis.py']
     create_run(args.output,dict(purpose='Freeze full bounded E3 sensitivity evaluation after train reference completion',
         study=args.study,inventory_sha256=file_hash(args.bank/'manifest.json'),reference_files_sha256=reference_hashes,
         timing='All references completed before protected scoring; no changes to previously fixed contrasts or selected128IDs'))

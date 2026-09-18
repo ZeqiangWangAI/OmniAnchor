@@ -6,11 +6,11 @@ import numpy as np
 import pandas as pd
 from scipy.stats import pearsonr, spearmanr
 
-from vlanchor import to_matrix
-from vlanchor.analysis import bh_fdr
-from vlanchor.campaign import create_run, append_event, merge_score_shards
-from vlanchor.io import load_samples, load_scores, read_json, write_json
-from vlanchor.provenance import file_hash
+from omnianchor import to_matrix
+from omnianchor.analysis import bh_fdr
+from omnianchor.campaign import create_run, append_event, merge_score_shards
+from omnianchor.io import load_samples, load_scores, read_json, write_json
+from omnianchor.provenance import file_hash
 
 
 def main():
@@ -53,7 +53,7 @@ def main():
     required=["pleasant","unpleasant","aroused","calm"]
     if set(matrix.anchor_ids)!=set(required):
         raise ValueError("Not the predeclared directVA anchor set.")
-    values={"VLanchor":matrix.values[[matrix.sample_ids.index(i) for i in ids]][:,
+    values={"OmniAnchor":matrix.values[[matrix.sample_ids.index(i) for i in ids]][:,
         [matrix.anchor_ids.index(c) for c in required]]}
     sources={"native_parts":{str(p):file_hash(p) for p in parts}}
     for method in ["qwen-embedding","qwen-reranker"]:
@@ -98,7 +98,7 @@ def main():
                     summaries.append({"method":name,"dimension":dimension,"metric":metric_name,
                         "correlation":point,"ci_lower":float(lo),"ci_upper":float(hi),"n":len(ids)})
                     results[name]=(point,boot)
-                p,b=results["VLanchor"]
+                p,b=results["OmniAnchor"]
                 for name in ["qwen-embedding","qwen-reranker"]:
                     q,c=results[name]
                     delta=b-c
@@ -108,7 +108,7 @@ def main():
                     lo,hi=np.quantile(delta[valid],[.025,.975])
                     null=delta[valid]-(p-q)
                     pvalue=(1+int((np.abs(null)>=abs(p-q)).sum()))/(len(null)+1)
-                    differences.append({"primary":"VLanchor","comparator":name,"dimension":dimension,
+                    differences.append({"primary":"OmniAnchor","comparator":name,"dimension":dimension,
                         "metric":metric_name,"difference":p-q,"ci_lower":float(lo),"ci_upper":float(hi),
                         "centered_bootstrap_p":pvalue,"bootstrap_bias":float(np.mean(delta[valid])-(p-q))})
         pd.DataFrame(summaries).to_csv(args.output/"direct-correlations.csv",index=False)

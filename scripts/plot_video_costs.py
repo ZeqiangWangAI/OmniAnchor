@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import scienceplots  # noqa: F401
 
-from vlanchor.provenance import file_hash
+from omnianchor.provenance import file_hash
 
 
 def main():
@@ -23,7 +23,7 @@ def main():
     plt.style.use(['science', 'no-latex', 'bright'])
     plt.rcParams.update({'font.family': 'STIXGeneral', 'font.size': 10})
     fig, axes = plt.subplots(1, 2, figsize=(8.5, 4.8))
-    for method, label, color, marker in zip(methods, ['VLanchor', 'Official embedding', 'Official reranker'],
+    for method, label, color, marker in zip(methods, ['OmniAnchor', 'Official embedding', 'Official reranker'],
                                             ['#4477AA', '#228833', '#EE6677'], ['o', 's', '^']):
         rows = data[data.method == method].sort_values('frames')
         for ax, values in zip(axes, [rows.measurement_seconds/60, rows.peak_allocated_bytes/2**30]):

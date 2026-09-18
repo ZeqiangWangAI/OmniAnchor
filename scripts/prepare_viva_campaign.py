@@ -4,9 +4,9 @@ import hashlib
 import shutil
 from pathlib import Path
 
-from vlanchor.campaign import select_smoke
-from vlanchor.io import load_samples, read_json, write_json
-from vlanchor.provenance import file_hash
+from omnianchor.campaign import select_smoke
+from omnianchor.io import load_samples, read_json, write_json
+from omnianchor.provenance import file_hash
 
 
 def main():

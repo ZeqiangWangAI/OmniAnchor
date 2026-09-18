@@ -5,10 +5,10 @@ from pathlib import Path
 
 import numpy as np
 
-from vlanchor import fit_reference, to_matrix, transform
-from vlanchor.campaign import create_run, merge_score_shards, append_event
-from vlanchor.io import load_samples, load_scores, read_json, save_calibration, save_matrix, save_scores, write_json
-from vlanchor.types import ScoreTable
+from omnianchor import fit_reference, to_matrix, transform
+from omnianchor.campaign import create_run, merge_score_shards, append_event
+from omnianchor.io import load_samples, load_scores, read_json, save_calibration, save_matrix, save_scores, write_json
+from omnianchor.types import ScoreTable
 
 
 def main():

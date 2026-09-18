@@ -16,7 +16,7 @@ from .io import (jsonable, load_calibration, load_matrix, load_samples, load_sco
 
 
 def parser() -> argparse.ArgumentParser:
-    p = argparse.ArgumentParser(prog="vlanchor", description="Traceable probabilistic anchor measurement")
+    p = argparse.ArgumentParser(prog="omnianchor", description="Traceable probabilistic anchor measurement")
     sub = p.add_subparsers(dest="command", required=True)
     validate = sub.add_parser("validate", help="Validate study and optional local samples without loading weights")
     validate.add_argument("--config", required=True)
@@ -219,7 +219,7 @@ def main(argv=None) -> int:
     try:
         result = execute(p.parse_args(argv))
     except (ValueError, FileNotFoundError) as exc:
-        p.exit(2, f"vlanchor: {exc}\n")
+        p.exit(2, f"omnianchor: {exc}\n")
     print(json.dumps(jsonable(result), ensure_ascii=False, allow_nan=False))
     return 1 if result.get("failed_items", 0) else 0
 

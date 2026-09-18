@@ -6,7 +6,7 @@
 #SBATCH --mem=48G
 #SBATCH --time=01:00:00
 set -euo pipefail
-VL_ROOT=/mnt/fast/nobackup/scratch4weeks/zw00924/VLanchor-20260910
+VL_ROOT=/mnt/fast/nobackup/scratch4weeks/zw00924/OmniAnchor-20260910
 VL_RUN="$VL_ROOT/runs/vatex-reranking-${SLURM_JOB_ID}"
 mkdir "$VL_RUN"
 trap 'VL_EXIT=$?; printf "%s\n" "$VL_EXIT" > "$VL_RUN/exit_code.txt"' EXIT

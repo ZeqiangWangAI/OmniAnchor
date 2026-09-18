@@ -5,10 +5,10 @@ import json
 import shutil
 from pathlib import Path
 
-from vlanchor.campaign import select_smoke
-from vlanchor.io import load_samples, write_json
-from vlanchor.provenance import file_hash
-from vlanchor.types import Part, Sample
+from omnianchor.campaign import select_smoke
+from omnianchor.io import load_samples, write_json
+from omnianchor.provenance import file_hash
+from omnianchor.types import Part, Sample
 
 
 def main():

@@ -6,9 +6,9 @@ import numpy as np
 import pandas as pd
 from scipy.stats import pearsonr, spearmanr
 
-from vlanchor.campaign import create_run, append_event
-from vlanchor.io import read_json, write_json
-from vlanchor.provenance import file_hash
+from omnianchor.campaign import create_run, append_event
+from omnianchor.io import read_json, write_json
+from omnianchor.provenance import file_hash
 
 
 def main():

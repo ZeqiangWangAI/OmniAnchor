@@ -5,8 +5,8 @@ import math
 from datetime import datetime, timezone
 from pathlib import Path
 
-from vlanchor.io import load_samples, read_json, write_json
-from vlanchor.provenance import file_hash
+from omnianchor.io import load_samples, read_json, write_json
+from omnianchor.provenance import file_hash
 
 
 def pilot_evidence(folder, method, expected_ids, pilot):

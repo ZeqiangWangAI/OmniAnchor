@@ -3,9 +3,9 @@ from types import SimpleNamespace
 
 import pytest
 
-from vlanchor.backends import HFBackend
-from vlanchor.backends import hf
-from vlanchor.types import ModelSpec
+from omnianchor.backends import HFBackend
+from omnianchor.backends import hf
+from omnianchor.types import ModelSpec
 
 
 COMMIT = "4815a0a6a064214f2d8208c094464a5a6b76ca8d"

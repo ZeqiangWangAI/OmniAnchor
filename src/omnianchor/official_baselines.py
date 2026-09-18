@@ -70,7 +70,7 @@ class QwenRetrieval:
         self.processor = AutoProcessor.from_pretrained(snapshot, trust_remote_code=False)
         if self.kind == "embedding":
             path = upstream / "qwen3_vl_embedding.py"
-            spec = importlib.util.spec_from_file_location("vlanchor_pinned_qwen_embedding", path)
+            spec = importlib.util.spec_from_file_location("omnianchor_pinned_qwen_embedding", path)
             module = importlib.util.module_from_spec(spec)
             sys.modules[spec.name] = module
             spec.loader.exec_module(module)

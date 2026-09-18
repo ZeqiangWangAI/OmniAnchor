@@ -7,7 +7,7 @@ from scipy.stats import spearmanr
 from sklearn.cluster import KMeans
 from sklearn.metrics import adjusted_rand_score
 
-from vlanchor.evaluation import group_bootstrap
+from omnianchor.evaluation import group_bootstrap
 
 
 def rank_agreement(a, b):

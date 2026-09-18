@@ -9,9 +9,9 @@ if __package__:
     from .analyze_vatex import two_stage_priority
 else:
     from analyze_vatex import two_stage_priority
-from vlanchor.campaign import create_run, append_event
-from vlanchor.io import read_json
-from vlanchor.provenance import file_hash
+from omnianchor.campaign import create_run, append_event
+from omnianchor.io import read_json
+from omnianchor.provenance import file_hash
 
 
 def merge_shards(embedding_path, runs):

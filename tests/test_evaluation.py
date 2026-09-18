@@ -1,7 +1,7 @@
 import numpy as np
 import pytest
 
-from vlanchor.evaluation import (
+from omnianchor.evaluation import (
     compare_networks, evaluate_candidates, evaluate_multilabel, evaluate_vad,
     fit_linear_probe, group_bootstrap, retrieval_metrics,
 )

@@ -8,8 +8,8 @@ import matplotlib.pyplot as plt
 import scienceplots  # noqa: F401 -- registers the requested scientific styles
 from matplotlib.patches import FancyBboxPatch
 
-from vlanchor.campaign import create_run, append_event
-from vlanchor.provenance import file_hash
+from omnianchor.campaign import create_run, append_event
+from omnianchor.provenance import file_hash
 
 
 def main():
@@ -35,7 +35,7 @@ def main():
     def arrow(start,end,**kwargs):
         ax.annotate('',xy=end,xytext=start,arrowprops=dict(arrowstyle='-|>',color='#50666F',lw=1.3,**kwargs))
 
-    ax.text(.05,5.62,'VLanchor measurement and validation',fontsize=13,fontweight='bold',va='top')
+    ax.text(.05,5.62,'OmniAnchor measurement and validation',fontsize=13,fontweight='bold',va='top')
     top=[('Material','Text / image / video\nContent hashes\nProcessing records'),
          ('Fixed specification','Model + anchors\nExact bridge relation'),
          ('Event scores','Token log likelihood\nTeacher forcing\nUncached decoder'),

@@ -3,10 +3,10 @@ import argparse
 import hashlib
 from pathlib import Path
 
-from vlanchor.campaign import select_bridge_coordinates
-from vlanchor.io import load_scores,load_spec,read_json,save_scores,write_json
-from vlanchor.provenance import file_hash
-from vlanchor.types import Bridge
+from omnianchor.campaign import select_bridge_coordinates
+from omnianchor.io import load_scores,load_spec,read_json,save_scores,write_json
+from omnianchor.provenance import file_hash
+from omnianchor.types import Bridge
 
 
 def main():

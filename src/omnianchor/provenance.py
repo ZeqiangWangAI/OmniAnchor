@@ -26,7 +26,7 @@ def file_hash(path: str | Path) -> str:
 
 def runtime_manifest() -> dict:
     versions = {}
-    for package in ("vlanchor", "numpy", "pandas", "scipy", "scikit-learn", "torch",
+    for package in ("omnianchor", "numpy", "pandas", "scipy", "scikit-learn", "torch",
                     "transformers", "tokenizers", "accelerate", "av", "Pillow"):
         try:
             versions[package] = importlib.metadata.version(package)

@@ -40,7 +40,7 @@ shareable deliverables remain separate from this immutable scientific snapshot.
 The archive command is:
 
 ```sh
-python scripts/package_allowlist.py --allowlist research/private-evidence-allowlist-20260911-01.json --output dist/vlanchor-private-evidence-20260911-01.tgz
+python scripts/package_allowlist.py --allowlist research/private-evidence-allowlist-20260911-01.json --output dist/omnianchor-private-evidence-20260911-01.tgz
 ```
 
 The builder rechecks every selected file hash before writing. Successful archive
@@ -234,7 +234,7 @@ python scripts/package_allowlist.py --allowlist research/source-package-allowlis
 
 The builder rejects changed file bytes, paths outside the root, symlinks, and an
 existing output archive. It never traverses unlisted directories. The candidate
-`dist/vlanchor-source-candidate-20260911-01.tgz` was freshly extracted, all 259
+`dist/omnianchor-source-candidate-20260911-01.tgz` was freshly extracted, all 259
 hashes matched, and all 253 tests passed using the existing analysis environment
 (6.90 seconds). Evidence: `research/source-package-extraction-verification-20260911-01.json`.
 This verifies the source component only. The candidate still needs final embedded

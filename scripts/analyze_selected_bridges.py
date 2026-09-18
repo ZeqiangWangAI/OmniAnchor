@@ -7,14 +7,14 @@ import numpy as np
 import pandas as pd
 from scipy.stats import spearmanr
 
-from vlanchor import fit_reference, to_matrix, transform
-from vlanchor.analysis import bh_fdr
-from vlanchor.campaign import append_event, create_run, select_bridge_coordinates
-from vlanchor.evaluation import evaluate_candidates, evaluate_multilabel
-from vlanchor.io import load_samples, load_scores, read_json, write_json
-from vlanchor.provenance import file_hash
-from vlanchor.reliability import cronbach_alpha
-from vlanchor.types import Bridge
+from omnianchor import fit_reference, to_matrix, transform
+from omnianchor.analysis import bh_fdr
+from omnianchor.campaign import append_event, create_run, select_bridge_coordinates
+from omnianchor.evaluation import evaluate_candidates, evaluate_multilabel
+from omnianchor.io import load_samples, load_scores, read_json, write_json
+from omnianchor.provenance import file_hash
+from omnianchor.reliability import cronbach_alpha
+from omnianchor.types import Bridge
 
 
 def main():

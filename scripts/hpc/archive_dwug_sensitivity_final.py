@@ -5,7 +5,7 @@ from pathlib import Path
 import subprocess
 import tarfile
 
-root = Path('/mnt/fast/nobackup/scratch4weeks/zw00924/VLanchor-20260910')
+root = Path('/mnt/fast/nobackup/scratch4weeks/zw00924/OmniAnchor-20260910')
 array_rows = subprocess.check_output(['sacct', '-j', '47420', '-n', '-P', '-X',
     '--format=JobIDRaw,JobID,State,ExitCode'], text=True)
 resolved = {}

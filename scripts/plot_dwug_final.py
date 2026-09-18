@@ -18,7 +18,7 @@ def main():
     native = shift[shift.method == 'native-raw_logp']
     pairs = json.loads((args.analysis/'pooled-pair-validity.json').read_text())
     methods = ['native-raw_logp', 'e5-original', 'qwen-embedding-original', 'qwen-reranker-anchor']
-    labels = ['VLanchor', 'E5 original', 'Qwen embedding', 'Qwen reranker']
+    labels = ['OmniAnchor', 'E5 original', 'Qwen embedding', 'Qwen reranker']
     plt.style.use(['science', 'no-latex', 'bright'])
     plt.rcParams.update({'font.family': 'STIXGeneral', 'mathtext.fontset': 'stix', 'font.size': 10})
     fig, axes = plt.subplots(1, 2, figsize=(10, 4.2), gridspec_kw={'width_ratios': [1.05, 1]})

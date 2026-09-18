@@ -15,14 +15,14 @@ def main():
     args=parser.parse_args()
     if args.record.exists():
         raise FileExistsError('Submission record already exists; inspect job IDs before retrying.')
-    root=Path('/mnt/fast/nobackup/scratch4weeks/zw00924/VLanchor-20260910')
+    root=Path('/mnt/fast/nobackup/scratch4weeks/zw00924/OmniAnchor-20260910')
     release=args.release.resolve()
     os.chdir(release)
     sys.path[:0]=[str(release/'src'),str(release/'scripts')]
     from frozen_evaluation import validate_frozen_evaluation
     from vision_reuse_admission import admit_vision_reuse
-    from vlanchor.io import load_samples,read_json
-    from vlanchor.provenance import file_hash
+    from omnianchor.io import load_samples,read_json
+    from omnianchor.provenance import file_hash
     gate=root/'runs/vision-reuse-gate-44786/gate/summary.json'
     admit_vision_reuse(gate)
     config=Path('configs/studies/vatex_general128.json')

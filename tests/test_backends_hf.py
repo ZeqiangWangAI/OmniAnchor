@@ -9,10 +9,10 @@ import numpy as np
 from PIL import Image
 import pytest
 
-from vlanchor.backends.hf import HFBackend, PreparedCandidate, reference_token_logps
-from vlanchor.engine import score
-from vlanchor.errors import BoundaryError, BudgetExceeded, ResourceUnavailable, VLanchorError
-from vlanchor.types import Anchor, Bridge, Limits, ModelSpec, Part, ResourceProfile, Sample
+from omnianchor.backends.hf import HFBackend, PreparedCandidate, reference_token_logps
+from omnianchor.engine import score
+from omnianchor.errors import BoundaryError, BudgetExceeded, ResourceUnavailable, OmniAnchorError
+from omnianchor.types import Anchor, Bridge, Limits, ModelSpec, Part, ResourceProfile, Sample
 from scripts.verify_native import verify_native
 
 torch = pytest.importorskip("torch")
@@ -155,7 +155,7 @@ def test_reference_shift_mask_and_full_vocabulary_normalization():
     assert result == pytest.approx([math.log(0.6), math.log(0.5)], abs=2e-7)
     assert sum(result) == pytest.approx(math.log(0.3), abs=2e-7)
     item.inputs["attention_mask"][0, 0] = 0
-    with pytest.raises(VLanchorError, match="Padding"):
+    with pytest.raises(OmniAnchorError, match="Padding"):
         reference_token_logps(KnownModel().eval(), item)
 
 
@@ -185,7 +185,7 @@ def test_anchor_order_additions_aliases_and_ids_do_not_change_scores():
         [Anchor(id="extra", surface="equality"), *reversed(anchors)])}
     assert all(first[key] == second[key] for key in first)
     assert first["x"] == first["alias"]
-    with pytest.raises(VLanchorError, match="Duplicate"):
+    with pytest.raises(OmniAnchorError, match="Duplicate"):
         b.score_candidates(SAMPLE, BRIDGE, [anchors[0], anchors[0]])
 
 
@@ -201,7 +201,7 @@ def test_boundary_merge_and_unicode_normalization_fail_closed():
 @pytest.mark.parametrize("surface", ["<|im_end|>", "<think>", "x<|image_pad|>y", "\ud800"])
 def test_reserved_and_invalid_unicode_anchors_rejected(surface):
     result = backend().score_candidates(SAMPLE, BRIDGE, [Anchor.model_construct(id="a", surface=surface)])[0]
-    assert result["status"] == "VLanchorError" and result["raw_logp"] is None
+    assert result["status"] == "OmniAnchorError" and result["raw_logp"] is None
 
 
 @pytest.mark.parametrize("limits, anchor", [

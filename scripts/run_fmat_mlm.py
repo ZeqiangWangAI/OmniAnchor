@@ -7,10 +7,10 @@ from time import perf_counter
 import numpy as np
 import pandas as pd
 
-from vlanchor.baselines import HFSingleTokenMLM
-from vlanchor.campaign import append_event, create_run
-from vlanchor.io import read_json, write_json
-from vlanchor.provenance import file_hash, runtime_manifest
+from omnianchor.baselines import HFSingleTokenMLM
+from omnianchor.campaign import append_event, create_run
+from omnianchor.io import read_json, write_json
+from omnianchor.provenance import file_hash, runtime_manifest
 
 
 def main():

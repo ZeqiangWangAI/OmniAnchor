@@ -8,9 +8,9 @@ from pathlib import Path
 
 import pandas as pd
 
-from vlanchor.io import load_samples, write_json
-from vlanchor.campaign import select_smoke
-from vlanchor.provenance import file_hash
+from omnianchor.io import load_samples, write_json
+from omnianchor.campaign import select_smoke
+from omnianchor.provenance import file_hash
 
 
 def main():

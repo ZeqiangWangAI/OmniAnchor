@@ -6,9 +6,9 @@ import pytest
 from scipy.stats import spearmanr
 from sklearn.metrics import average_precision_score, roc_auc_score
 
-from vlanchor.calibration import fit_reference, to_matrix, transform
-from vlanchor.errors import IncompatibleMeasurement, MissingScores
-from vlanchor.types import ScoreTable
+from omnianchor.calibration import fit_reference, to_matrix, transform
+from omnianchor.errors import IncompatibleMeasurement, MissingScores
+from omnianchor.types import ScoreTable
 
 
 def make_scores(values, *, split="train", prefix="s"):

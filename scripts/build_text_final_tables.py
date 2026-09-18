@@ -6,9 +6,9 @@ from pathlib import Path
 import pandas as pd
 
 from build_verified_paper_tables import emit_table
-from vlanchor.campaign import append_event, create_run
-from vlanchor.io import read_json, write_json
-from vlanchor.provenance import file_hash
+from omnianchor.campaign import append_event, create_run
+from omnianchor.io import read_json, write_json
+from omnianchor.provenance import file_hash
 
 
 def cell(row, value="value", lower="ci_lower", upper="ci_upper"):

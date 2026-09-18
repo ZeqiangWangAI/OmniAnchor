@@ -9,9 +9,9 @@ import scienceplots  # noqa: F401 -- registers the requested scientific styles
 import numpy as np
 import pandas as pd
 
-from vlanchor.campaign import create_run, append_event
-from vlanchor.io import write_json
-from vlanchor.provenance import file_hash
+from omnianchor.campaign import create_run, append_event
+from omnianchor.io import write_json
+from omnianchor.provenance import file_hash
 
 
 def main():
@@ -51,8 +51,8 @@ def main():
     fig.suptitle("FMAT matched external criterion: all stored and newly evaluated methods")
     save(fig, "fmat-matched-validity")
     correlations = pd.read_csv(args.oasis/"direct-correlations.csv")
-    methods = ["VLanchor", "qwen-embedding", "qwen-reranker"]
-    labels = ["VLanchor / Qwen3.5-4B", "Official embedding", "Official reranker"]
+    methods = ["OmniAnchor", "qwen-embedding", "qwen-reranker"]
+    labels = ["OmniAnchor / Qwen3.5-4B", "Official embedding", "Official reranker"]
     colors = ["#176B87", "#929DA6", "#B16A36"]
     fig, axes = plt.subplots(1, 2, figsize=(10, 3.4), sharey=True, layout="constrained")
     for ax, dimension, title in zip(axes, ["V", "A"], ["Valence", "Arousal"]):
