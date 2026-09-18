@@ -1,0 +1,8 @@
+# Relation `associated_with`, Simplified Chinese. One wording, as used in the Surrey demo.
+# Chinese and English packs are independent instruments; shared IDs do not align scales.
+name: associated_zh
+bridges:
+- id: associated_zh_1
+  relation: associated_with
+  language: zh-Hans
+  prefix: "与这份材料相关的一个概念是：\n"

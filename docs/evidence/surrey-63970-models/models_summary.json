@@ -1,0 +1,354 @@
+{
+  "purpose": "multi_model_software_smoke_not_construct_validation",
+  "runtime": {
+    "python": "3.11.15",
+    "platform": "Linux-4.18.0-553.8.1.el8_10.x86_64-x86_64-with-glibc2.28",
+    "packages": {
+      "numpy": "2.4.4",
+      "pandas": "3.0.2",
+      "scipy": "1.17.1",
+      "scikit-learn": "1.8.0",
+      "torch": "2.9.0+cu128",
+      "transformers": "5.18.0.dev0",
+      "tokenizers": "0.23.2",
+      "accelerate": "1.13.0",
+      "av": "18.1.0",
+      "Pillow": "12.1.1"
+    }
+  },
+  "models": {
+    "qwen3.5-4b": {
+      "status": "passed",
+      "alias": "qwen3.5-4b",
+      "adapter": "qwen3_5",
+      "adapter_kind": "native_multimodal",
+      "model": {
+        "backend": "hf",
+        "id": "Qwen/Qwen3.5-4B",
+        "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+        "device": "cuda",
+        "precision": "bf16",
+        "attention_implementation": null,
+        "adapter": "qwen3_5",
+        "turn_end_token": "<|im_end|>",
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        },
+        "adapter_kind": "native_multimodal",
+        "scoring_policy": "native-strict-v1",
+        "injected_test_runtime": false,
+        "resources": {
+          "image": {
+            "min_pixels": 65536,
+            "max_pixels": 262144
+          },
+          "video": {
+            "sampled_frames": 8,
+            "sampling": "uniform",
+            "max_pixels_per_frame": 65536
+          },
+          "limits": {
+            "input_text_tokens": 2048,
+            "anchor_continuation_tokens": 32,
+            "total_postprocessor_tokens": 8192,
+            "implicit_truncation": false
+          }
+        },
+        "system_prompt": null,
+        "shared_prefill_requested": false,
+        "multi_token_cache": false,
+        "torch_version": "2.9.0+cu128",
+        "transformers_version": "5.18.0.dev0",
+        "transformers_source_revision": "4815a0a6a064214f2d8208c094464a5a6b76ca8d",
+        "processor_revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+        "tokenizers_version": "0.23.2",
+        "pillow_version": "12.1.1",
+        "causal_conv1d_version": null,
+        "flash_linear_attention_version": null,
+        "av_version": "18.1.0"
+      },
+      "elapsed_seconds": 97.53090514056385,
+      "score_items_text": 32,
+      "cache_hits_replay": 32,
+      "turn_terminated": {
+        "raw_logp": -16.30108952522278,
+        "token_count": 3,
+        "prefix_raw_logp": -14.433719038963318
+      },
+      "image": {
+        "supported": true,
+        "statuses": [
+          "ok"
+        ],
+        "errors": []
+      },
+      "native_verification": {
+        "selected_vs_full": true,
+        "shared_prefill": "not_run",
+        "modality_state": true
+      },
+      "raw_logp_range": [
+        -25.444499969482422,
+        -6.355865018907934
+      ],
+      "prefix_token_count_last": 25,
+      "verification_sequence_lengths": [
+        27,
+        27
+      ],
+      "peak_memory_bytes": 9128637952,
+      "gpu": "NVIDIA RTX A5000"
+    },
+    "qwen3-vl-4b": {
+      "status": "passed",
+      "alias": "qwen3-vl-4b",
+      "adapter": "qwen3_vl",
+      "adapter_kind": "native_multimodal",
+      "model": {
+        "backend": "hf",
+        "id": "Qwen/Qwen3-VL-4B-Instruct",
+        "revision": "ebb281ec70b05090aa6165b016eac8ec08e71b17",
+        "device": "cuda",
+        "precision": "bf16",
+        "attention_implementation": null,
+        "adapter": "qwen3_vl",
+        "turn_end_token": "<|im_end|>",
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        },
+        "adapter_kind": "native_multimodal",
+        "scoring_policy": "native-strict-v1",
+        "injected_test_runtime": false,
+        "resources": {
+          "image": {
+            "min_pixels": 65536,
+            "max_pixels": 262144
+          },
+          "video": {
+            "sampled_frames": 8,
+            "sampling": "uniform",
+            "max_pixels_per_frame": 65536
+          },
+          "limits": {
+            "input_text_tokens": 2048,
+            "anchor_continuation_tokens": 32,
+            "total_postprocessor_tokens": 8192,
+            "implicit_truncation": false
+          }
+        },
+        "system_prompt": null,
+        "shared_prefill_requested": false,
+        "multi_token_cache": false,
+        "torch_version": "2.9.0+cu128",
+        "transformers_version": "5.18.0.dev0",
+        "transformers_source_revision": "4815a0a6a064214f2d8208c094464a5a6b76ca8d",
+        "processor_revision": "ebb281ec70b05090aa6165b016eac8ec08e71b17",
+        "tokenizers_version": "0.23.2",
+        "pillow_version": "12.1.1",
+        "causal_conv1d_version": null,
+        "flash_linear_attention_version": null,
+        "av_version": "18.1.0"
+      },
+      "elapsed_seconds": 88.0852072276175,
+      "score_items_text": 32,
+      "cache_hits_replay": 32,
+      "turn_terminated": {
+        "raw_logp": -23.489428378641605,
+        "token_count": 3,
+        "prefix_raw_logp": -14.336135722696781
+      },
+      "image": {
+        "supported": true,
+        "statuses": [
+          "ok"
+        ],
+        "errors": []
+      },
+      "native_verification": {
+        "selected_vs_full": true,
+        "shared_prefill": "not_run",
+        "modality_state": true
+      },
+      "raw_logp_range": [
+        -26.37409496307373,
+        -5.6476932530495105
+      ],
+      "prefix_token_count_last": 20,
+      "verification_sequence_lengths": [
+        22,
+        22
+      ],
+      "peak_memory_bytes": 8897932288,
+      "gpu": "NVIDIA RTX A5000"
+    },
+    "qwen3-4b": {
+      "status": "passed",
+      "alias": "qwen3-4b",
+      "adapter": "qwen3",
+      "adapter_kind": "causal_lm",
+      "model": {
+        "backend": "hf",
+        "id": "Qwen/Qwen3-4B",
+        "revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+        "device": "cuda",
+        "precision": "bf16",
+        "attention_implementation": null,
+        "adapter": "qwen3",
+        "turn_end_token": "<|im_end|>",
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        },
+        "adapter_kind": "causal_lm",
+        "scoring_policy": "native-strict-v1",
+        "injected_test_runtime": false,
+        "resources": {
+          "image": {
+            "min_pixels": 65536,
+            "max_pixels": 262144
+          },
+          "video": {
+            "sampled_frames": 8,
+            "sampling": "uniform",
+            "max_pixels_per_frame": 65536
+          },
+          "limits": {
+            "input_text_tokens": 2048,
+            "anchor_continuation_tokens": 32,
+            "total_postprocessor_tokens": 8192,
+            "implicit_truncation": false
+          }
+        },
+        "system_prompt": null,
+        "shared_prefill_requested": false,
+        "multi_token_cache": false,
+        "torch_version": "2.9.0+cu128",
+        "transformers_version": "5.18.0.dev0",
+        "transformers_source_revision": "4815a0a6a064214f2d8208c094464a5a6b76ca8d",
+        "processor_revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+        "tokenizers_version": "0.23.2",
+        "pillow_version": "12.1.1",
+        "causal_conv1d_version": null,
+        "flash_linear_attention_version": null,
+        "av_version": "18.1.0"
+      },
+      "elapsed_seconds": 67.39135336503386,
+      "score_items_text": 32,
+      "cache_hits_replay": 32,
+      "turn_terminated": {
+        "raw_logp": -38.44411510229111,
+        "token_count": 3,
+        "prefix_raw_logp": -23.708998143672943
+      },
+      "image": {
+        "supported": false,
+        "statuses": [
+          "OmniAnchorError"
+        ],
+        "errors": [
+          "Adapter qwen3 accepts text only; sample 'image-red_square' contains image parts. (accepts text only)"
+        ]
+      },
+      "native_verification": {
+        "selected_vs_full": true,
+        "shared_prefill": "not_run",
+        "modality_state": "not_run"
+      },
+      "raw_logp_range": [
+        -39.411895751953125,
+        -7.154681557425647
+      ],
+      "prefix_token_count_last": 24,
+      "verification_sequence_lengths": [
+        26,
+        26
+      ],
+      "peak_memory_bytes": 8065607680,
+      "gpu": "NVIDIA RTX A5000"
+    },
+    "smollm3-3b": {
+      "status": "passed",
+      "alias": "smollm3-3b",
+      "adapter": "causal_lm",
+      "adapter_kind": "causal_lm",
+      "model": {
+        "backend": "hf",
+        "id": "HuggingFaceTB/SmolLM3-3B",
+        "revision": "a07cc9a04f16550a088caea529712d1d335b0ac1",
+        "device": "cuda",
+        "precision": "bf16",
+        "attention_implementation": null,
+        "adapter": "causal_lm",
+        "turn_end_token": "<|im_end|>",
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        },
+        "adapter_kind": "causal_lm",
+        "scoring_policy": "native-strict-v1",
+        "injected_test_runtime": false,
+        "resources": {
+          "image": {
+            "min_pixels": 65536,
+            "max_pixels": 262144
+          },
+          "video": {
+            "sampled_frames": 8,
+            "sampling": "uniform",
+            "max_pixels_per_frame": 65536
+          },
+          "limits": {
+            "input_text_tokens": 2048,
+            "anchor_continuation_tokens": 32,
+            "total_postprocessor_tokens": 8192,
+            "implicit_truncation": false
+          }
+        },
+        "system_prompt": null,
+        "shared_prefill_requested": false,
+        "multi_token_cache": false,
+        "torch_version": "2.9.0+cu128",
+        "transformers_version": "5.18.0.dev0",
+        "transformers_source_revision": "4815a0a6a064214f2d8208c094464a5a6b76ca8d",
+        "processor_revision": "a07cc9a04f16550a088caea529712d1d335b0ac1",
+        "tokenizers_version": "0.23.2",
+        "pillow_version": "12.1.1",
+        "causal_conv1d_version": null,
+        "flash_linear_attention_version": null,
+        "av_version": "18.1.0"
+      },
+      "elapsed_seconds": 53.02407761476934,
+      "score_items_text": 32,
+      "cache_hits_replay": 32,
+      "turn_terminated": {
+        "raw_logp": -26.682111144065857,
+        "token_count": 3,
+        "prefix_raw_logp": -13.787619352340698
+      },
+      "image": {
+        "supported": false,
+        "statuses": [
+          "OmniAnchorError"
+        ],
+        "errors": [
+          "Adapter causal_lm accepts text only; sample 'image-red_square' contains image parts. (accepts text only)"
+        ]
+      },
+      "native_verification": {
+        "selected_vs_full": true,
+        "shared_prefill": "not_run",
+        "modality_state": "not_run"
+      },
+      "raw_logp_range": [
+        -30.049379348754883,
+        -7.006182802841067
+      ],
+      "prefix_token_count_last": 80,
+      "verification_sequence_lengths": [
+        82,
+        82
+      ],
+      "peak_memory_bytes": 6182855168,
+      "gpu": "NVIDIA RTX A5000"
+    }
+  },
+  "status": "passed"
+}

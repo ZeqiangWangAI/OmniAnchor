@@ -1,0 +1,118 @@
+{
+  "status": "passed",
+  "purpose": "native_implementation_acceptance_not_construct_validation",
+  "model": {
+    "backend": "hf",
+    "id": "Qwen/Qwen3-4B",
+    "revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+    "device": "cuda",
+    "precision": "bf16",
+    "attention_implementation": null,
+    "adapter": "qwen3",
+    "turn_end_token": "<|im_end|>",
+    "chat_template_kwargs": {
+      "enable_thinking": false
+    },
+    "adapter_kind": "causal_lm",
+    "scoring_policy": "native-strict-v1",
+    "injected_test_runtime": false,
+    "resources": {
+      "image": {
+        "min_pixels": 65536,
+        "max_pixels": 262144
+      },
+      "video": {
+        "sampled_frames": 8,
+        "sampling": "uniform",
+        "max_pixels_per_frame": 65536
+      },
+      "limits": {
+        "input_text_tokens": 2048,
+        "anchor_continuation_tokens": 32,
+        "total_postprocessor_tokens": 8192,
+        "implicit_truncation": false
+      }
+    },
+    "system_prompt": null,
+    "shared_prefill_requested": false,
+    "multi_token_cache": false,
+    "torch_version": "2.9.0+cu128",
+    "transformers_version": "5.18.0.dev0",
+    "transformers_source_revision": "4815a0a6a064214f2d8208c094464a5a6b76ca8d",
+    "processor_revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+    "tokenizers_version": "0.23.2",
+    "pillow_version": "12.1.1",
+    "causal_conv1d_version": null,
+    "flash_linear_attention_version": null,
+    "av_version": "18.1.0"
+  },
+  "checks": {
+    "selected_vs_full": {
+      "passed": true,
+      "source": "executed",
+      "normalization_dtype": "float32",
+      "event": "token_prefix",
+      "full_logit_sequence_limit": 1024,
+      "sequence_lengths": [
+        26,
+        26
+      ],
+      "candidates": [
+        {
+          "anchor_id": "freedom",
+          "token_count": 2,
+          "token_ids": [
+            24716,
+            8769
+          ],
+          "selected_token_logps": [
+            -23.99811553955078,
+            -0.14819160103797913
+          ],
+          "full_token_logps": [
+            -23.99811553955078,
+            -0.14819160103797913
+          ],
+          "passed": true,
+          "max_absolute_token_logp_error": 0.0,
+          "token_errors": [
+            0.0,
+            0.0
+          ],
+          "tolerance_nats_per_token": 0.01
+        },
+        {
+          "anchor_id": "blue_circle",
+          "token_count": 2,
+          "token_ids": [
+            12203,
+            12671
+          ],
+          "selected_token_logps": [
+            -17.84186553955078,
+            -5.155953884124756
+          ],
+          "full_token_logps": [
+            -17.84186553955078,
+            -5.155953884124756
+          ],
+          "passed": true,
+          "max_absolute_token_logp_error": 0.0,
+          "token_errors": [
+            0.0,
+            0.0
+          ],
+          "tolerance_nats_per_token": 0.01
+        }
+      ]
+    },
+    "shared_prefill": {
+      "source": "not_run",
+      "reason": "No single-token anchor."
+    },
+    "modality_state": {
+      "source": "not_run",
+      "reason": "No media samples supplied."
+    }
+  }
+}

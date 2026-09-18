@@ -1,0 +1,135 @@
+{
+  "status": "passed",
+  "purpose": "native_implementation_acceptance_not_construct_validation",
+  "model": {
+    "backend": "hf",
+    "id": "Qwen/Qwen3.5-4B",
+    "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+    "device": "cuda",
+    "precision": "bf16",
+    "attention_implementation": null,
+    "adapter": "qwen3_5",
+    "turn_end_token": "<|im_end|>",
+    "chat_template_kwargs": {
+      "enable_thinking": false
+    },
+    "adapter_kind": "native_multimodal",
+    "scoring_policy": "native-strict-v1",
+    "injected_test_runtime": false,
+    "resources": {
+      "image": {
+        "min_pixels": 65536,
+        "max_pixels": 262144
+      },
+      "video": {
+        "sampled_frames": 8,
+        "sampling": "uniform",
+        "max_pixels_per_frame": 65536
+      },
+      "limits": {
+        "input_text_tokens": 2048,
+        "anchor_continuation_tokens": 32,
+        "total_postprocessor_tokens": 8192,
+        "implicit_truncation": false
+      }
+    },
+    "system_prompt": null,
+    "shared_prefill_requested": true,
+    "multi_token_cache": false,
+    "torch_version": "2.9.0+cu128",
+    "transformers_version": "5.18.0.dev0",
+    "transformers_source_revision": "4815a0a6a064214f2d8208c094464a5a6b76ca8d",
+    "processor_revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+    "tokenizers_version": "0.23.2",
+    "pillow_version": "12.1.1",
+    "causal_conv1d_version": null,
+    "flash_linear_attention_version": null,
+    "av_version": "18.1.0"
+  },
+  "checks": {
+    "selected_vs_full": {
+      "passed": true,
+      "source": "executed",
+      "normalization_dtype": "float32",
+      "event": "token_prefix",
+      "full_logit_sequence_limit": 256,
+      "sequence_lengths": [
+        36,
+        36
+      ],
+      "candidates": [
+        {
+          "anchor_id": "freedom",
+          "token_count": 2,
+          "token_ids": [
+            23938,
+            8504
+          ],
+          "selected_token_logps": [
+            -6.590521812438965,
+            -0.007259301375597715
+          ],
+          "full_token_logps": [
+            -6.590521812438965,
+            -0.007259301375597715
+          ],
+          "passed": true,
+          "max_absolute_token_logp_error": 0.0,
+          "token_errors": [
+            0.0,
+            0.0
+          ],
+          "tolerance_nats_per_token": 0.01
+        },
+        {
+          "anchor_id": "blue_circle",
+          "token_count": 2,
+          "token_ids": [
+            11855,
+            12307
+          ],
+          "selected_token_logps": [
+            -15.012396812438965,
+            -9.706880569458008
+          ],
+          "full_token_logps": [
+            -15.012396812438965,
+            -9.706880569458008
+          ],
+          "passed": true,
+          "max_absolute_token_logp_error": 0.0,
+          "token_errors": [
+            0.0,
+            0.0
+          ],
+          "tolerance_nats_per_token": 0.01
+        }
+      ]
+    },
+    "shared_prefill": {
+      "passed": true,
+      "source": "reused_live_demo_evidence",
+      "optimization_status": "disabled",
+      "fallback": "uncached_reference",
+      "runtime_validation": {
+        "max_absolute_token_logp_error": 0.015580177307128906,
+        "tolerance_nats": 0.01,
+        "candidate_count": 1,
+        "passed": false,
+        "enabled": false,
+        "fallback": "uncached_teacher_forcing"
+      },
+      "candidates": []
+    },
+    "modality_state": {
+      "passed": true,
+      "sequence_logp_errors": {
+        "freedom": 0.0,
+        "red": 0.0,
+        "blue_circle": 0.0,
+        "social_justice": 0.0
+      },
+      "source": "reused_live_demo_evidence"
+    }
+  }
+}

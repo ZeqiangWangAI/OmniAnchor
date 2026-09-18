@@ -10,3 +10,5 @@ build/
 data/
 runs/
 .DS_Store
+.venv*/
+logs/

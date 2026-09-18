@@ -1,0 +1,8 @@
+# Text-only Qwen3-4B through the `qwen3` adapter (thinking disabled in the template).
+# Image or video parts fail explicitly; use a multimodal alias for media.
+name: qwen3-4b-text-en
+model: qwen3-4b
+anchors: ../anchors/affect12_en.yaml
+bridges: ../bridges/evokes_emotion_en.yaml
+event: token_prefix
+seed: 42

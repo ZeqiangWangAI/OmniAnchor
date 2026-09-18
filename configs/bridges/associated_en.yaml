@@ -1,0 +1,16 @@
+# Relation `associated_with`, English. Three paraphrases of one relation; a study averages
+# them uniformly. Prefixes end with a newline so the anchor starts a fresh line.
+name: associated_en
+bridges:
+- id: associated_en_1
+  relation: associated_with
+  language: en
+  prefix: "A concept associated with this material is:\n"
+- id: associated_en_2
+  relation: associated_with
+  language: en
+  prefix: "This material is associated with the concept of:\n"
+- id: associated_en_3
+  relation: associated_with
+  language: en
+  prefix: "One concept related to this material is:\n"

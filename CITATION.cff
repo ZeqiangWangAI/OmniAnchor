@@ -1,0 +1,51 @@
+cff-version: 1.2.0
+message: If you use this software, please cite the manuscript below.
+title: "OmniAnchor: measuring researcher-named psychological constructs in text, images and video"
+type: software
+version: 0.2.0
+date-released: "2026-09-18"
+license: Apache-2.0
+repository-code: https://github.com/ZeqiangWangAI/OmniAnchor
+authors:
+  - family-names: Wang
+    given-names: Zeqiang
+    affiliation: University of Surrey
+  - family-names: Qiao
+    given-names: Hanru
+    affiliation: Hebei University
+  - family-names: Zhan
+    given-names: Yu
+    affiliation: Huazhong Agricultural University
+  - family-names: Yue
+    given-names: Yu
+    affiliation: Hong Kong Baptist University
+  - family-names: Chen
+    given-names: Zixi
+    affiliation: New York University Shanghai
+  - family-names: De
+    given-names: Suparna
+    affiliation: University of Surrey
+  - family-names: Xu
+    given-names: Qingwen
+    affiliation: New York University
+preferred-citation:
+  type: article
+  title: "OmniAnchor: measuring researcher-named psychological constructs in text, images and video"
+  journal: Nature Communications
+  year: 2026
+  notes: Submitted.
+  authors:
+    - family-names: Wang
+      given-names: Zeqiang
+    - family-names: Qiao
+      given-names: Hanru
+    - family-names: Zhan
+      given-names: Yu
+    - family-names: Yue
+      given-names: Yu
+    - family-names: Chen
+      given-names: Zixi
+    - family-names: De
+      given-names: Suparna
+    - family-names: Xu
+      given-names: Qingwen

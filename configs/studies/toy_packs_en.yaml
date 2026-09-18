@@ -1,0 +1,13 @@
+# The same study as toy_en.yaml, written with a model alias and packs.
+name: toy-en-packs
+model: toy
+anchors:
+- id: care
+  surface: care
+- id: freedom
+  surface: freedom
+- id: safety
+  surface: safety
+bridges: ../bridges/associated_en.yaml
+event: token_prefix
+seed: 42

@@ -1,0 +1,16 @@
+# `omnianchor run --config configs/pipelines/toy_quickstart.yaml`
+# Measures the example samples with the deterministic toy backend, fits the reference on the
+# samples marked split=train, exports a reference-z matrix and runs two analyses.
+# Replace `study` with a real-model study (configs/studies/qwen35_affect12_en.yaml) on CUDA.
+study: ../studies/toy_packs_en.yaml
+samples: ../../examples/samples.json
+output_dir: ../../runs/toy-quickstart
+cache: ../../runs/cache
+reference:
+  split: train
+export:
+  variant: reference_z
+  missing: error
+analyses:
+- kind: pca
+- kind: network

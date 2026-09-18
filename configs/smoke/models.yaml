@@ -1,0 +1,7 @@
+# Aliases exercised by scripts/run_model_smoke.py on a CUDA node (scripts/hpc/models_smoke.sbatch).
+# Every alias must exist in the packaged registry (src/omnianchor/registry/models.yaml).
+models:
+- qwen3.5-4b
+- qwen3-vl-4b
+- qwen3-4b
+- smollm3-3b

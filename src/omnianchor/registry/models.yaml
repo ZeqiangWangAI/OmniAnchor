@@ -1,0 +1,45 @@
+# Model aliases for `model: <alias>` in study YAML. Every Hugging Face entry pins an
+# immutable 40-character commit; the adapter names the scoring path in backends/adapters.py.
+# `validation` records the Surrey HPC job that ran the native acceptance check with real
+# weights. Aliases without a validation entry can be scored but are not yet evidence-backed.
+toy:
+  backend: toy
+  id: toy
+  revision: v1
+  device: cpu
+  precision: fp32
+  adapter: toy
+  note: Deterministic byte-Markov fixture for software tests; no scientific validity.
+qwen3.5-4b:
+  backend: hf
+  id: Qwen/Qwen3.5-4B
+  revision: 851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a
+  adapter: qwen3_5
+  modalities: [text, image, video]
+  validation: Surrey jobs 44314, 47472, 63446 and 63970; see docs/validation.md
+qwen3-vl-4b:
+  backend: hf
+  id: Qwen/Qwen3-VL-4B-Instruct
+  revision: ebb281ec70b05090aa6165b016eac8ec08e71b17
+  adapter: qwen3_vl
+  modalities: [text, image, video]
+  validation: Surrey jobs 47472 and 63970; see docs/validation.md
+qwen3-4b:
+  backend: hf
+  id: Qwen/Qwen3-4B
+  revision: 1cfa9a7208912126459214e8b04321603b3df60c
+  adapter: qwen3
+  modalities: [text]
+  validation: Surrey job 63970 (2026-09-18); see docs/validation.md
+smollm3-3b:
+  backend: hf
+  id: HuggingFaceTB/SmolLM3-3B
+  revision: a07cc9a04f16550a088caea529712d1d335b0ac1
+  adapter: causal_lm
+  turn_end_token: "<|im_end|>"
+  chat_template_kwargs: {enable_thinking: false}
+  modalities: [text]
+  validation: Surrey job 63970 (2026-09-18); see docs/validation.md
+  note: The published template prepends a long system preamble that includes the current
+    date, so the rendered prefix (and its recorded hash) changes from day to day; pass a
+    system_prompt in the study to fix it.

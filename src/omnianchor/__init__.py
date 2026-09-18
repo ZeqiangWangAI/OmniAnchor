@@ -10,7 +10,7 @@ from .analysis import cluster, compare_groups, semantic_shift, semantic_network
 from .reliability import audit_reliability
 from .optimization import optimize_bridges
 
-__version__ = "0.1.0"
+__version__ = "0.2.0"
 
 __all__ = [
     "Anchor", "Bridge", "CalibrationArtifact", "MeasurementMatrix", "ModelSpec",

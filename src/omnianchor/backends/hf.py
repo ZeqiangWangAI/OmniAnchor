@@ -1,4 +1,8 @@
-"""Strict native Qwen teacher forcing, with an unpadded, uncached reference path."""
+"""Strict native teacher forcing, with an unpadded, uncached reference path.
+
+Model-family differences (class, modalities, template arguments, turn-end token) come
+from ``adapters.py``; the encoding and scoring checks below are the same for every model.
+"""
 
 from __future__ import annotations
 
@@ -13,13 +17,10 @@ from urllib.parse import urlsplit
 
 from ..errors import BoundaryError, BudgetExceeded, ResourceUnavailable, OmniAnchorError
 from ..types import Anchor, Bridge, Event, ModelSpec, ResourceProfile, Sample
+from .adapters import ModelAdapter, TextOnlyProcessor, resolve_adapter
 from .media import FrozenMedia, freeze_media, processor_media_kwargs
 
 
-SUPPORTED_MODELS = {
-    "Qwen/Qwen3.5-4B": "Qwen3_5ForConditionalGeneration",
-    "Qwen/Qwen3-VL-4B-Instruct": "Qwen3VLForConditionalGeneration",
-}
 _MODEL_INPUTS = {
     "input_ids", "attention_mask", "mm_token_type_ids", "pixel_values",
     "pixel_values_videos", "image_grid_thw", "video_grid_thw",
@@ -139,17 +140,40 @@ class HFBackend:
         self.shared_prefill = shared_prefill
         self.shared_prefill_validation: dict[str, Any] | None = None
         self.last_preparation: dict[str, Any] = {}
+        # Without a loaded checkpoint the adapter can only come from the explicit field or
+        # the packaged registry; otherwise it is resolved from config.model_type at load.
+        self.adapter: ModelAdapter | None = None
+        try:
+            self.adapter = resolve_adapter(model_spec)
+        except OmniAnchorError:
+            if self._injected:
+                raise
         if self._injected:
             self._model.eval()
+
+    @property
+    def chat_template_kwargs(self) -> dict[str, Any]:
+        if self.model_spec.chat_template_kwargs is not None:
+            return dict(self.model_spec.chat_template_kwargs)
+        return dict(self.adapter.chat_template_kwargs) if self.adapter else {}
+
+    @property
+    def turn_end_token(self) -> str | None:
+        if self.model_spec.turn_end_token is not None:
+            return self.model_spec.turn_end_token
+        return self.adapter.turn_end_token if self.adapter else None
 
     @property
     def identity(self) -> dict[str, Any]:
         result = {
             "backend": "hf", **self.model_spec.model_dump(),
-            "adapter": "qwen-native-strict-v1", "injected_test_runtime": self._injected,
+            "adapter": self.adapter.name if self.adapter else None,
+            "adapter_kind": self.adapter.kind if self.adapter else None,
+            "scoring_policy": "native-strict-v1", "injected_test_runtime": self._injected,
             "resources": self.resources.model_dump(), "system_prompt": self.system_prompt,
             "shared_prefill_requested": self.shared_prefill,
-            "multi_token_cache": False, "enable_thinking": False,
+            "multi_token_cache": False, "chat_template_kwargs": self.chat_template_kwargs,
+            "turn_end_token": self.turn_end_token,
             "torch_version": _version("torch"), "transformers_version": _version("transformers"),
             "transformers_source_revision": _transformers_source_revision(),
             "processor_revision": self.model_spec.revision,
@@ -165,8 +189,6 @@ class HFBackend:
             return
         torch = _torch()
         spec = self.model_spec
-        if spec.id not in SUPPORTED_MODELS:
-            raise ResourceUnavailable(f"No validated native adapter for {spec.id}.")
         if not re.fullmatch(r"[a-fA-F0-9]{40}", spec.revision):
             raise OmniAnchorError("Real model revisions must be immutable 40-character commit hashes.")
         try:
@@ -188,9 +210,16 @@ class HFBackend:
             import transformers
         except ImportError as exc:
             raise ResourceUnavailable("HF scoring requires transformers: install omnianchor[hf].") from exc
-        cls = getattr(transformers, SUPPORTED_MODELS[spec.id], None)
+        try:
+            config = transformers.AutoConfig.from_pretrained(spec.id, revision=spec.revision)
+        except Exception as exc:
+            raise ResourceUnavailable(f"Cannot read the checkpoint configuration: {exc}") from exc
+        adapter = resolve_adapter(spec, model_type=getattr(config, "model_type", None))
+        cls = getattr(transformers, adapter.model_class, None)
         if cls is None:
-            raise ResourceUnavailable("Installed Transformers lacks this Qwen model architecture.")
+            raise ResourceUnavailable(
+                f"Installed Transformers lacks {adapter.model_class} for adapter {adapter.name}."
+            )
         kwargs: dict[str, Any] = {
             "revision": spec.revision, "dtype": torch.bfloat16 if spec.precision == "bf16"
             else torch.float32, "device_map": {"": f"cuda:{index}"},
@@ -198,13 +227,19 @@ class HFBackend:
         if spec.attention_implementation:
             kwargs["attn_implementation"] = spec.attention_implementation
         try:
-            self._processor = transformers.AutoProcessor.from_pretrained(
-                spec.id, revision=spec.revision,
-            )
+            if adapter.text_only:
+                self._processor = TextOnlyProcessor(transformers.AutoTokenizer.from_pretrained(
+                    spec.id, revision=spec.revision,
+                ))
+            else:
+                self._processor = transformers.AutoProcessor.from_pretrained(
+                    spec.id, revision=spec.revision,
+                )
             self._model = cls.from_pretrained(spec.id, **kwargs).eval()
         except Exception as exc:
             self._model = None
             raise ResourceUnavailable(f"Cannot load the requested CUDA checkpoint: {exc}") from exc
+        self.adapter = adapter
 
     def _encode(self, text: str, frozen: FrozenMedia) -> dict[str, Any]:
         torch = _torch()
@@ -233,7 +268,7 @@ class HFBackend:
             raise OmniAnchorError("Processor unexpectedly padded or masked the sequence.")
         if ids.shape[1] > self.resources.limits.total_postprocessor_tokens:
             raise BudgetExceeded("Full processor-expanded sequence exceeds its token budget.")
-        if frozen.images or frozen.videos:
+        if (frozen.images or frozen.videos) and self.adapter.requires_mm_token_type_ids:
             if "mm_token_type_ids" not in inputs or inputs["mm_token_type_ids"].shape != ids.shape:
                 raise OmniAnchorError("Native multimodal scoring requires matching mm_token_type_ids.")
         for kind, pixel_key, grid_key, max_pixels in (
@@ -290,6 +325,16 @@ class HFBackend:
                 raise _MediaPrefixError(f"Processor changed frozen media field {name}.")
         return n
 
+    def render_prefix(self, frozen: FrozenMedia, bridge: Bridge) -> str:
+        """Official chat template (user turn, generation prompt) followed by the exact bridge."""
+        messages = []
+        if self.system_prompt is not None:
+            messages.append({"role": "system", "content": self.system_prompt})
+        messages.append({"role": "user", "content": frozen.content})
+        return self._processor.apply_chat_template(
+            messages, tokenize=False, add_generation_prompt=True, **self.chat_template_kwargs,
+        ) + bridge.prefix
+
     def _validate_surface(self, surface: str) -> None:
         special = getattr(self._processor.tokenizer, "all_special_tokens", [])
         if any(token and token in surface for token in special) or any(
@@ -319,9 +364,14 @@ class HFBackend:
         if len(continuation) > self.resources.limits.anchor_continuation_tokens:
             raise BudgetExceeded(f"Anchor {anchor.id} exceeds its continuation token budget.")
         if event == "turn_terminated":
-            end_token = "<|im_end|>"
+            end_token = self.turn_end_token
+            if end_token is None:
+                raise OmniAnchorError(
+                    f"Adapter {self.adapter.name} declares no turn-end token; set "
+                    "model.turn_end_token explicitly to score the turn_terminated event."
+                )
             if end_token not in getattr(tokenizer, "all_special_tokens", []):
-                raise OmniAnchorError("Tokenizer does not declare the Qwen turn-end token.")
+                raise OmniAnchorError(f"Tokenizer does not declare the turn-end token {end_token!r}.")
             end_id = tokenizer.convert_tokens_to_ids(end_token)
             terminated = self._encode(prefix_text + anchor.surface + end_token, frozen)
             end_start = self._check_prefix(full, terminated)
@@ -381,18 +431,19 @@ class HFBackend:
             return []
         self._ensure_loaded()
         tokenizer = self._processor.tokenizer
+        unsupported = sorted({part.type for part in sample.parts} - self.adapter.modalities)
+        if unsupported:
+            raise OmniAnchorError(
+                f"Adapter {self.adapter.name} accepts {'/'.join(sorted(self.adapter.modalities))} "
+                f"only; sample {sample.id!r} contains {', '.join(unsupported)} parts."
+                + (" (accepts text only)" if self.adapter.text_only else "")
+            )
         text_count = sum(len(tokenizer.encode(part.text or "", add_special_tokens=False))
                          for part in sample.parts if part.type == "text")
         if text_count > self.resources.limits.input_text_tokens:
             raise BudgetExceeded("Input text exceeds its token budget; it was not truncated.")
         frozen = freeze_media(sample, self.resources)
-        messages = []
-        if self.system_prompt is not None:
-            messages.append({"role": "system", "content": self.system_prompt})
-        messages.append({"role": "user", "content": frozen.content})
-        prefix_text = self._processor.apply_chat_template(
-            messages, tokenize=False, add_generation_prompt=True, enable_thinking=False,
-        ) + bridge.prefix
+        prefix_text = self.render_prefix(frozen, bridge)
         prefix = self._encode(prefix_text, frozen)
         items = []
         failures: dict[str, dict[str, Any]] = {}

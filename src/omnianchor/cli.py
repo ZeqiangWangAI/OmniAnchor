@@ -62,6 +62,15 @@ def parser() -> argparse.ArgumentParser:
     op.add_argument("--variant", default="reference_z")
     op.add_argument("--split", choices=["train"], required=True)
     op.add_argument("--min-class-count", type=int, default=5)
+    run = sub.add_parser("run", help="Run a pipeline YAML: measure, calibrate, export, analyze")
+    run.add_argument("--config", required=True, help="Pipeline YAML; see docs/configuration.md")
+    sub.add_parser("models", help="List model aliases and scoring adapters")
+    vm = sub.add_parser("verify-model", help="Native acceptance check of a study's model on CUDA")
+    vm.add_argument("--config", required=True, help="Study YAML whose model is verified")
+    vm.add_argument("--output", required=True, help="Verification JSON")
+    vm.add_argument("--image", help="Optional local image for the modality-state check")
+    vm.add_argument("--max-full-sequence-tokens", type=int, default=256,
+                    help="Bound on the sequence for which full logits are materialised")
     return p
 
 
@@ -210,15 +219,46 @@ def execute(args) -> dict:
             score_bridge=scorer)
         write_json(args.output, result)
         return {"output": args.output, "status": result.status}
+    if args.command == "run":
+        from .pipeline import run_pipeline
+        return run_pipeline(args.config)
+    if args.command == "models":
+        from .backends.adapters import ADAPTERS
+        from .config import model_registry
+        return {"aliases": model_registry(),
+                "adapters": {name: {"kind": a.kind, "model_types": list(a.model_types),
+                                    "model_class": a.model_class,
+                                    "modalities": sorted(a.modalities),
+                                    "chat_template_kwargs": dict(a.chat_template_kwargs),
+                                    "turn_end_token": a.turn_end_token}
+                             for name, a in ADAPTERS.items()}}
+    if args.command == "verify-model":
+        from .backends import HFBackend
+        from .types import Part, Sample
+        from .verification import verify_native
+        spec = load_spec(args.config)
+        if spec.model.backend != "hf":
+            raise ValueError("verify-model checks real Hugging Face checkpoints only.")
+        backend = HFBackend(spec.model, resources=spec.resources, system_prompt=spec.system_prompt)
+        backend.score_candidates(Sample(id="load", parts=(Part(type="text", text="Load."),)),
+                                 spec.bridges[0], spec.anchors[:1])
+        image = Sample(id="image", parts=(Part(type="image", path=args.image),)) if args.image else None
+        report = verify_native(backend, output=args.output, bridge=spec.bridges[0],
+                               image_sample=image,
+                               max_full_sequence_tokens=args.max_full_sequence_tokens)
+        return {"output": args.output, "status": report["status"],
+                "adapter": backend.identity["adapter"],
+                "failed_items": 0 if report["status"] == "passed" else 1}
     raise ValueError("Unknown command.")
 
 
 def main(argv=None) -> int:
     import json
+    from .errors import OmniAnchorError
     p = parser()
     try:
         result = execute(p.parse_args(argv))
-    except (ValueError, FileNotFoundError) as exc:
+    except (ValueError, FileNotFoundError, OmniAnchorError) as exc:
         p.exit(2, f"omnianchor: {exc}\n")
     print(json.dumps(jsonable(result), ensure_ascii=False, allow_nan=False))
     return 1 if result.get("failed_items", 0) else 0

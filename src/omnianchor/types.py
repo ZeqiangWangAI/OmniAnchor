@@ -95,6 +95,12 @@ class ModelSpec(FrozenModel):
     device: str = "cuda"
     precision: Literal["bf16", "fp32"] = "bf16"
     attention_implementation: str | None = None
+    adapter: str | None = None
+    """Scoring adapter name from ``backends.adapters``; None selects by ``config.model_type``."""
+    turn_end_token: str | None = None
+    """Exact turn-end token for ``turn_terminated``; required when the adapter declares none."""
+    chat_template_kwargs: dict[str, Any] | None = None
+    """Overrides the adapter's chat-template keyword arguments when set."""
 
 
 class ImageBudget(FrozenModel):

@@ -37,7 +37,7 @@ rating rows from the public reproduction package under the recorded provider ter
 Do not include raw `data/`, `runs/`, media directories or source snapshots by a
 recursive packaging rule: they may embed restricted or third-party material.
 
-`docs/REPRODUCTION_PACKAGE.md` specifies the private/public boundary. A final
-shareable package still requires an explicit per-file allowlist and the dataset
-terms audit. This notice is not a declaration that every repository artifact is
+The private evidence archive is selected by an explicit per-file allowlist
+(`scripts/package_allowlist.py`) after a dataset terms audit; it is separate from this
+public repository. This notice is not a declaration that every repository artifact is
 approved for redistribution.

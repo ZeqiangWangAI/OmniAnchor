@@ -1,0 +1,7 @@
+# Twelve affect anchors, three `evokes_emotion` wordings, Qwen3.5-4B (native multimodal).
+name: qwen35-affect12-en
+model: qwen3.5-4b
+anchors: ../anchors/affect12_en.yaml
+bridges: ../bridges/evokes_emotion_en.yaml
+event: token_prefix
+seed: 42

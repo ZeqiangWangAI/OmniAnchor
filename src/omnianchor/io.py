@@ -60,7 +60,11 @@ def read_json(path: str | Path) -> Any:
 
 
 def load_spec(path: str | Path) -> StudySpec:
-    return StudySpec.model_validate(yaml.safe_load(Path(path).read_text(encoding="utf-8")))
+    """Load a study YAML/JSON file; packs and model aliases resolve relative to the file."""
+    from .config import resolve_study_config
+    path = Path(path)
+    raw = yaml.safe_load(path.read_text(encoding="utf-8"))
+    return StudySpec.model_validate(resolve_study_config(raw, path.resolve().parent))
 
 
 def load_samples(path: str | Path) -> list[Sample]:

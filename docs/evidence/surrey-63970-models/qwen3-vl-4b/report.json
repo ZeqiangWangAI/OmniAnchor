@@ -1,0 +1,82 @@
+{
+  "status": "passed",
+  "alias": "qwen3-vl-4b",
+  "adapter": "qwen3_vl",
+  "adapter_kind": "native_multimodal",
+  "model": {
+    "backend": "hf",
+    "id": "Qwen/Qwen3-VL-4B-Instruct",
+    "revision": "ebb281ec70b05090aa6165b016eac8ec08e71b17",
+    "device": "cuda",
+    "precision": "bf16",
+    "attention_implementation": null,
+    "adapter": "qwen3_vl",
+    "turn_end_token": "<|im_end|>",
+    "chat_template_kwargs": {
+      "enable_thinking": false
+    },
+    "adapter_kind": "native_multimodal",
+    "scoring_policy": "native-strict-v1",
+    "injected_test_runtime": false,
+    "resources": {
+      "image": {
+        "min_pixels": 65536,
+        "max_pixels": 262144
+      },
+      "video": {
+        "sampled_frames": 8,
+        "sampling": "uniform",
+        "max_pixels_per_frame": 65536
+      },
+      "limits": {
+        "input_text_tokens": 2048,
+        "anchor_continuation_tokens": 32,
+        "total_postprocessor_tokens": 8192,
+        "implicit_truncation": false
+      }
+    },
+    "system_prompt": null,
+    "shared_prefill_requested": false,
+    "multi_token_cache": false,
+    "torch_version": "2.9.0+cu128",
+    "transformers_version": "5.18.0.dev0",
+    "transformers_source_revision": "4815a0a6a064214f2d8208c094464a5a6b76ca8d",
+    "processor_revision": "ebb281ec70b05090aa6165b016eac8ec08e71b17",
+    "tokenizers_version": "0.23.2",
+    "pillow_version": "12.1.1",
+    "causal_conv1d_version": null,
+    "flash_linear_attention_version": null,
+    "av_version": "18.1.0"
+  },
+  "elapsed_seconds": 88.0852072276175,
+  "score_items_text": 32,
+  "cache_hits_replay": 32,
+  "turn_terminated": {
+    "raw_logp": -23.489428378641605,
+    "token_count": 3,
+    "prefix_raw_logp": -14.336135722696781
+  },
+  "image": {
+    "supported": true,
+    "statuses": [
+      "ok"
+    ],
+    "errors": []
+  },
+  "native_verification": {
+    "selected_vs_full": true,
+    "shared_prefill": "not_run",
+    "modality_state": true
+  },
+  "raw_logp_range": [
+    -26.37409496307373,
+    -5.6476932530495105
+  ],
+  "prefix_token_count_last": 20,
+  "verification_sequence_lengths": [
+    22,
+    22
+  ],
+  "peak_memory_bytes": 8897932288,
+  "gpu": "NVIDIA RTX A5000"
+}

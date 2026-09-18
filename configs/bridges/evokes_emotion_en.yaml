@@ -1,0 +1,15 @@
+# Relation `evokes_emotion`, English, for affect anchor packs (configs/anchors/affect12_en.yaml).
+name: evokes_emotion_en
+bridges:
+- id: evokes_en_1
+  relation: evokes_emotion
+  language: en
+  prefix: "An emotion evoked in the reader by this material is:\n"
+- id: evokes_en_2
+  relation: evokes_emotion
+  language: en
+  prefix: "This material evokes the following emotion in the reader:\n"
+- id: evokes_en_3
+  relation: evokes_emotion
+  language: en
+  prefix: "A feeling this material evokes in the reader is:\n"

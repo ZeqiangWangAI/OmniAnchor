@@ -1,0 +1,168 @@
+{
+  "status": "passed",
+  "purpose": "native_implementation_acceptance_not_construct_validation",
+  "model": {
+    "backend": "hf",
+    "id": "Qwen/Qwen3-VL-4B-Instruct",
+    "revision": "ebb281ec70b05090aa6165b016eac8ec08e71b17",
+    "device": "cuda",
+    "precision": "bf16",
+    "attention_implementation": null,
+    "adapter": "qwen3_vl",
+    "turn_end_token": "<|im_end|>",
+    "chat_template_kwargs": {
+      "enable_thinking": false
+    },
+    "adapter_kind": "native_multimodal",
+    "scoring_policy": "native-strict-v1",
+    "injected_test_runtime": false,
+    "resources": {
+      "image": {
+        "min_pixels": 65536,
+        "max_pixels": 262144
+      },
+      "video": {
+        "sampled_frames": 8,
+        "sampling": "uniform",
+        "max_pixels_per_frame": 65536
+      },
+      "limits": {
+        "input_text_tokens": 2048,
+        "anchor_continuation_tokens": 32,
+        "total_postprocessor_tokens": 8192,
+        "implicit_truncation": false
+      }
+    },
+    "system_prompt": null,
+    "shared_prefill_requested": false,
+    "multi_token_cache": false,
+    "torch_version": "2.9.0+cu128",
+    "transformers_version": "5.18.0.dev0",
+    "transformers_source_revision": "4815a0a6a064214f2d8208c094464a5a6b76ca8d",
+    "processor_revision": "ebb281ec70b05090aa6165b016eac8ec08e71b17",
+    "tokenizers_version": "0.23.2",
+    "pillow_version": "12.1.1",
+    "causal_conv1d_version": null,
+    "flash_linear_attention_version": null,
+    "av_version": "18.1.0"
+  },
+  "checks": {
+    "selected_vs_full": {
+      "passed": true,
+      "source": "executed",
+      "normalization_dtype": "float32",
+      "event": "token_prefix",
+      "full_logit_sequence_limit": 1024,
+      "sequence_lengths": [
+        22,
+        22
+      ],
+      "candidates": [
+        {
+          "anchor_id": "freedom",
+          "token_count": 2,
+          "token_ids": [
+            24716,
+            8769
+          ],
+          "selected_token_logps": [
+            -13.443825721740723,
+            -0.11620578914880753
+          ],
+          "full_token_logps": [
+            -13.443825721740723,
+            -0.11620578914880753
+          ],
+          "passed": true,
+          "max_absolute_token_logp_error": 0.0,
+          "token_errors": [
+            0.0,
+            0.0
+          ],
+          "tolerance_nats_per_token": 0.01
+        },
+        {
+          "anchor_id": "blue_circle",
+          "token_count": 2,
+          "token_ids": [
+            12203,
+            12671
+          ],
+          "selected_token_logps": [
+            -11.318825721740723,
+            -0.6561232805252075
+          ],
+          "full_token_logps": [
+            -11.318825721740723,
+            -0.6561232805252075
+          ],
+          "passed": true,
+          "max_absolute_token_logp_error": 0.0,
+          "token_errors": [
+            0.0,
+            0.0
+          ],
+          "tolerance_nats_per_token": 0.01
+        }
+      ]
+    },
+    "shared_prefill": {
+      "source": "not_run",
+      "reason": "No single-token anchor."
+    },
+    "modality_state": {
+      "passed": true,
+      "source": "executed",
+      "order": [
+        "text",
+        "image",
+        "text"
+      ],
+      "comparisons": [
+        {
+          "modality": "image",
+          "grid": [
+            [
+              1,
+              16,
+              16
+            ]
+          ],
+          "media": [
+            {
+              "type": "image",
+              "path": "/var/tmp/zw00924/omnianchor/63970/results/stimuli/red_square.png",
+              "width": 256,
+              "height": 256,
+              "rgb_sha256": "408a29ff0dd892603083bde7623cb700b75a7c47894ff1443d4dd2f9ffa27bd5",
+              "orientation": "exif_transposed"
+            }
+          ],
+          "passed": true,
+          "candidates": [
+            {
+              "anchor_id": "freedom",
+              "passed": true,
+              "max_absolute_token_logp_error": 0.0,
+              "token_errors": [
+                0.0,
+                0.0
+              ],
+              "tolerance_nats_per_token": 0.01
+            },
+            {
+              "anchor_id": "blue_circle",
+              "passed": true,
+              "max_absolute_token_logp_error": 0.0,
+              "token_errors": [
+                0.0,
+                0.0
+              ],
+              "tolerance_nats_per_token": 0.01
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
