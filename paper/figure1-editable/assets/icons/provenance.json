@@ -1,0 +1,47 @@
+{
+  "library": "Lucide",
+  "repository": "https://github.com/lucide-icons/lucide",
+  "commit": "d9f72b25256fc57fabf9bfac0972fb97aa84aedd",
+  "retrieved_utc": "2026-09-18",
+  "license": "ISC, with MIT for inherited Feather icons; see verbatim LICENSE",
+  "license_url": "https://raw.githubusercontent.com/lucide-icons/lucide/d9f72b25256fc57fabf9bfac0972fb97aa84aedd/LICENSE",
+  "icons": [
+    {
+      "name": "file-text",
+      "path": "file-text.svg",
+      "source": "https://raw.githubusercontent.com/lucide-icons/lucide/d9f72b25256fc57fabf9bfac0972fb97aa84aedd/icons/file-text.svg",
+      "upstream_path": "icons/file-text.svg"
+    },
+    {
+      "name": "image",
+      "path": "image.svg",
+      "source": "https://raw.githubusercontent.com/lucide-icons/lucide/d9f72b25256fc57fabf9bfac0972fb97aa84aedd/icons/image.svg",
+      "upstream_path": "icons/image.svg"
+    },
+    {
+      "name": "panels-top-left",
+      "path": "panels-top-left.svg",
+      "source": "https://raw.githubusercontent.com/lucide-icons/lucide/d9f72b25256fc57fabf9bfac0972fb97aa84aedd/icons/panels-top-left.svg",
+      "upstream_path": "icons/panels-top-left.svg"
+    },
+    {
+      "name": "film",
+      "path": "film.svg",
+      "source": "https://raw.githubusercontent.com/lucide-icons/lucide/d9f72b25256fc57fabf9bfac0972fb97aa84aedd/icons/film.svg",
+      "upstream_path": "icons/film.svg"
+    },
+    {
+      "name": "lock-keyhole",
+      "path": "lock-keyhole.svg",
+      "source": "https://raw.githubusercontent.com/lucide-icons/lucide/d9f72b25256fc57fabf9bfac0972fb97aa84aedd/icons/lock-keyhole.svg",
+      "upstream_path": "icons/lock-keyhole.svg"
+    },
+    {
+      "name": "image-plus",
+      "path": "image-plus.svg",
+      "source": "https://raw.githubusercontent.com/lucide-icons/lucide/d9f72b25256fc57fabf9bfac0972fb97aa84aedd/icons/image-plus.svg",
+      "upstream_path": "icons/image-plus.svg"
+    }
+  ],
+  "integration_note": "Inline SVG children inside transformed groups; retain outline strokes and editable geometry. Original viewBox is 0 0 24 24."
+}

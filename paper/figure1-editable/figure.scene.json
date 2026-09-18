@@ -1,0 +1,5852 @@
+{
+  "format": "editable-svg-scene-1",
+  "canvas": {
+    "width": 1536,
+    "height": 1072
+  },
+  "source": "user-provided raster figure",
+  "scene": {
+    "tag": "{http://www.w3.org/2000/svg}svg",
+    "attributes": {
+      "width": "1536",
+      "height": "1072",
+      "viewBox": "0 0 1536 1072",
+      "version": "1.1",
+      "font-family": "'Times New Roman', Times, 'Liberation Serif', serif",
+      "shape-rendering": "geometricPrecision",
+      "text-rendering": "optimizeLegibility"
+    },
+    "text": null,
+    "tail": null,
+    "children": [
+      {
+        "tag": "{http://www.w3.org/2000/svg}title",
+        "attributes": {},
+        "text": "OmniAnchor: scored event, named coordinates, and two validation routes",
+        "tail": null,
+        "children": []
+      },
+      {
+        "tag": "{http://www.w3.org/2000/svg}desc",
+        "attributes": {},
+        "text": "Editable reconstruction of the user-provided figure. All text, formula components, tables, connectors, icons and scatter points are vector objects. Two editable image objects show the documented OASIS I466 Lake 12 photograph. Scores and scatter points remain conceptual, not empirical measurements.",
+        "tail": null,
+        "children": []
+      },
+      {
+        "tag": "{http://www.w3.org/2000/svg}defs",
+        "attributes": {},
+        "text": null,
+        "tail": null,
+        "children": [
+          {
+            "tag": "{http://www.w3.org/2000/svg}linearGradient",
+            "attributes": {
+              "id": "panel-fill",
+              "x1": "0%",
+              "y1": "0%",
+              "x2": "100%",
+              "y2": "100%"
+            },
+            "text": null,
+            "tail": null,
+            "children": [
+              {
+                "tag": "{http://www.w3.org/2000/svg}stop",
+                "attributes": {
+                  "offset": "0%",
+                  "stop-color": "#fbfcfd"
+                },
+                "text": null,
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}stop",
+                "attributes": {
+                  "offset": "100%",
+                  "stop-color": "#f4f6f8"
+                },
+                "text": null,
+                "tail": null,
+                "children": []
+              }
+            ]
+          },
+          {
+            "tag": "{http://www.w3.org/2000/svg}linearGradient",
+            "attributes": {
+              "id": "model-fill",
+              "x1": "0%",
+              "y1": "0%",
+              "x2": "100%",
+              "y2": "100%"
+            },
+            "text": null,
+            "tail": null,
+            "children": [
+              {
+                "tag": "{http://www.w3.org/2000/svg}stop",
+                "attributes": {
+                  "offset": "0%",
+                  "stop-color": "#fafdff"
+                },
+                "text": null,
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}stop",
+                "attributes": {
+                  "offset": "100%",
+                  "stop-color": "#f1f7fe"
+                },
+                "text": null,
+                "tail": null,
+                "children": []
+              }
+            ]
+          },
+          {
+            "tag": "{http://www.w3.org/2000/svg}linearGradient",
+            "attributes": {
+              "id": "table-head",
+              "x1": "0%",
+              "y1": "0%",
+              "x2": "100%",
+              "y2": "100%"
+            },
+            "text": null,
+            "tail": null,
+            "children": [
+              {
+                "tag": "{http://www.w3.org/2000/svg}stop",
+                "attributes": {
+                  "offset": "0%",
+                  "stop-color": "#f6f8fa"
+                },
+                "text": null,
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}stop",
+                "attributes": {
+                  "offset": "100%",
+                  "stop-color": "#e7edf2"
+                },
+                "text": null,
+                "tail": null,
+                "children": []
+              }
+            ]
+          },
+          {
+            "tag": "{http://www.w3.org/2000/svg}linearGradient",
+            "attributes": {
+              "id": "token-fill",
+              "x1": "0%",
+              "y1": "0%",
+              "x2": "100%",
+              "y2": "100%"
+            },
+            "text": null,
+            "tail": null,
+            "children": [
+              {
+                "tag": "{http://www.w3.org/2000/svg}stop",
+                "attributes": {
+                  "offset": "0%",
+                  "stop-color": "#f1f6fb"
+                },
+                "text": null,
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}stop",
+                "attributes": {
+                  "offset": "100%",
+                  "stop-color": "#dce6ef"
+                },
+                "text": null,
+                "tail": null,
+                "children": []
+              }
+            ]
+          },
+          {
+            "tag": "{http://www.w3.org/2000/svg}linearGradient",
+            "attributes": {
+              "id": "continuation-fill",
+              "x1": "0%",
+              "y1": "0%",
+              "x2": "100%",
+              "y2": "100%"
+            },
+            "text": null,
+            "tail": null,
+            "children": [
+              {
+                "tag": "{http://www.w3.org/2000/svg}stop",
+                "attributes": {
+                  "offset": "0%",
+                  "stop-color": "#ecfaff"
+                },
+                "text": null,
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}stop",
+                "attributes": {
+                  "offset": "100%",
+                  "stop-color": "#bfddfb"
+                },
+                "text": null,
+                "tail": null,
+                "children": []
+              }
+            ]
+          },
+          {
+            "tag": "{http://www.w3.org/2000/svg}marker",
+            "attributes": {
+              "id": "arrow",
+              "markerWidth": "8",
+              "markerHeight": "8",
+              "refX": "6",
+              "refY": "4",
+              "orient": "auto",
+              "markerUnits": "userSpaceOnUse"
+            },
+            "text": null,
+            "tail": null,
+            "children": [
+              {
+                "tag": "{http://www.w3.org/2000/svg}path",
+                "attributes": {
+                  "d": "M 1 1 L 6 4 L 1 7",
+                  "fill": "none",
+                  "stroke": "#080d16",
+                  "stroke-width": "1.6",
+                  "stroke-linecap": "round",
+                  "stroke-linejoin": "round"
+                },
+                "text": null,
+                "tail": null,
+                "children": []
+              }
+            ]
+          },
+          {
+            "tag": "{http://www.w3.org/2000/svg}marker",
+            "attributes": {
+              "id": "arrow-start",
+              "markerWidth": "8",
+              "markerHeight": "8",
+              "refX": "1",
+              "refY": "4",
+              "orient": "auto",
+              "markerUnits": "userSpaceOnUse"
+            },
+            "text": null,
+            "tail": null,
+            "children": [
+              {
+                "tag": "{http://www.w3.org/2000/svg}path",
+                "attributes": {
+                  "d": "M 6 1 L 1 4 L 6 7",
+                  "fill": "none",
+                  "stroke": "#080d16",
+                  "stroke-width": "1.6",
+                  "stroke-linecap": "round",
+                  "stroke-linejoin": "round"
+                },
+                "text": null,
+                "tail": null,
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "{http://www.w3.org/2000/svg}g",
+        "attributes": {
+          "id": "background-and-dividers",
+          "{http://www.inkscape.org/namespaces/inkscape}label": "background and dividers",
+          "{http://www.inkscape.org/namespaces/inkscape}groupmode": "layer"
+        },
+        "text": null,
+        "tail": null,
+        "children": [
+          {
+            "tag": "{http://www.w3.org/2000/svg}rect",
+            "attributes": {
+              "x": "0",
+              "y": "0",
+              "width": "1536",
+              "height": "1072",
+              "rx": "0",
+              "fill": "white",
+              "stroke": "none",
+              "stroke-width": "1"
+            },
+            "text": null,
+            "tail": null,
+            "children": []
+          },
+          {
+            "tag": "{http://www.w3.org/2000/svg}line",
+            "attributes": {
+              "x1": "20",
+              "y1": "461",
+              "x2": "1516",
+              "y2": "461",
+              "stroke": "#e0e2e5",
+              "stroke-width": "5"
+            },
+            "text": null,
+            "tail": null,
+            "children": []
+          },
+          {
+            "tag": "{http://www.w3.org/2000/svg}line",
+            "attributes": {
+              "x1": "20",
+              "y1": "744",
+              "x2": "1516",
+              "y2": "744",
+              "stroke": "#e0e2e5",
+              "stroke-width": "5"
+            },
+            "text": null,
+            "tail": null,
+            "children": []
+          }
+        ]
+      },
+      {
+        "tag": "{http://www.w3.org/2000/svg}g",
+        "attributes": {
+          "id": "a-the-scored-event",
+          "{http://www.inkscape.org/namespaces/inkscape}label": "a the scored event",
+          "{http://www.inkscape.org/namespaces/inkscape}groupmode": "layer"
+        },
+        "text": null,
+        "tail": null,
+        "children": [
+          {
+            "tag": "{http://www.w3.org/2000/svg}text",
+            "attributes": {
+              "x": "26",
+              "y": "47",
+              "font-size": "51",
+              "fill": "#080d16",
+              "text-anchor": "start",
+              "font-weight": "bold"
+            },
+            "text": "a",
+            "tail": null,
+            "children": []
+          },
+          {
+            "tag": "{http://www.w3.org/2000/svg}text",
+            "attributes": {
+              "x": "80",
+              "y": "47",
+              "font-size": "36",
+              "fill": "#080d16",
+              "text-anchor": "start",
+              "font-weight": "bold"
+            },
+            "text": "The scored event",
+            "tail": null,
+            "children": []
+          },
+          {
+            "tag": "{http://www.w3.org/2000/svg}g",
+            "attributes": {
+              "id": "supported-input-types",
+              "{http://www.inkscape.org/namespaces/inkscape}label": "supported input types"
+            },
+            "text": null,
+            "tail": null,
+            "children": [
+              {
+                "tag": "{http://www.w3.org/2000/svg}rect",
+                "attributes": {
+                  "x": "25",
+                  "y": "67",
+                  "width": "290",
+                  "height": "107",
+                  "rx": "4",
+                  "fill": "url(#panel-fill)",
+                  "stroke": "#dbe2e9",
+                  "stroke-width": "1"
+                },
+                "text": null,
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}text",
+                "attributes": {
+                  "x": "37",
+                  "y": "88",
+                  "font-size": "15.5",
+                  "fill": "#080d16",
+                  "text-anchor": "start"
+                },
+                "text": "Supported input types (single input ",
+                "tail": null,
+                "children": [
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}tspan",
+                    "attributes": {
+                      "font-style": "italic"
+                    },
+                    "text": "x",
+                    "tail": ")",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}g",
+                "attributes": {
+                  "id": "icon-file-text-43",
+                  "{http://www.inkscape.org/namespaces/inkscape}label": "icon file text 43",
+                  "transform": "translate(43 104) scale(1.5416666666666667)",
+                  "fill": "none",
+                  "stroke": "#080d16",
+                  "stroke-width": "1.45",
+                  "stroke-linecap": "round",
+                  "stroke-linejoin": "round"
+                },
+                "text": null,
+                "tail": null,
+                "children": [
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}path",
+                    "attributes": {
+                      "d": "M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"
+                    },
+                    "text": null,
+                    "tail": "\n  ",
+                    "children": []
+                  },
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}path",
+                    "attributes": {
+                      "d": "M14 2v5a1 1 0 0 0 1 1h5"
+                    },
+                    "text": null,
+                    "tail": "\n  ",
+                    "children": []
+                  },
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}path",
+                    "attributes": {
+                      "d": "M10 9H8"
+                    },
+                    "text": null,
+                    "tail": "\n  ",
+                    "children": []
+                  },
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}path",
+                    "attributes": {
+                      "d": "M16 13H8"
+                    },
+                    "text": null,
+                    "tail": "\n  ",
+                    "children": []
+                  },
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}path",
+                    "attributes": {
+                      "d": "M16 17H8"
+                    },
+                    "text": null,
+                    "tail": "\n",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}g",
+                "attributes": {
+                  "id": "icon-image-103",
+                  "{http://www.inkscape.org/namespaces/inkscape}label": "icon image 103",
+                  "transform": "translate(103 104) scale(1.625)",
+                  "fill": "none",
+                  "stroke": "#080d16",
+                  "stroke-width": "1.5",
+                  "stroke-linecap": "round",
+                  "stroke-linejoin": "round"
+                },
+                "text": null,
+                "tail": null,
+                "children": [
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}rect",
+                    "attributes": {
+                      "width": "18",
+                      "height": "18",
+                      "x": "3",
+                      "y": "3",
+                      "rx": "2",
+                      "ry": "2"
+                    },
+                    "text": null,
+                    "tail": "\n  ",
+                    "children": []
+                  },
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}circle",
+                    "attributes": {
+                      "cx": "9",
+                      "cy": "9",
+                      "r": "2"
+                    },
+                    "text": null,
+                    "tail": "\n  ",
+                    "children": []
+                  },
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}path",
+                    "attributes": {
+                      "d": "m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"
+                    },
+                    "text": null,
+                    "tail": "\n",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}g",
+                "attributes": {
+                  "id": "icon-image-and-text",
+                  "{http://www.inkscape.org/namespaces/inkscape}label": "icon image and text"
+                },
+                "text": null,
+                "tail": null,
+                "children": [
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}rect",
+                    "attributes": {
+                      "x": "173",
+                      "y": "109",
+                      "width": "49",
+                      "height": "30",
+                      "rx": "0",
+                      "fill": "none",
+                      "stroke": "#080d16",
+                      "stroke-width": "1.8"
+                    },
+                    "text": null,
+                    "tail": null,
+                    "children": []
+                  },
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}g",
+                    "attributes": {
+                      "id": "icon-image-175",
+                      "{http://www.inkscape.org/namespaces/inkscape}label": "icon image 175",
+                      "transform": "translate(175 114) scale(0.9583333333333334)",
+                      "fill": "none",
+                      "stroke": "#080d16",
+                      "stroke-width": "1.7",
+                      "stroke-linecap": "round",
+                      "stroke-linejoin": "round"
+                    },
+                    "text": null,
+                    "tail": null,
+                    "children": [
+                      {
+                        "tag": "{http://www.w3.org/2000/svg}rect",
+                        "attributes": {
+                          "width": "18",
+                          "height": "18",
+                          "x": "3",
+                          "y": "3",
+                          "rx": "2",
+                          "ry": "2"
+                        },
+                        "text": null,
+                        "tail": "\n  ",
+                        "children": []
+                      },
+                      {
+                        "tag": "{http://www.w3.org/2000/svg}circle",
+                        "attributes": {
+                          "cx": "9",
+                          "cy": "9",
+                          "r": "2"
+                        },
+                        "text": null,
+                        "tail": "\n  ",
+                        "children": []
+                      },
+                      {
+                        "tag": "{http://www.w3.org/2000/svg}path",
+                        "attributes": {
+                          "d": "m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"
+                        },
+                        "text": null,
+                        "tail": "\n",
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}line",
+                    "attributes": {
+                      "x1": "201",
+                      "y1": "117",
+                      "x2": "217",
+                      "y2": "117",
+                      "stroke": "#080d16",
+                      "stroke-width": "1.6"
+                    },
+                    "text": null,
+                    "tail": null,
+                    "children": []
+                  },
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}line",
+                    "attributes": {
+                      "x1": "201",
+                      "y1": "123",
+                      "x2": "217",
+                      "y2": "123",
+                      "stroke": "#080d16",
+                      "stroke-width": "1.6"
+                    },
+                    "text": null,
+                    "tail": null,
+                    "children": []
+                  },
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}line",
+                    "attributes": {
+                      "x1": "201",
+                      "y1": "129",
+                      "x2": "217",
+                      "y2": "129",
+                      "stroke": "#080d16",
+                      "stroke-width": "1.6"
+                    },
+                    "text": null,
+                    "tail": null,
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}g",
+                "attributes": {
+                  "id": "icon-film-253",
+                  "{http://www.inkscape.org/namespaces/inkscape}label": "icon film 253",
+                  "transform": "translate(253 104) scale(1.6666666666666667)",
+                  "fill": "none",
+                  "stroke": "#080d16",
+                  "stroke-width": "1.6",
+                  "stroke-linecap": "round",
+                  "stroke-linejoin": "round"
+                },
+                "text": null,
+                "tail": null,
+                "children": [
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}rect",
+                    "attributes": {
+                      "width": "18",
+                      "height": "18",
+                      "x": "3",
+                      "y": "3",
+                      "rx": "2"
+                    },
+                    "text": null,
+                    "tail": "\n  ",
+                    "children": []
+                  },
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}path",
+                    "attributes": {
+                      "d": "M7 3v18"
+                    },
+                    "text": null,
+                    "tail": "\n  ",
+                    "children": []
+                  },
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}path",
+                    "attributes": {
+                      "d": "M3 7.5h4"
+                    },
+                    "text": null,
+                    "tail": "\n  ",
+                    "children": []
+                  },
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}path",
+                    "attributes": {
+                      "d": "M3 12h18"
+                    },
+                    "text": null,
+                    "tail": "\n  ",
+                    "children": []
+                  },
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}path",
+                    "attributes": {
+                      "d": "M3 16.5h4"
+                    },
+                    "text": null,
+                    "tail": "\n  ",
+                    "children": []
+                  },
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}path",
+                    "attributes": {
+                      "d": "M17 3v18"
+                    },
+                    "text": null,
+                    "tail": "\n  ",
+                    "children": []
+                  },
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}path",
+                    "attributes": {
+                      "d": "M17 7.5h4"
+                    },
+                    "text": null,
+                    "tail": "\n  ",
+                    "children": []
+                  },
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}path",
+                    "attributes": {
+                      "d": "M17 16.5h4"
+                    },
+                    "text": null,
+                    "tail": "\n",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}path",
+                "attributes": {
+                  "d": "M 270 116 L 270 129 L 279 122.5 Z",
+                  "fill": "#080d16",
+                  "stroke": "#080d16",
+                  "stroke-width": "0"
+                },
+                "text": null,
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}text",
+                "attributes": {
+                  "x": "62",
+                  "y": "160",
+                  "font-size": "14",
+                  "fill": "#080d16",
+                  "text-anchor": "middle"
+                },
+                "text": "Text",
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}text",
+                "attributes": {
+                  "x": "123",
+                  "y": "160",
+                  "font-size": "14",
+                  "fill": "#080d16",
+                  "text-anchor": "middle"
+                },
+                "text": "Image",
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}text",
+                "attributes": {
+                  "x": "198",
+                  "y": "160",
+                  "font-size": "14",
+                  "fill": "#080d16",
+                  "text-anchor": "middle"
+                },
+                "text": "Image + text",
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}text",
+                "attributes": {
+                  "x": "274",
+                  "y": "160",
+                  "font-size": "14",
+                  "fill": "#080d16",
+                  "text-anchor": "middle"
+                },
+                "text": "Video",
+                "tail": null,
+                "children": []
+              }
+            ]
+          },
+          {
+            "tag": "{http://www.w3.org/2000/svg}g",
+            "attributes": {
+              "id": "material-x-real-OASIS-stimulus",
+              "{http://www.inkscape.org/namespaces/inkscape}label": "material x real OASIS stimulus"
+            },
+            "text": null,
+            "tail": null,
+            "children": [
+              {
+                "tag": "{http://www.w3.org/2000/svg}rect",
+                "attributes": {
+                  "x": "25",
+                  "y": "193",
+                  "width": "273",
+                  "height": "233",
+                  "rx": "4",
+                  "fill": "white",
+                  "stroke": "#dbe2e9",
+                  "stroke-width": "1"
+                },
+                "text": null,
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}text",
+                "attributes": {
+                  "x": "38",
+                  "y": "215",
+                  "font-size": "19",
+                  "fill": "#080d16",
+                  "text-anchor": "start",
+                  "font-weight": "bold"
+                },
+                "text": "Material ",
+                "tail": null,
+                "children": [
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}tspan",
+                    "attributes": {
+                      "font-style": "italic"
+                    },
+                    "text": "x",
+                    "tail": null,
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}g",
+                "attributes": {
+                  "id": "OASIS-stimulus-in-scored-event",
+                  "{http://www.inkscape.org/namespaces/inkscape}label": "OASIS stimulus in scored event"
+                },
+                "text": null,
+                "tail": null,
+                "children": [
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}title",
+                    "attributes": {},
+                    "text": "OASIS stimulus I466, Lake 12; photograph by James Wheeler. See SOURCES.md.",
+                    "tail": null,
+                    "children": []
+                  },
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}image",
+                    "attributes": {
+                      "x": "38",
+                      "y": "224",
+                      "width": "245",
+                      "height": "154",
+                      "preserveAspectRatio": "xMidYMid slice",
+                      "id": "OASIS-stimulus-in-scored-event-replaceable-photo",
+                      "{http://www.w3.org/1999/xlink}href": "@asset:assets/oasis_I466_Lake_12_native.jpg"
+                    },
+                    "text": null,
+                    "tail": null,
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}text",
+                "attributes": {
+                  "x": "38",
+                  "y": "397",
+                  "font-size": "15.5",
+                  "fill": "#080d16",
+                  "text-anchor": "start"
+                },
+                "text": "OASIS · Lake 12 (I466)",
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}text",
+                "attributes": {
+                  "x": "38",
+                  "y": "415",
+                  "font-size": "12.5",
+                  "fill": "#48515e",
+                  "text-anchor": "start",
+                  "font-style": "italic"
+                },
+                "text": "Dataset example; scores below are symbolic.",
+                "tail": null,
+                "children": []
+              }
+            ]
+          },
+          {
+            "tag": "{http://www.w3.org/2000/svg}line",
+            "attributes": {
+              "x1": "298",
+              "y1": "290",
+              "x2": "333",
+              "y2": "290",
+              "stroke": "#080d16",
+              "stroke-width": "1.6",
+              "marker-end": "url(#arrow)"
+            },
+            "text": null,
+            "tail": null,
+            "children": []
+          },
+          {
+            "tag": "{http://www.w3.org/2000/svg}g",
+            "attributes": {
+              "id": "fixed-wording-and-declared-relation",
+              "{http://www.inkscape.org/namespaces/inkscape}label": "fixed wording and declared relation"
+            },
+            "text": null,
+            "tail": null,
+            "children": [
+              {
+                "tag": "{http://www.w3.org/2000/svg}rect",
+                "attributes": {
+                  "x": "335",
+                  "y": "67",
+                  "width": "259",
+                  "height": "348",
+                  "rx": "4",
+                  "fill": "url(#panel-fill)",
+                  "stroke": "#dbe2e9",
+                  "stroke-width": "1"
+                },
+                "text": null,
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}text",
+                "attributes": {
+                  "x": "351",
+                  "y": "90",
+                  "font-size": "15",
+                  "fill": "#080d16",
+                  "text-anchor": "start",
+                  "font-weight": "bold"
+                },
+                "text": "Declared relation:",
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}text",
+                "attributes": {
+                  "x": "351",
+                  "y": "111",
+                  "font-size": "15",
+                  "fill": "#080d16",
+                  "text-anchor": "start",
+                  "font-weight": "bold"
+                },
+                "text": "emotion evocation",
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}rect",
+                "attributes": {
+                  "x": "351",
+                  "y": "129",
+                  "width": "217",
+                  "height": "82",
+                  "rx": "2",
+                  "fill": "white",
+                  "stroke": "#cbd6e1",
+                  "stroke-width": "1"
+                },
+                "text": null,
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}text",
+                "attributes": {
+                  "x": "361",
+                  "y": "149",
+                  "font-size": "15",
+                  "fill": "#080d16",
+                  "text-anchor": "start",
+                  "font-weight": "bold"
+                },
+                "text": "Fixed wording ",
+                "tail": null,
+                "children": [
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}tspan",
+                    "attributes": {
+                      "font-style": "italic"
+                    },
+                    "text": "b",
+                    "tail": null,
+                    "children": []
+                  },
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}tspan",
+                    "attributes": {
+                      "dy": "4",
+                      "font-size": "70%"
+                    },
+                    "text": "1",
+                    "tail": null,
+                    "children": []
+                  },
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}tspan",
+                    "attributes": {
+                      "dy": "-4"
+                    },
+                    "text": "​",
+                    "tail": null,
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}rect",
+                "attributes": {
+                  "x": "351",
+                  "y": "223",
+                  "width": "217",
+                  "height": "61",
+                  "rx": "2",
+                  "fill": "white",
+                  "stroke": "#cbd6e1",
+                  "stroke-width": "1"
+                },
+                "text": null,
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}text",
+                "attributes": {
+                  "x": "361",
+                  "y": "243",
+                  "font-size": "15",
+                  "fill": "#080d16",
+                  "text-anchor": "start",
+                  "font-weight": "bold"
+                },
+                "text": "Fixed wording ",
+                "tail": null,
+                "children": [
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}tspan",
+                    "attributes": {
+                      "font-style": "italic"
+                    },
+                    "text": "b",
+                    "tail": null,
+                    "children": []
+                  },
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}tspan",
+                    "attributes": {
+                      "dy": "4",
+                      "font-size": "70%"
+                    },
+                    "text": "2",
+                    "tail": null,
+                    "children": []
+                  },
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}tspan",
+                    "attributes": {
+                      "dy": "-4"
+                    },
+                    "text": "​",
+                    "tail": null,
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}rect",
+                "attributes": {
+                  "x": "351",
+                  "y": "296",
+                  "width": "217",
+                  "height": "61",
+                  "rx": "2",
+                  "fill": "white",
+                  "stroke": "#cbd6e1",
+                  "stroke-width": "1"
+                },
+                "text": null,
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}text",
+                "attributes": {
+                  "x": "361",
+                  "y": "316",
+                  "font-size": "15",
+                  "fill": "#080d16",
+                  "text-anchor": "start",
+                  "font-weight": "bold"
+                },
+                "text": "Fixed wording ",
+                "tail": null,
+                "children": [
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}tspan",
+                    "attributes": {
+                      "font-style": "italic"
+                    },
+                    "text": "b",
+                    "tail": null,
+                    "children": []
+                  },
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}tspan",
+                    "attributes": {
+                      "dy": "4",
+                      "font-size": "70%"
+                    },
+                    "text": "3",
+                    "tail": null,
+                    "children": []
+                  },
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}tspan",
+                    "attributes": {
+                      "dy": "-4"
+                    },
+                    "text": "​",
+                    "tail": null,
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}text",
+                "attributes": {
+                  "x": "361",
+                  "y": "175",
+                  "font-size": "17",
+                  "fill": "#080d16",
+                  "text-anchor": "start",
+                  "font-style": "italic"
+                },
+                "text": "“The feeling this photograph",
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}text",
+                "attributes": {
+                  "x": "361",
+                  "y": "195",
+                  "font-size": "17",
+                  "fill": "#080d16",
+                  "text-anchor": "start",
+                  "font-style": "italic"
+                },
+                "text": "evokes in a viewer is:”",
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}text",
+                "attributes": {
+                  "x": "363",
+                  "y": "269",
+                  "font-size": "18",
+                  "fill": "#080d16",
+                  "text-anchor": "start"
+                },
+                "text": "…",
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}text",
+                "attributes": {
+                  "x": "363",
+                  "y": "342",
+                  "font-size": "18",
+                  "fill": "#080d16",
+                  "text-anchor": "start"
+                },
+                "text": "…",
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}text",
+                "attributes": {
+                  "x": "351",
+                  "y": "380",
+                  "font-size": "16",
+                  "fill": "#48515e",
+                  "text-anchor": "start",
+                  "font-style": "italic"
+                },
+                "text": "Same relation and language;",
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}text",
+                "attributes": {
+                  "x": "351",
+                  "y": "399",
+                  "font-size": "16",
+                  "fill": "#48515e",
+                  "text-anchor": "start",
+                  "font-style": "italic"
+                },
+                "text": "fixed before scoring.",
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}path",
+                "attributes": {
+                  "d": "M 575 170 L 582 170 Q 588 170 588 176 L 588 237 Q 588 245 595 245 Q 588 245 588 253 L 588 317 Q 588 324 582 324 L 575 324",
+                  "fill": "none",
+                  "stroke": "#080d16",
+                  "stroke-width": "1.5"
+                },
+                "text": null,
+                "tail": null,
+                "children": []
+              }
+            ]
+          },
+          {
+            "tag": "{http://www.w3.org/2000/svg}text",
+            "attributes": {
+              "x": "660",
+              "y": "200",
+              "font-size": "18",
+              "fill": "#080d16",
+              "text-anchor": "middle",
+              "font-weight": "bold"
+            },
+            "text": "Prefix",
+            "tail": null,
+            "children": []
+          },
+          {
+            "tag": "{http://www.w3.org/2000/svg}text",
+            "attributes": {
+              "x": "660",
+              "y": "224",
+              "font-size": "19",
+              "fill": "#080d16",
+              "text-anchor": "middle"
+            },
+            "text": null,
+            "tail": null,
+            "children": [
+              {
+                "tag": "{http://www.w3.org/2000/svg}tspan",
+                "attributes": {
+                  "font-style": "italic"
+                },
+                "text": "p",
+                "tail": " = ",
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}tspan",
+                "attributes": {
+                  "font-style": "italic"
+                },
+                "text": "T",
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}tspan",
+                "attributes": {
+                  "dy": "4",
+                  "font-size": "70%"
+                },
+                "text": "M",
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}tspan",
+                "attributes": {
+                  "dy": "-4"
+                },
+                "text": "​",
+                "tail": "(",
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}tspan",
+                "attributes": {
+                  "font-style": "italic"
+                },
+                "text": "P",
+                "tail": "(",
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}tspan",
+                "attributes": {
+                  "font-style": "italic"
+                },
+                "text": "x, b",
+                "tail": "))",
+                "children": []
+              }
+            ]
+          },
+          {
+            "tag": "{http://www.w3.org/2000/svg}line",
+            "attributes": {
+              "x1": "595",
+              "y1": "245",
+              "x2": "725",
+              "y2": "245",
+              "stroke": "#080d16",
+              "stroke-width": "2",
+              "marker-end": "url(#arrow)"
+            },
+            "text": null,
+            "tail": null,
+            "children": []
+          },
+          {
+            "tag": "{http://www.w3.org/2000/svg}g",
+            "attributes": {
+              "id": "frozen-model-and-token-scoring",
+              "{http://www.inkscape.org/namespaces/inkscape}label": "frozen model and token scoring"
+            },
+            "text": null,
+            "tail": null,
+            "children": [
+              {
+                "tag": "{http://www.w3.org/2000/svg}rect",
+                "attributes": {
+                  "x": "734",
+                  "y": "92",
+                  "width": "442",
+                  "height": "249",
+                  "rx": "5",
+                  "fill": "url(#model-fill)",
+                  "stroke": "#005bdc",
+                  "stroke-width": "2.3"
+                },
+                "text": null,
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}text",
+                "attributes": {
+                  "x": "955",
+                  "y": "120",
+                  "font-size": "24",
+                  "fill": "#004bb9",
+                  "text-anchor": "middle",
+                  "font-weight": "bold"
+                },
+                "text": "Frozen multimodal generative model",
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}text",
+                "attributes": {
+                  "x": "960",
+                  "y": "144",
+                  "font-size": "19",
+                  "fill": "#004bb9",
+                  "text-anchor": "middle",
+                  "font-weight": "bold"
+                },
+                "text": "Qwen3.5-4B",
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}g",
+                "attributes": {
+                  "id": "icon-lock-keyhole-863",
+                  "{http://www.inkscape.org/namespaces/inkscape}label": "icon lock keyhole 863",
+                  "transform": "translate(863 147) scale(1.25)",
+                  "fill": "none",
+                  "stroke": "#0052bf",
+                  "stroke-width": "2",
+                  "stroke-linecap": "round",
+                  "stroke-linejoin": "round"
+                },
+                "text": null,
+                "tail": null,
+                "children": [
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}circle",
+                    "attributes": {
+                      "cx": "12",
+                      "cy": "16",
+                      "r": "1"
+                    },
+                    "text": null,
+                    "tail": "\n  ",
+                    "children": []
+                  },
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}rect",
+                    "attributes": {
+                      "x": "3",
+                      "y": "10",
+                      "width": "18",
+                      "height": "12",
+                      "rx": "2"
+                    },
+                    "text": null,
+                    "tail": "\n  ",
+                    "children": []
+                  },
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}path",
+                    "attributes": {
+                      "d": "M7 10V7a5 5 0 0 1 10 0v3"
+                    },
+                    "text": null,
+                    "tail": "\n",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}text",
+                "attributes": {
+                  "x": "900",
+                  "y": "173",
+                  "font-size": "18",
+                  "fill": "#080d16",
+                  "text-anchor": "start",
+                  "font-style": "italic"
+                },
+                "text": "Model weights fixed",
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}text",
+                "attributes": {
+                  "x": "853",
+                  "y": "217",
+                  "font-size": "15",
+                  "fill": "#080d16",
+                  "text-anchor": "middle"
+                },
+                "text": "Context tokens (from prefix ",
+                "tail": null,
+                "children": [
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}tspan",
+                    "attributes": {
+                      "font-style": "italic"
+                    },
+                    "text": "p",
+                    "tail": ")",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}text",
+                "attributes": {
+                  "x": "1064",
+                  "y": "217",
+                  "font-size": "15",
+                  "fill": "#080d16",
+                  "text-anchor": "middle"
+                },
+                "text": "Continuation tokens (",
+                "tail": null,
+                "children": [
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}tspan",
+                    "attributes": {
+                      "font-style": "italic"
+                    },
+                    "text": "c",
+                    "tail": null,
+                    "children": []
+                  },
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}tspan",
+                    "attributes": {
+                      "dy": "4",
+                      "font-size": "70%"
+                    },
+                    "text": "i,t",
+                    "tail": null,
+                    "children": []
+                  },
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}tspan",
+                    "attributes": {
+                      "dy": "-4"
+                    },
+                    "text": "​",
+                    "tail": ")",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}path",
+                "attributes": {
+                  "d": "M 765 234 L 765 232 Q 765 230 770 230 L 849 230 Q 853 230 853 226 Q 853 230 857 230 L 936 230 Q 941 230 941 234",
+                  "fill": "none",
+                  "stroke": "#080d16",
+                  "stroke-width": "1"
+                },
+                "text": null,
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}path",
+                "attributes": {
+                  "d": "M 980 234 L 980 232 Q 980 230 985 230 L 1059 230 Q 1063 230 1063 226 Q 1063 230 1067 230 L 1141 230 Q 1146 230 1146 234",
+                  "fill": "none",
+                  "stroke": "#080d16",
+                  "stroke-width": "1"
+                },
+                "text": null,
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}rect",
+                "attributes": {
+                  "x": "757",
+                  "y": "242",
+                  "width": "48",
+                  "height": "48",
+                  "rx": "0",
+                  "fill": "url(#token-fill)",
+                  "stroke": "#687d96",
+                  "stroke-width": "1"
+                },
+                "text": null,
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}text",
+                "attributes": {
+                  "x": "781",
+                  "y": "271",
+                  "font-size": "21",
+                  "fill": "#080d16",
+                  "text-anchor": "middle"
+                },
+                "text": null,
+                "tail": null,
+                "children": [
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}tspan",
+                    "attributes": {
+                      "font-style": "italic"
+                    },
+                    "text": "t",
+                    "tail": null,
+                    "children": []
+                  },
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}tspan",
+                    "attributes": {
+                      "dy": "4",
+                      "font-size": "70%"
+                    },
+                    "text": "1",
+                    "tail": null,
+                    "children": []
+                  },
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}tspan",
+                    "attributes": {
+                      "dy": "-4"
+                    },
+                    "text": "​",
+                    "tail": null,
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}rect",
+                "attributes": {
+                  "x": "805",
+                  "y": "242",
+                  "width": "48",
+                  "height": "48",
+                  "rx": "0",
+                  "fill": "url(#token-fill)",
+                  "stroke": "#687d96",
+                  "stroke-width": "1"
+                },
+                "text": null,
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}text",
+                "attributes": {
+                  "x": "829",
+                  "y": "271",
+                  "font-size": "21",
+                  "fill": "#080d16",
+                  "text-anchor": "middle"
+                },
+                "text": null,
+                "tail": null,
+                "children": [
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}tspan",
+                    "attributes": {
+                      "font-style": "italic"
+                    },
+                    "text": "t",
+                    "tail": null,
+                    "children": []
+                  },
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}tspan",
+                    "attributes": {
+                      "dy": "4",
+                      "font-size": "70%"
+                    },
+                    "text": "2",
+                    "tail": null,
+                    "children": []
+                  },
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}tspan",
+                    "attributes": {
+                      "dy": "-4"
+                    },
+                    "text": "​",
+                    "tail": null,
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}rect",
+                "attributes": {
+                  "x": "901",
+                  "y": "242",
+                  "width": "48",
+                  "height": "48",
+                  "rx": "0",
+                  "fill": "url(#token-fill)",
+                  "stroke": "#687d96",
+                  "stroke-width": "1"
+                },
+                "text": null,
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}text",
+                "attributes": {
+                  "x": "925",
+                  "y": "271",
+                  "font-size": "21",
+                  "fill": "#080d16",
+                  "text-anchor": "middle"
+                },
+                "text": null,
+                "tail": null,
+                "children": [
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}tspan",
+                    "attributes": {
+                      "font-style": "italic"
+                    },
+                    "text": "t",
+                    "tail": null,
+                    "children": []
+                  },
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}tspan",
+                    "attributes": {
+                      "dy": "4",
+                      "font-size": "70%"
+                    },
+                    "text": "n",
+                    "tail": null,
+                    "children": []
+                  },
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}tspan",
+                    "attributes": {
+                      "dy": "-4"
+                    },
+                    "text": "​",
+                    "tail": null,
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}text",
+                "attributes": {
+                  "x": "877",
+                  "y": "271",
+                  "font-size": "25",
+                  "fill": "#080d16",
+                  "text-anchor": "middle"
+                },
+                "text": "⋯",
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}line",
+                "attributes": {
+                  "x1": "957",
+                  "y1": "220",
+                  "x2": "957",
+                  "y2": "304",
+                  "stroke": "#34516f",
+                  "stroke-width": "1.4",
+                  "stroke-dasharray": "7 4"
+                },
+                "text": null,
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}rect",
+                "attributes": {
+                  "x": "967",
+                  "y": "242",
+                  "width": "48",
+                  "height": "48",
+                  "rx": "0",
+                  "fill": "url(#continuation-fill)",
+                  "stroke": "#0872ec",
+                  "stroke-width": "1"
+                },
+                "text": null,
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}text",
+                "attributes": {
+                  "x": "991",
+                  "y": "271",
+                  "font-size": "21",
+                  "fill": "#080d16",
+                  "text-anchor": "middle"
+                },
+                "text": null,
+                "tail": null,
+                "children": [
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}tspan",
+                    "attributes": {
+                      "font-style": "italic"
+                    },
+                    "text": "c",
+                    "tail": null,
+                    "children": []
+                  },
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}tspan",
+                    "attributes": {
+                      "dy": "4",
+                      "font-size": "70%"
+                    },
+                    "text": "i,1",
+                    "tail": null,
+                    "children": []
+                  },
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}tspan",
+                    "attributes": {
+                      "dy": "-4"
+                    },
+                    "text": "​",
+                    "tail": null,
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}rect",
+                "attributes": {
+                  "x": "1015",
+                  "y": "242",
+                  "width": "48",
+                  "height": "48",
+                  "rx": "0",
+                  "fill": "url(#continuation-fill)",
+                  "stroke": "#0872ec",
+                  "stroke-width": "1"
+                },
+                "text": null,
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}text",
+                "attributes": {
+                  "x": "1039",
+                  "y": "271",
+                  "font-size": "21",
+                  "fill": "#080d16",
+                  "text-anchor": "middle"
+                },
+                "text": null,
+                "tail": null,
+                "children": [
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}tspan",
+                    "attributes": {
+                      "font-style": "italic"
+                    },
+                    "text": "c",
+                    "tail": null,
+                    "children": []
+                  },
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}tspan",
+                    "attributes": {
+                      "dy": "4",
+                      "font-size": "70%"
+                    },
+                    "text": "i,2",
+                    "tail": null,
+                    "children": []
+                  },
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}tspan",
+                    "attributes": {
+                      "dy": "-4"
+                    },
+                    "text": "​",
+                    "tail": null,
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}rect",
+                "attributes": {
+                  "x": "1110",
+                  "y": "242",
+                  "width": "48",
+                  "height": "48",
+                  "rx": "0",
+                  "fill": "url(#continuation-fill)",
+                  "stroke": "#0872ec",
+                  "stroke-width": "1"
+                },
+                "text": null,
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}text",
+                "attributes": {
+                  "x": "1134",
+                  "y": "271",
+                  "font-size": "21",
+                  "fill": "#080d16",
+                  "text-anchor": "middle"
+                },
+                "text": null,
+                "tail": null,
+                "children": [
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}tspan",
+                    "attributes": {
+                      "font-style": "italic"
+                    },
+                    "text": "c",
+                    "tail": null,
+                    "children": []
+                  },
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}tspan",
+                    "attributes": {
+                      "dy": "4",
+                      "font-size": "70%"
+                    },
+                    "text": "i,Lᵢ",
+                    "tail": null,
+                    "children": []
+                  },
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}tspan",
+                    "attributes": {
+                      "dy": "-4"
+                    },
+                    "text": "​",
+                    "tail": null,
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}text",
+                "attributes": {
+                  "x": "1087",
+                  "y": "271",
+                  "font-size": "25",
+                  "fill": "#080d16",
+                  "text-anchor": "middle"
+                },
+                "text": "⋯",
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}text",
+                "attributes": {
+                  "x": "955",
+                  "y": "327",
+                  "font-size": "19",
+                  "fill": "#003278",
+                  "text-anchor": "middle",
+                  "font-weight": "bold"
+                },
+                "text": "Score the exact continuation",
+                "tail": null,
+                "children": []
+              }
+            ]
+          },
+          {
+            "tag": "{http://www.w3.org/2000/svg}line",
+            "attributes": {
+              "x1": "1186",
+              "y1": "245",
+              "x2": "1229",
+              "y2": "245",
+              "stroke": "#080d16",
+              "stroke-width": "2",
+              "marker-end": "url(#arrow)"
+            },
+            "text": null,
+            "tail": null,
+            "children": []
+          },
+          {
+            "tag": "{http://www.w3.org/2000/svg}g",
+            "attributes": {
+              "id": "target-continuations",
+              "{http://www.inkscape.org/namespaces/inkscape}label": "target continuations"
+            },
+            "text": null,
+            "tail": null,
+            "children": [
+              {
+                "tag": "{http://www.w3.org/2000/svg}rect",
+                "attributes": {
+                  "x": "1239",
+                  "y": "87",
+                  "width": "273",
+                  "height": "263",
+                  "rx": "4",
+                  "fill": "url(#panel-fill)",
+                  "stroke": "#ced9e5",
+                  "stroke-width": "1"
+                },
+                "text": null,
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}text",
+                "attributes": {
+                  "x": "1256",
+                  "y": "117",
+                  "font-size": "19",
+                  "fill": "#080d16",
+                  "text-anchor": "start",
+                  "font-weight": "bold"
+                },
+                "text": "Target continuation ",
+                "tail": null,
+                "children": [
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}tspan",
+                    "attributes": {
+                      "font-style": "italic"
+                    },
+                    "text": "a",
+                    "tail": null,
+                    "children": []
+                  },
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}tspan",
+                    "attributes": {
+                      "dy": "4",
+                      "font-size": "70%"
+                    },
+                    "text": "i",
+                    "tail": null,
+                    "children": []
+                  },
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}tspan",
+                    "attributes": {
+                      "dy": "-4"
+                    },
+                    "text": "​",
+                    "tail": null,
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}rect",
+                "attributes": {
+                  "x": "1256",
+                  "y": "136",
+                  "width": "129",
+                  "height": "40",
+                  "rx": "7",
+                  "fill": "white",
+                  "stroke": "#005bdc",
+                  "stroke-width": "1.4"
+                },
+                "text": null,
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}text",
+                "attributes": {
+                  "x": "1320.5",
+                  "y": "162",
+                  "font-size": "20",
+                  "fill": "#080d16",
+                  "text-anchor": "middle"
+                },
+                "text": "pleasant",
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}rect",
+                "attributes": {
+                  "x": "1256",
+                  "y": "188",
+                  "width": "129",
+                  "height": "40",
+                  "rx": "7",
+                  "fill": "white",
+                  "stroke": "#005bdc",
+                  "stroke-width": "1.4"
+                },
+                "text": null,
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}text",
+                "attributes": {
+                  "x": "1320.5",
+                  "y": "214",
+                  "font-size": "20",
+                  "fill": "#080d16",
+                  "text-anchor": "middle"
+                },
+                "text": "unpleasant",
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}rect",
+                "attributes": {
+                  "x": "1256",
+                  "y": "240",
+                  "width": "129",
+                  "height": "40",
+                  "rx": "7",
+                  "fill": "white",
+                  "stroke": "#005bdc",
+                  "stroke-width": "1.4"
+                },
+                "text": null,
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}text",
+                "attributes": {
+                  "x": "1320.5",
+                  "y": "266",
+                  "font-size": "20",
+                  "fill": "#080d16",
+                  "text-anchor": "middle"
+                },
+                "text": "aroused",
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}rect",
+                "attributes": {
+                  "x": "1256",
+                  "y": "292",
+                  "width": "129",
+                  "height": "40",
+                  "rx": "7",
+                  "fill": "white",
+                  "stroke": "#005bdc",
+                  "stroke-width": "1.4"
+                },
+                "text": null,
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}text",
+                "attributes": {
+                  "x": "1320.5",
+                  "y": "318",
+                  "font-size": "20",
+                  "fill": "#080d16",
+                  "text-anchor": "middle"
+                },
+                "text": "calm",
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}path",
+                "attributes": {
+                  "d": "M 1401 136 C 1409 136 1409 138 1409 146 L 1409 223.5 Q 1409 233.5 1418 233.5 Q 1409 233.5 1409 243.5 L 1409 321 C 1409 329 1409 331 1401 331",
+                  "fill": "none",
+                  "stroke": "#080d16",
+                  "stroke-width": "1.3"
+                },
+                "text": null,
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}text",
+                "attributes": {
+                  "x": "1429",
+                  "y": "220",
+                  "font-size": "15.5",
+                  "fill": "#080d16",
+                  "text-anchor": "start"
+                },
+                "text": "One anchor",
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}text",
+                "attributes": {
+                  "x": "1429",
+                  "y": "238",
+                  "font-size": "15.5",
+                  "fill": "#080d16",
+                  "text-anchor": "start"
+                },
+                "text": "per scored",
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}text",
+                "attributes": {
+                  "x": "1429",
+                  "y": "256",
+                  "font-size": "15.5",
+                  "fill": "#080d16",
+                  "text-anchor": "start"
+                },
+                "text": "event",
+                "tail": null,
+                "children": []
+              }
+            ]
+          },
+          {
+            "tag": "{http://www.w3.org/2000/svg}g",
+            "attributes": {
+              "id": "exact-continuation-log-likelihood-formula",
+              "{http://www.inkscape.org/namespaces/inkscape}label": "exact continuation log likelihood formula"
+            },
+            "text": null,
+            "tail": null,
+            "children": [
+              {
+                "tag": "{http://www.w3.org/2000/svg}text",
+                "attributes": {
+                  "x": "704",
+                  "y": "408",
+                  "font-size": "28",
+                  "fill": "#080d16",
+                  "text-anchor": "start"
+                },
+                "text": null,
+                "tail": null,
+                "children": [
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}tspan",
+                    "attributes": {
+                      "font-style": "italic"
+                    },
+                    "text": "s",
+                    "tail": null,
+                    "children": []
+                  },
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}tspan",
+                    "attributes": {
+                      "dy": "4",
+                      "font-size": "70%"
+                    },
+                    "text": "i,b",
+                    "tail": null,
+                    "children": []
+                  },
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}tspan",
+                    "attributes": {
+                      "dy": "-4"
+                    },
+                    "text": "​",
+                    "tail": "(",
+                    "children": []
+                  },
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}tspan",
+                    "attributes": {
+                      "font-style": "italic"
+                    },
+                    "text": "x",
+                    "tail": ") = log ",
+                    "children": []
+                  },
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}tspan",
+                    "attributes": {
+                      "font-style": "italic"
+                    },
+                    "text": "p",
+                    "tail": null,
+                    "children": []
+                  },
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}tspan",
+                    "attributes": {
+                      "dy": "4",
+                      "font-size": "70%"
+                    },
+                    "text": "M",
+                    "tail": null,
+                    "children": []
+                  },
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}tspan",
+                    "attributes": {
+                      "dy": "-4"
+                    },
+                    "text": "​",
+                    "tail": "(",
+                    "children": []
+                  },
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}tspan",
+                    "attributes": {
+                      "font-style": "italic"
+                    },
+                    "text": "c",
+                    "tail": null,
+                    "children": []
+                  },
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}tspan",
+                    "attributes": {
+                      "dy": "4",
+                      "font-size": "70%"
+                    },
+                    "text": "i",
+                    "tail": null,
+                    "children": []
+                  },
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}tspan",
+                    "attributes": {
+                      "dy": "-4"
+                    },
+                    "text": "​",
+                    "tail": " | ",
+                    "children": []
+                  },
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}tspan",
+                    "attributes": {
+                      "font-style": "italic"
+                    },
+                    "text": "p",
+                    "tail": ") =",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}text",
+                "attributes": {
+                  "x": "1008",
+                  "y": "412",
+                  "font-size": "46",
+                  "fill": "#080d16",
+                  "text-anchor": "middle"
+                },
+                "text": "∑",
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}text",
+                "attributes": {
+                  "x": "1008",
+                  "y": "370",
+                  "font-size": "20",
+                  "fill": "#080d16",
+                  "text-anchor": "middle"
+                },
+                "text": null,
+                "tail": null,
+                "children": [
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}tspan",
+                    "attributes": {
+                      "font-style": "italic"
+                    },
+                    "text": "L",
+                    "tail": null,
+                    "children": []
+                  },
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}tspan",
+                    "attributes": {
+                      "dy": "4",
+                      "font-size": "70%"
+                    },
+                    "text": "i",
+                    "tail": null,
+                    "children": []
+                  },
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}tspan",
+                    "attributes": {
+                      "dy": "-4"
+                    },
+                    "text": "​",
+                    "tail": null,
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}text",
+                "attributes": {
+                  "x": "1008",
+                  "y": "435",
+                  "font-size": "18",
+                  "fill": "#080d16",
+                  "text-anchor": "middle"
+                },
+                "text": null,
+                "tail": null,
+                "children": [
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}tspan",
+                    "attributes": {
+                      "font-style": "italic"
+                    },
+                    "text": "t",
+                    "tail": "=1",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}text",
+                "attributes": {
+                  "x": "1035",
+                  "y": "408",
+                  "font-size": "27",
+                  "fill": "#080d16",
+                  "text-anchor": "start"
+                },
+                "text": "log ",
+                "tail": null,
+                "children": [
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}tspan",
+                    "attributes": {
+                      "font-style": "italic"
+                    },
+                    "text": "p",
+                    "tail": null,
+                    "children": []
+                  },
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}tspan",
+                    "attributes": {
+                      "dy": "4",
+                      "font-size": "70%"
+                    },
+                    "text": "M",
+                    "tail": null,
+                    "children": []
+                  },
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}tspan",
+                    "attributes": {
+                      "dy": "-4"
+                    },
+                    "text": "​",
+                    "tail": "(",
+                    "children": []
+                  },
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}tspan",
+                    "attributes": {
+                      "font-style": "italic"
+                    },
+                    "text": "c",
+                    "tail": null,
+                    "children": []
+                  },
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}tspan",
+                    "attributes": {
+                      "dy": "4",
+                      "font-size": "70%"
+                    },
+                    "text": "i,t",
+                    "tail": null,
+                    "children": []
+                  },
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}tspan",
+                    "attributes": {
+                      "dy": "-4"
+                    },
+                    "text": "​",
+                    "tail": " | ",
+                    "children": []
+                  },
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}tspan",
+                    "attributes": {
+                      "font-style": "italic"
+                    },
+                    "text": "p",
+                    "tail": ", ",
+                    "children": []
+                  },
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}tspan",
+                    "attributes": {
+                      "font-style": "italic"
+                    },
+                    "text": "c",
+                    "tail": null,
+                    "children": []
+                  },
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}tspan",
+                    "attributes": {
+                      "dy": "4",
+                      "font-size": "70%"
+                    },
+                    "text": "i,<t",
+                    "tail": null,
+                    "children": []
+                  },
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}tspan",
+                    "attributes": {
+                      "dy": "-4"
+                    },
+                    "text": "​",
+                    "tail": ").",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "{http://www.w3.org/2000/svg}text",
+            "attributes": {
+              "x": "1317",
+              "y": "406",
+              "font-size": "16",
+              "fill": "#48515e",
+              "text-anchor": "start",
+              "font-style": "italic"
+            },
+            "text": "Natural log probability; nats.",
+            "tail": null,
+            "children": []
+          }
+        ]
+      },
+      {
+        "tag": "{http://www.w3.org/2000/svg}g",
+        "attributes": {
+          "id": "b-from-scores-to-named-coordinates",
+          "{http://www.inkscape.org/namespaces/inkscape}label": "b from scores to named coordinates",
+          "{http://www.inkscape.org/namespaces/inkscape}groupmode": "layer"
+        },
+        "text": null,
+        "tail": null,
+        "children": [
+          {
+            "tag": "{http://www.w3.org/2000/svg}text",
+            "attributes": {
+              "x": "26",
+              "y": "505",
+              "font-size": "51",
+              "fill": "#080d16",
+              "text-anchor": "start",
+              "font-weight": "bold"
+            },
+            "text": "b",
+            "tail": null,
+            "children": []
+          },
+          {
+            "tag": "{http://www.w3.org/2000/svg}text",
+            "attributes": {
+              "x": "80",
+              "y": "504",
+              "font-size": "35",
+              "fill": "#080d16",
+              "text-anchor": "start",
+              "font-weight": "bold"
+            },
+            "text": "From scores to named coordinates",
+            "tail": null,
+            "children": []
+          },
+          {
+            "tag": "{http://www.w3.org/2000/svg}g",
+            "attributes": {
+              "id": "scores-table",
+              "{http://www.inkscape.org/namespaces/inkscape}label": "scores table"
+            },
+            "text": null,
+            "tail": null,
+            "children": [
+              {
+                "tag": "{http://www.w3.org/2000/svg}rect",
+                "attributes": {
+                  "x": "78",
+                  "y": "517",
+                  "width": "272",
+                  "height": "210",
+                  "rx": "4",
+                  "fill": "#fcfdff",
+                  "stroke": "#dbe2e9",
+                  "stroke-width": "1"
+                },
+                "text": null,
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}text",
+                "attributes": {
+                  "x": "92",
+                  "y": "540",
+                  "font-size": "18",
+                  "fill": "#080d16",
+                  "text-anchor": "start",
+                  "font-weight": "bold"
+                },
+                "text": "Scores for one material ",
+                "tail": null,
+                "children": [
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}tspan",
+                    "attributes": {
+                      "font-style": "italic"
+                    },
+                    "text": "x",
+                    "tail": null,
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}rect",
+                "attributes": {
+                  "x": "92",
+                  "y": "556",
+                  "width": "246",
+                  "height": "162",
+                  "rx": "0",
+                  "fill": "white",
+                  "stroke": "#cbd1d8",
+                  "stroke-width": "0.85"
+                },
+                "text": null,
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}rect",
+                "attributes": {
+                  "x": "92",
+                  "y": "556",
+                  "width": "246",
+                  "height": "27",
+                  "rx": "0",
+                  "fill": "url(#table-head)",
+                  "stroke": "#b7c1cb",
+                  "stroke-width": "0.85"
+                },
+                "text": null,
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}line",
+                "attributes": {
+                  "x1": "92",
+                  "y1": "583",
+                  "x2": "338",
+                  "y2": "583",
+                  "stroke": "#cbd1d8",
+                  "stroke-width": "0.8"
+                },
+                "text": null,
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}line",
+                "attributes": {
+                  "x1": "92",
+                  "y1": "610",
+                  "x2": "338",
+                  "y2": "610",
+                  "stroke": "#cbd1d8",
+                  "stroke-width": "0.8"
+                },
+                "text": null,
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}line",
+                "attributes": {
+                  "x1": "92",
+                  "y1": "637",
+                  "x2": "338",
+                  "y2": "637",
+                  "stroke": "#cbd1d8",
+                  "stroke-width": "0.8"
+                },
+                "text": null,
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}line",
+                "attributes": {
+                  "x1": "92",
+                  "y1": "664",
+                  "x2": "338",
+                  "y2": "664",
+                  "stroke": "#cbd1d8",
+                  "stroke-width": "0.8"
+                },
+                "text": null,
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}line",
+                "attributes": {
+                  "x1": "92",
+                  "y1": "691",
+                  "x2": "338",
+                  "y2": "691",
+                  "stroke": "#cbd1d8",
+                  "stroke-width": "0.8"
+                },
+                "text": null,
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}text",
+                "attributes": {
+                  "x": "156.0",
+                  "y": "574.6",
+                  "font-size": "15",
+                  "fill": "#080d16",
+                  "text-anchor": "middle",
+                  "font-weight": "bold"
+                },
+                "text": "Anchor ",
+                "tail": null,
+                "children": [
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}tspan",
+                    "attributes": {
+                      "font-style": "italic"
+                    },
+                    "text": "a",
+                    "tail": null,
+                    "children": []
+                  },
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}tspan",
+                    "attributes": {
+                      "dy": "4",
+                      "font-size": "70%"
+                    },
+                    "text": "i",
+                    "tail": null,
+                    "children": []
+                  },
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}tspan",
+                    "attributes": {
+                      "dy": "-4"
+                    },
+                    "text": "​",
+                    "tail": null,
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}text",
+                "attributes": {
+                  "x": "107",
+                  "y": "601.94",
+                  "font-size": "16",
+                  "fill": "#080d16",
+                  "text-anchor": "start"
+                },
+                "text": "pleasant",
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}text",
+                "attributes": {
+                  "x": "107",
+                  "y": "628.94",
+                  "font-size": "16",
+                  "fill": "#080d16",
+                  "text-anchor": "start"
+                },
+                "text": "unpleasant",
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}text",
+                "attributes": {
+                  "x": "107",
+                  "y": "655.94",
+                  "font-size": "16",
+                  "fill": "#080d16",
+                  "text-anchor": "start"
+                },
+                "text": "aroused",
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}text",
+                "attributes": {
+                  "x": "107",
+                  "y": "682.94",
+                  "font-size": "16",
+                  "fill": "#080d16",
+                  "text-anchor": "start"
+                },
+                "text": "calm",
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}text",
+                "attributes": {
+                  "x": "107",
+                  "y": "709.94",
+                  "font-size": "16",
+                  "fill": "#080d16",
+                  "text-anchor": "start"
+                },
+                "text": "…",
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}line",
+                "attributes": {
+                  "x1": "220",
+                  "y1": "556",
+                  "x2": "220",
+                  "y2": "718",
+                  "stroke": "#bfc7cf",
+                  "stroke-width": "0.8"
+                },
+                "text": null,
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}text",
+                "attributes": {
+                  "x": "279.0",
+                  "y": "574.6",
+                  "font-size": "15",
+                  "fill": "#080d16",
+                  "text-anchor": "middle",
+                  "font-weight": "bold"
+                },
+                "text": "Score (nats)",
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}text",
+                "attributes": {
+                  "x": "279.0",
+                  "y": "601.94",
+                  "font-size": "16",
+                  "fill": "#080d16",
+                  "text-anchor": "middle"
+                },
+                "text": null,
+                "tail": null,
+                "children": [
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}tspan",
+                    "attributes": {
+                      "font-style": "italic"
+                    },
+                    "text": "s",
+                    "tail": null,
+                    "children": []
+                  },
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}tspan",
+                    "attributes": {
+                      "dy": "4",
+                      "font-size": "70%"
+                    },
+                    "text": "1,b",
+                    "tail": null,
+                    "children": []
+                  },
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}tspan",
+                    "attributes": {
+                      "dy": "-4"
+                    },
+                    "text": "​",
+                    "tail": "(",
+                    "children": []
+                  },
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}tspan",
+                    "attributes": {
+                      "font-style": "italic"
+                    },
+                    "text": "x",
+                    "tail": ")",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}text",
+                "attributes": {
+                  "x": "279.0",
+                  "y": "628.94",
+                  "font-size": "16",
+                  "fill": "#080d16",
+                  "text-anchor": "middle"
+                },
+                "text": null,
+                "tail": null,
+                "children": [
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}tspan",
+                    "attributes": {
+                      "font-style": "italic"
+                    },
+                    "text": "s",
+                    "tail": null,
+                    "children": []
+                  },
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}tspan",
+                    "attributes": {
+                      "dy": "4",
+                      "font-size": "70%"
+                    },
+                    "text": "2,b",
+                    "tail": null,
+                    "children": []
+                  },
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}tspan",
+                    "attributes": {
+                      "dy": "-4"
+                    },
+                    "text": "​",
+                    "tail": "(",
+                    "children": []
+                  },
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}tspan",
+                    "attributes": {
+                      "font-style": "italic"
+                    },
+                    "text": "x",
+                    "tail": ")",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}text",
+                "attributes": {
+                  "x": "279.0",
+                  "y": "655.94",
+                  "font-size": "16",
+                  "fill": "#080d16",
+                  "text-anchor": "middle"
+                },
+                "text": null,
+                "tail": null,
+                "children": [
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}tspan",
+                    "attributes": {
+                      "font-style": "italic"
+                    },
+                    "text": "s",
+                    "tail": null,
+                    "children": []
+                  },
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}tspan",
+                    "attributes": {
+                      "dy": "4",
+                      "font-size": "70%"
+                    },
+                    "text": "3,b",
+                    "tail": null,
+                    "children": []
+                  },
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}tspan",
+                    "attributes": {
+                      "dy": "-4"
+                    },
+                    "text": "​",
+                    "tail": "(",
+                    "children": []
+                  },
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}tspan",
+                    "attributes": {
+                      "font-style": "italic"
+                    },
+                    "text": "x",
+                    "tail": ")",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}text",
+                "attributes": {
+                  "x": "279.0",
+                  "y": "682.94",
+                  "font-size": "16",
+                  "fill": "#080d16",
+                  "text-anchor": "middle"
+                },
+                "text": null,
+                "tail": null,
+                "children": [
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}tspan",
+                    "attributes": {
+                      "font-style": "italic"
+                    },
+                    "text": "s",
+                    "tail": null,
+                    "children": []
+                  },
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}tspan",
+                    "attributes": {
+                      "dy": "4",
+                      "font-size": "70%"
+                    },
+                    "text": "4,b",
+                    "tail": null,
+                    "children": []
+                  },
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}tspan",
+                    "attributes": {
+                      "dy": "-4"
+                    },
+                    "text": "​",
+                    "tail": "(",
+                    "children": []
+                  },
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}tspan",
+                    "attributes": {
+                      "font-style": "italic"
+                    },
+                    "text": "x",
+                    "tail": ")",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}text",
+                "attributes": {
+                  "x": "279.0",
+                  "y": "709.94",
+                  "font-size": "16",
+                  "fill": "#080d16",
+                  "text-anchor": "middle"
+                },
+                "text": "…",
+                "tail": null,
+                "children": []
+              }
+            ]
+          },
+          {
+            "tag": "{http://www.w3.org/2000/svg}text",
+            "attributes": {
+              "x": "444",
+              "y": "594",
+              "font-size": "18",
+              "fill": "#080d16",
+              "text-anchor": "middle"
+            },
+            "text": "Aggregate across",
+            "tail": null,
+            "children": []
+          },
+          {
+            "tag": "{http://www.w3.org/2000/svg}text",
+            "attributes": {
+              "x": "444",
+              "y": "614",
+              "font-size": "18",
+              "fill": "#080d16",
+              "text-anchor": "middle"
+            },
+            "text": "wordings ",
+            "tail": null,
+            "children": [
+              {
+                "tag": "{http://www.w3.org/2000/svg}tspan",
+                "attributes": {
+                  "font-style": "italic"
+                },
+                "text": "b",
+                "tail": null,
+                "children": []
+              }
+            ]
+          },
+          {
+            "tag": "{http://www.w3.org/2000/svg}line",
+            "attributes": {
+              "x1": "363",
+              "y1": "626",
+              "x2": "529",
+              "y2": "626",
+              "stroke": "#080d16",
+              "stroke-width": "1.6",
+              "marker-end": "url(#arrow)"
+            },
+            "text": null,
+            "tail": null,
+            "children": []
+          },
+          {
+            "tag": "{http://www.w3.org/2000/svg}text",
+            "attributes": {
+              "x": "444",
+              "y": "650",
+              "font-size": "15.5",
+              "fill": "#080d16",
+              "text-anchor": "middle"
+            },
+            "text": "(e.g., mean)",
+            "tail": null,
+            "children": []
+          },
+          {
+            "tag": "{http://www.w3.org/2000/svg}g",
+            "attributes": {
+              "id": "named-coordinates-table",
+              "{http://www.inkscape.org/namespaces/inkscape}label": "named coordinates table"
+            },
+            "text": null,
+            "tail": null,
+            "children": [
+              {
+                "tag": "{http://www.w3.org/2000/svg}rect",
+                "attributes": {
+                  "x": "551",
+                  "y": "517",
+                  "width": "315",
+                  "height": "210",
+                  "rx": "4",
+                  "fill": "#fcfdff",
+                  "stroke": "#dbe2e9",
+                  "stroke-width": "1"
+                },
+                "text": null,
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}text",
+                "attributes": {
+                  "x": "565",
+                  "y": "540",
+                  "font-size": "18",
+                  "fill": "#08264a",
+                  "text-anchor": "start",
+                  "font-weight": "bold"
+                },
+                "text": "Named coordinates for material ",
+                "tail": null,
+                "children": [
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}tspan",
+                    "attributes": {
+                      "font-style": "italic"
+                    },
+                    "text": "x",
+                    "tail": null,
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}rect",
+                "attributes": {
+                  "x": "565",
+                  "y": "556",
+                  "width": "286",
+                  "height": "162",
+                  "rx": "0",
+                  "fill": "white",
+                  "stroke": "#cbd1d8",
+                  "stroke-width": "0.85"
+                },
+                "text": null,
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}rect",
+                "attributes": {
+                  "x": "565",
+                  "y": "556",
+                  "width": "286",
+                  "height": "27",
+                  "rx": "0",
+                  "fill": "url(#table-head)",
+                  "stroke": "#b7c1cb",
+                  "stroke-width": "0.85"
+                },
+                "text": null,
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}line",
+                "attributes": {
+                  "x1": "565",
+                  "y1": "583",
+                  "x2": "851",
+                  "y2": "583",
+                  "stroke": "#cbd1d8",
+                  "stroke-width": "0.8"
+                },
+                "text": null,
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}line",
+                "attributes": {
+                  "x1": "565",
+                  "y1": "610",
+                  "x2": "851",
+                  "y2": "610",
+                  "stroke": "#cbd1d8",
+                  "stroke-width": "0.8"
+                },
+                "text": null,
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}line",
+                "attributes": {
+                  "x1": "565",
+                  "y1": "637",
+                  "x2": "851",
+                  "y2": "637",
+                  "stroke": "#cbd1d8",
+                  "stroke-width": "0.8"
+                },
+                "text": null,
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}line",
+                "attributes": {
+                  "x1": "565",
+                  "y1": "664",
+                  "x2": "851",
+                  "y2": "664",
+                  "stroke": "#cbd1d8",
+                  "stroke-width": "0.8"
+                },
+                "text": null,
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}line",
+                "attributes": {
+                  "x1": "565",
+                  "y1": "691",
+                  "x2": "851",
+                  "y2": "691",
+                  "stroke": "#cbd1d8",
+                  "stroke-width": "0.8"
+                },
+                "text": null,
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}text",
+                "attributes": {
+                  "x": "656.5",
+                  "y": "574.6",
+                  "font-size": "15",
+                  "fill": "#080d16",
+                  "text-anchor": "middle",
+                  "font-weight": "bold"
+                },
+                "text": "Coordinate (construct)",
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}text",
+                "attributes": {
+                  "x": "580",
+                  "y": "601.94",
+                  "font-size": "16",
+                  "fill": "#080d16",
+                  "text-anchor": "start"
+                },
+                "text": "Pleasantness",
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}text",
+                "attributes": {
+                  "x": "580",
+                  "y": "628.94",
+                  "font-size": "16",
+                  "fill": "#080d16",
+                  "text-anchor": "start"
+                },
+                "text": "Unpleasantness",
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}text",
+                "attributes": {
+                  "x": "580",
+                  "y": "655.94",
+                  "font-size": "16",
+                  "fill": "#080d16",
+                  "text-anchor": "start"
+                },
+                "text": "Arousal",
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}text",
+                "attributes": {
+                  "x": "580",
+                  "y": "682.94",
+                  "font-size": "16",
+                  "fill": "#080d16",
+                  "text-anchor": "start"
+                },
+                "text": "Calmness",
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}text",
+                "attributes": {
+                  "x": "580",
+                  "y": "709.94",
+                  "font-size": "16",
+                  "fill": "#080d16",
+                  "text-anchor": "start"
+                },
+                "text": "…",
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}line",
+                "attributes": {
+                  "x1": "748",
+                  "y1": "556",
+                  "x2": "748",
+                  "y2": "718",
+                  "stroke": "#bfc7cf",
+                  "stroke-width": "0.8"
+                },
+                "text": null,
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}text",
+                "attributes": {
+                  "x": "799.5",
+                  "y": "574.6",
+                  "font-size": "15",
+                  "fill": "#080d16",
+                  "text-anchor": "middle",
+                  "font-weight": "bold"
+                },
+                "text": "Value",
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}text",
+                "attributes": {
+                  "x": "799.5",
+                  "y": "601.94",
+                  "font-size": "16",
+                  "fill": "#080d16",
+                  "text-anchor": "middle"
+                },
+                "text": null,
+                "tail": null,
+                "children": [
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}tspan",
+                    "attributes": {
+                      "font-style": "italic"
+                    },
+                    "text": "s̄",
+                    "tail": null,
+                    "children": []
+                  },
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}tspan",
+                    "attributes": {
+                      "dy": "4",
+                      "font-size": "70%"
+                    },
+                    "text": "1",
+                    "tail": null,
+                    "children": []
+                  },
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}tspan",
+                    "attributes": {
+                      "dy": "-4"
+                    },
+                    "text": "​",
+                    "tail": "(",
+                    "children": []
+                  },
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}tspan",
+                    "attributes": {
+                      "font-style": "italic"
+                    },
+                    "text": "x",
+                    "tail": ")",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}text",
+                "attributes": {
+                  "x": "799.5",
+                  "y": "628.94",
+                  "font-size": "16",
+                  "fill": "#080d16",
+                  "text-anchor": "middle"
+                },
+                "text": null,
+                "tail": null,
+                "children": [
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}tspan",
+                    "attributes": {
+                      "font-style": "italic"
+                    },
+                    "text": "s̄",
+                    "tail": null,
+                    "children": []
+                  },
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}tspan",
+                    "attributes": {
+                      "dy": "4",
+                      "font-size": "70%"
+                    },
+                    "text": "2",
+                    "tail": null,
+                    "children": []
+                  },
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}tspan",
+                    "attributes": {
+                      "dy": "-4"
+                    },
+                    "text": "​",
+                    "tail": "(",
+                    "children": []
+                  },
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}tspan",
+                    "attributes": {
+                      "font-style": "italic"
+                    },
+                    "text": "x",
+                    "tail": ")",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}text",
+                "attributes": {
+                  "x": "799.5",
+                  "y": "655.94",
+                  "font-size": "16",
+                  "fill": "#080d16",
+                  "text-anchor": "middle"
+                },
+                "text": null,
+                "tail": null,
+                "children": [
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}tspan",
+                    "attributes": {
+                      "font-style": "italic"
+                    },
+                    "text": "s̄",
+                    "tail": null,
+                    "children": []
+                  },
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}tspan",
+                    "attributes": {
+                      "dy": "4",
+                      "font-size": "70%"
+                    },
+                    "text": "3",
+                    "tail": null,
+                    "children": []
+                  },
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}tspan",
+                    "attributes": {
+                      "dy": "-4"
+                    },
+                    "text": "​",
+                    "tail": "(",
+                    "children": []
+                  },
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}tspan",
+                    "attributes": {
+                      "font-style": "italic"
+                    },
+                    "text": "x",
+                    "tail": ")",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}text",
+                "attributes": {
+                  "x": "799.5",
+                  "y": "682.94",
+                  "font-size": "16",
+                  "fill": "#080d16",
+                  "text-anchor": "middle"
+                },
+                "text": null,
+                "tail": null,
+                "children": [
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}tspan",
+                    "attributes": {
+                      "font-style": "italic"
+                    },
+                    "text": "s̄",
+                    "tail": null,
+                    "children": []
+                  },
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}tspan",
+                    "attributes": {
+                      "dy": "4",
+                      "font-size": "70%"
+                    },
+                    "text": "4",
+                    "tail": null,
+                    "children": []
+                  },
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}tspan",
+                    "attributes": {
+                      "dy": "-4"
+                    },
+                    "text": "​",
+                    "tail": "(",
+                    "children": []
+                  },
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}tspan",
+                    "attributes": {
+                      "font-style": "italic"
+                    },
+                    "text": "x",
+                    "tail": ")",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}text",
+                "attributes": {
+                  "x": "799.5",
+                  "y": "709.94",
+                  "font-size": "16",
+                  "fill": "#080d16",
+                  "text-anchor": "middle"
+                },
+                "text": "…",
+                "tail": null,
+                "children": []
+              }
+            ]
+          },
+          {
+            "tag": "{http://www.w3.org/2000/svg}text",
+            "attributes": {
+              "x": "998",
+              "y": "594",
+              "font-size": "18",
+              "fill": "#080d16",
+              "text-anchor": "middle"
+            },
+            "text": "Coordinates for many",
+            "tail": null,
+            "children": []
+          },
+          {
+            "tag": "{http://www.w3.org/2000/svg}text",
+            "attributes": {
+              "x": "998",
+              "y": "614",
+              "font-size": "18",
+              "fill": "#080d16",
+              "text-anchor": "middle"
+            },
+            "text": "materials form a dataset",
+            "tail": null,
+            "children": []
+          },
+          {
+            "tag": "{http://www.w3.org/2000/svg}line",
+            "attributes": {
+              "x1": "878",
+              "y1": "626",
+              "x2": "1119",
+              "y2": "626",
+              "stroke": "#080d16",
+              "stroke-width": "1.6",
+              "marker-end": "url(#arrow)"
+            },
+            "text": null,
+            "tail": null,
+            "children": []
+          },
+          {
+            "tag": "{http://www.w3.org/2000/svg}text",
+            "attributes": {
+              "x": "998",
+              "y": "653",
+              "font-size": "16.5",
+              "fill": "#080d16",
+              "text-anchor": "middle"
+            },
+            "text": null,
+            "tail": null,
+            "children": [
+              {
+                "tag": "{http://www.w3.org/2000/svg}tspan",
+                "attributes": {
+                  "font-style": "italic"
+                },
+                "text": "X",
+                "tail": " → [",
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}tspan",
+                "attributes": {
+                  "font-style": "italic"
+                },
+                "text": "s̄",
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}tspan",
+                "attributes": {
+                  "dy": "4",
+                  "font-size": "70%"
+                },
+                "text": "1",
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}tspan",
+                "attributes": {
+                  "dy": "-4"
+                },
+                "text": "​",
+                "tail": "(",
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}tspan",
+                "attributes": {
+                  "font-style": "italic"
+                },
+                "text": "x",
+                "tail": "), ",
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}tspan",
+                "attributes": {
+                  "font-style": "italic"
+                },
+                "text": "s̄",
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}tspan",
+                "attributes": {
+                  "dy": "4",
+                  "font-size": "70%"
+                },
+                "text": "2",
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}tspan",
+                "attributes": {
+                  "dy": "-4"
+                },
+                "text": "​",
+                "tail": "(",
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}tspan",
+                "attributes": {
+                  "font-style": "italic"
+                },
+                "text": "x",
+                "tail": "), ",
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}tspan",
+                "attributes": {
+                  "font-style": "italic"
+                },
+                "text": "s̄",
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}tspan",
+                "attributes": {
+                  "dy": "4",
+                  "font-size": "70%"
+                },
+                "text": "3",
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}tspan",
+                "attributes": {
+                  "dy": "-4"
+                },
+                "text": "​",
+                "tail": "(",
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}tspan",
+                "attributes": {
+                  "font-style": "italic"
+                },
+                "text": "x",
+                "tail": "), ",
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}tspan",
+                "attributes": {
+                  "font-style": "italic"
+                },
+                "text": "s̄",
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}tspan",
+                "attributes": {
+                  "dy": "4",
+                  "font-size": "70%"
+                },
+                "text": "4",
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}tspan",
+                "attributes": {
+                  "dy": "-4"
+                },
+                "text": "​",
+                "tail": "(",
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}tspan",
+                "attributes": {
+                  "font-style": "italic"
+                },
+                "text": "x",
+                "tail": "), …]",
+                "children": []
+              }
+            ]
+          },
+          {
+            "tag": "{http://www.w3.org/2000/svg}g",
+            "attributes": {
+              "id": "conceptual-measurement-space",
+              "{http://www.inkscape.org/namespaces/inkscape}label": "conceptual measurement space"
+            },
+            "text": null,
+            "tail": null,
+            "children": [
+              {
+                "tag": "{http://www.w3.org/2000/svg}rect",
+                "attributes": {
+                  "x": "1133",
+                  "y": "517",
+                  "width": "379",
+                  "height": "210",
+                  "rx": "4",
+                  "fill": "url(#panel-fill)",
+                  "stroke": "#dbe2e9",
+                  "stroke-width": "1"
+                },
+                "text": null,
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}text",
+                "attributes": {
+                  "x": "1147",
+                  "y": "540",
+                  "font-size": "18",
+                  "fill": "#002d65",
+                  "text-anchor": "start",
+                  "font-weight": "bold"
+                },
+                "text": "Measurement space",
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}circle",
+                "attributes": {
+                  "id": "schematic-point-1",
+                  "cx": "1301",
+                  "cy": "592.0",
+                  "r": "2.35",
+                  "fill": "#8a98a8",
+                  "opacity": "0.8"
+                },
+                "text": null,
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}circle",
+                "attributes": {
+                  "id": "schematic-point-2",
+                  "cx": "1354",
+                  "cy": "595.28",
+                  "r": "2.35",
+                  "fill": "#8a98a8",
+                  "opacity": "0.58"
+                },
+                "text": null,
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}circle",
+                "attributes": {
+                  "id": "schematic-point-3",
+                  "cx": "1391",
+                  "cy": "592.82",
+                  "r": "2.35",
+                  "fill": "#8a98a8",
+                  "opacity": "0.58"
+                },
+                "text": null,
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}circle",
+                "attributes": {
+                  "id": "schematic-point-4",
+                  "cx": "1277",
+                  "cy": "608.4",
+                  "r": "2.35",
+                  "fill": "#8a98a8",
+                  "opacity": "0.8"
+                },
+                "text": null,
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}circle",
+                "attributes": {
+                  "id": "schematic-point-5",
+                  "cx": "1311",
+                  "cy": "608.4",
+                  "r": "2.35",
+                  "fill": "#8a98a8",
+                  "opacity": "0.58"
+                },
+                "text": null,
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}circle",
+                "attributes": {
+                  "id": "schematic-point-6",
+                  "cx": "1345",
+                  "cy": "607.58",
+                  "r": "2.35",
+                  "fill": "#8a98a8",
+                  "opacity": "0.58"
+                },
+                "text": null,
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}circle",
+                "attributes": {
+                  "id": "schematic-point-7",
+                  "cx": "1372",
+                  "cy": "606.76",
+                  "r": "2.35",
+                  "fill": "#8a98a8",
+                  "opacity": "0.8"
+                },
+                "text": null,
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}circle",
+                "attributes": {
+                  "id": "schematic-point-8",
+                  "cx": "1398",
+                  "cy": "610.04",
+                  "r": "2.35",
+                  "fill": "#8a98a8",
+                  "opacity": "0.58"
+                },
+                "text": null,
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}circle",
+                "attributes": {
+                  "id": "schematic-point-9",
+                  "cx": "1258",
+                  "cy": "623.16",
+                  "r": "2.35",
+                  "fill": "#8a98a8",
+                  "opacity": "0.58"
+                },
+                "text": null,
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}circle",
+                "attributes": {
+                  "id": "schematic-point-10",
+                  "cx": "1277",
+                  "cy": "618.24",
+                  "r": "2.35",
+                  "fill": "#8a98a8",
+                  "opacity": "0.8"
+                },
+                "text": null,
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}circle",
+                "attributes": {
+                  "id": "schematic-point-11",
+                  "cx": "1295",
+                  "cy": "623.98",
+                  "r": "2.35",
+                  "fill": "#8a98a8",
+                  "opacity": "0.58"
+                },
+                "text": null,
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}circle",
+                "attributes": {
+                  "id": "schematic-point-12",
+                  "cx": "1344",
+                  "cy": "623.98",
+                  "r": "2.35",
+                  "fill": "#8a98a8",
+                  "opacity": "0.58"
+                },
+                "text": null,
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}circle",
+                "attributes": {
+                  "id": "schematic-point-13",
+                  "cx": "1362",
+                  "cy": "619.06",
+                  "r": "2.35",
+                  "fill": "#8a98a8",
+                  "opacity": "0.8"
+                },
+                "text": null,
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}circle",
+                "attributes": {
+                  "id": "schematic-point-14",
+                  "cx": "1385",
+                  "cy": "619.88",
+                  "r": "2.35",
+                  "fill": "#8a98a8",
+                  "opacity": "0.58"
+                },
+                "text": null,
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}circle",
+                "attributes": {
+                  "id": "schematic-point-15",
+                  "cx": "1301",
+                  "cy": "645.3",
+                  "r": "2.35",
+                  "fill": "#8a98a8",
+                  "opacity": "0.58"
+                },
+                "text": null,
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}circle",
+                "attributes": {
+                  "id": "schematic-point-16",
+                  "cx": "1347",
+                  "cy": "647.76",
+                  "r": "2.35",
+                  "fill": "#8a98a8",
+                  "opacity": "0.8"
+                },
+                "text": null,
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}circle",
+                "attributes": {
+                  "id": "schematic-point-17",
+                  "cx": "1364",
+                  "cy": "642.02",
+                  "r": "2.35",
+                  "fill": "#8a98a8",
+                  "opacity": "0.58"
+                },
+                "text": null,
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}circle",
+                "attributes": {
+                  "id": "schematic-point-18",
+                  "cx": "1258",
+                  "cy": "657.6",
+                  "r": "2.35",
+                  "fill": "#8a98a8",
+                  "opacity": "0.58"
+                },
+                "text": null,
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}circle",
+                "attributes": {
+                  "id": "schematic-point-19",
+                  "cx": "1285",
+                  "cy": "657.6",
+                  "r": "2.35",
+                  "fill": "#8a98a8",
+                  "opacity": "0.8"
+                },
+                "text": null,
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}circle",
+                "attributes": {
+                  "id": "schematic-point-20",
+                  "cx": "1301",
+                  "cy": "663.34",
+                  "r": "2.35",
+                  "fill": "#8a98a8",
+                  "opacity": "0.58"
+                },
+                "text": null,
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}circle",
+                "attributes": {
+                  "id": "schematic-point-21",
+                  "cx": "1339",
+                  "cy": "661.7",
+                  "r": "2.35",
+                  "fill": "#8a98a8",
+                  "opacity": "0.58"
+                },
+                "text": null,
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}circle",
+                "attributes": {
+                  "id": "schematic-point-22",
+                  "cx": "1359",
+                  "cy": "662.52",
+                  "r": "2.35",
+                  "fill": "#8a98a8",
+                  "opacity": "0.8"
+                },
+                "text": null,
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}circle",
+                "attributes": {
+                  "id": "schematic-point-23",
+                  "cx": "1377",
+                  "cy": "655.14",
+                  "r": "2.35",
+                  "fill": "#8a98a8",
+                  "opacity": "0.58"
+                },
+                "text": null,
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}circle",
+                "attributes": {
+                  "id": "schematic-point-24",
+                  "cx": "1400",
+                  "cy": "659.24",
+                  "r": "2.35",
+                  "fill": "#8a98a8",
+                  "opacity": "0.58"
+                },
+                "text": null,
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}circle",
+                "attributes": {
+                  "id": "schematic-point-25",
+                  "cx": "1257",
+                  "cy": "678.92",
+                  "r": "2.35",
+                  "fill": "#8a98a8",
+                  "opacity": "0.8"
+                },
+                "text": null,
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}circle",
+                "attributes": {
+                  "id": "schematic-point-26",
+                  "cx": "1277",
+                  "cy": "674.82",
+                  "r": "2.35",
+                  "fill": "#8a98a8",
+                  "opacity": "0.58"
+                },
+                "text": null,
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}circle",
+                "attributes": {
+                  "id": "schematic-point-27",
+                  "cx": "1308",
+                  "cy": "678.92",
+                  "r": "2.35",
+                  "fill": "#8a98a8",
+                  "opacity": "0.58"
+                },
+                "text": null,
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}circle",
+                "attributes": {
+                  "id": "schematic-point-28",
+                  "cx": "1337",
+                  "cy": "666.62",
+                  "r": "2.35",
+                  "fill": "#8a98a8",
+                  "opacity": "0.8"
+                },
+                "text": null,
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}circle",
+                "attributes": {
+                  "id": "schematic-point-29",
+                  "cx": "1383",
+                  "cy": "673.18",
+                  "r": "2.35",
+                  "fill": "#8a98a8",
+                  "opacity": "0.58"
+                },
+                "text": null,
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}line",
+                "attributes": {
+                  "x1": "1246",
+                  "y1": "633",
+                  "x2": "1408",
+                  "y2": "633",
+                  "stroke": "#080d16",
+                  "stroke-width": "1.6",
+                  "marker-end": "url(#arrow)",
+                  "marker-start": "url(#arrow-start)"
+                },
+                "text": null,
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}line",
+                "attributes": {
+                  "x1": "1325",
+                  "y1": "696",
+                  "x2": "1325",
+                  "y2": "570",
+                  "stroke": "#080d16",
+                  "stroke-width": "1.6",
+                  "marker-end": "url(#arrow)",
+                  "marker-start": "url(#arrow-start)"
+                },
+                "text": null,
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}text",
+                "attributes": {
+                  "x": "1336",
+                  "y": "570",
+                  "font-size": "15",
+                  "fill": "#080d16",
+                  "text-anchor": "start"
+                },
+                "text": "Arousal",
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}text",
+                "attributes": {
+                  "x": "1336",
+                  "y": "587",
+                  "font-size": "15",
+                  "fill": "#080d16",
+                  "text-anchor": "start"
+                },
+                "text": "(higher)",
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}text",
+                "attributes": {
+                  "x": "1193",
+                  "y": "629",
+                  "font-size": "15",
+                  "fill": "#080d16",
+                  "text-anchor": "middle"
+                },
+                "text": "Unpleasantness",
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}text",
+                "attributes": {
+                  "x": "1193",
+                  "y": "646",
+                  "font-size": "15",
+                  "fill": "#080d16",
+                  "text-anchor": "middle"
+                },
+                "text": "(higher)",
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}text",
+                "attributes": {
+                  "x": "1456",
+                  "y": "629",
+                  "font-size": "15",
+                  "fill": "#080d16",
+                  "text-anchor": "middle"
+                },
+                "text": "Pleasantness",
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}text",
+                "attributes": {
+                  "x": "1456",
+                  "y": "646",
+                  "font-size": "15",
+                  "fill": "#080d16",
+                  "text-anchor": "middle"
+                },
+                "text": "(higher)",
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}text",
+                "attributes": {
+                  "x": "1340",
+                  "y": "697",
+                  "font-size": "15",
+                  "fill": "#080d16",
+                  "text-anchor": "start"
+                },
+                "text": "Calmness",
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}text",
+                "attributes": {
+                  "x": "1340",
+                  "y": "714",
+                  "font-size": "15",
+                  "fill": "#080d16",
+                  "text-anchor": "start"
+                },
+                "text": "(higher)",
+                "tail": null,
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "{http://www.w3.org/2000/svg}g",
+        "attributes": {
+          "id": "c-two-validation-routes",
+          "{http://www.inkscape.org/namespaces/inkscape}label": "c two validation routes",
+          "{http://www.inkscape.org/namespaces/inkscape}groupmode": "layer"
+        },
+        "text": null,
+        "tail": null,
+        "children": [
+          {
+            "tag": "{http://www.w3.org/2000/svg}text",
+            "attributes": {
+              "x": "26",
+              "y": "785",
+              "font-size": "51",
+              "fill": "#080d16",
+              "text-anchor": "start",
+              "font-weight": "bold"
+            },
+            "text": "c",
+            "tail": null,
+            "children": []
+          },
+          {
+            "tag": "{http://www.w3.org/2000/svg}text",
+            "attributes": {
+              "x": "80",
+              "y": "783",
+              "font-size": "36",
+              "fill": "#080d16",
+              "text-anchor": "start",
+              "font-weight": "bold"
+            },
+            "text": "Two validation routes",
+            "tail": null,
+            "children": []
+          },
+          {
+            "tag": "{http://www.w3.org/2000/svg}rect",
+            "attributes": {
+              "x": "25",
+              "y": "798",
+              "width": "823",
+              "height": "233",
+              "rx": "4",
+              "fill": "#fff",
+              "stroke": "#dbe2e9",
+              "stroke-width": "1"
+            },
+            "text": null,
+            "tail": null,
+            "children": []
+          },
+          {
+            "tag": "{http://www.w3.org/2000/svg}rect",
+            "attributes": {
+              "x": "886",
+              "y": "798",
+              "width": "626",
+              "height": "233",
+              "rx": "4",
+              "fill": "#fff",
+              "stroke": "#dbe2e9",
+              "stroke-width": "1"
+            },
+            "text": null,
+            "tail": null,
+            "children": []
+          },
+          {
+            "tag": "{http://www.w3.org/2000/svg}line",
+            "attributes": {
+              "x1": "866",
+              "y1": "798",
+              "x2": "866",
+              "y2": "1031",
+              "stroke": "#929ba7",
+              "stroke-width": "1.3",
+              "stroke-dasharray": "8 5"
+            },
+            "text": null,
+            "tail": null,
+            "children": []
+          },
+          {
+            "tag": "{http://www.w3.org/2000/svg}text",
+            "attributes": {
+              "x": "38",
+              "y": "819",
+              "font-size": "19",
+              "fill": "#081e3a",
+              "text-anchor": "start",
+              "font-weight": "bold"
+            },
+            "text": "1. Direct measurement (no training)",
+            "tail": null,
+            "children": []
+          },
+          {
+            "tag": "{http://www.w3.org/2000/svg}text",
+            "attributes": {
+              "x": "899",
+              "y": "819",
+              "font-size": "19",
+              "fill": "#081e3a",
+              "text-anchor": "start",
+              "font-weight": "bold"
+            },
+            "text": "2. Trained prediction (downstream model)",
+            "tail": null,
+            "children": []
+          },
+          {
+            "tag": "{http://www.w3.org/2000/svg}g",
+            "attributes": {
+              "id": "direct-measurement-route",
+              "{http://www.inkscape.org/namespaces/inkscape}label": "direct measurement route"
+            },
+            "text": null,
+            "tail": null,
+            "children": [
+              {
+                "tag": "{http://www.w3.org/2000/svg}rect",
+                "attributes": {
+                  "x": "41",
+                  "y": "842",
+                  "width": "132",
+                  "height": "140",
+                  "rx": "4",
+                  "fill": "#fcfdff",
+                  "stroke": "#dbe2e9",
+                  "stroke-width": "1"
+                },
+                "text": null,
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}text",
+                "attributes": {
+                  "x": "54",
+                  "y": "865",
+                  "font-size": "15",
+                  "fill": "#08264a",
+                  "text-anchor": "start",
+                  "font-weight": "bold"
+                },
+                "text": "New material ",
+                "tail": null,
+                "children": [
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}tspan",
+                    "attributes": {
+                      "font-style": "italic"
+                    },
+                    "text": "x",
+                    "tail": null,
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}g",
+                "attributes": {
+                  "id": "OASIS-stimulus-in-validation",
+                  "{http://www.inkscape.org/namespaces/inkscape}label": "OASIS stimulus in validation"
+                },
+                "text": null,
+                "tail": null,
+                "children": [
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}title",
+                    "attributes": {},
+                    "text": "OASIS stimulus I466, Lake 12; photograph by James Wheeler. See SOURCES.md.",
+                    "tail": null,
+                    "children": []
+                  },
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}image",
+                    "attributes": {
+                      "x": "54",
+                      "y": "887",
+                      "width": "84",
+                      "height": "68",
+                      "preserveAspectRatio": "xMidYMid slice",
+                      "id": "OASIS-stimulus-in-validation-replaceable-photo",
+                      "{http://www.w3.org/1999/xlink}href": "@asset:assets/oasis_I466_Lake_12_native.jpg"
+                    },
+                    "text": null,
+                    "tail": null,
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}text",
+                "attributes": {
+                  "x": "146",
+                  "y": "927",
+                  "font-size": "18",
+                  "fill": "#080d16",
+                  "text-anchor": "start"
+                },
+                "text": "…",
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}line",
+                "attributes": {
+                  "x1": "182",
+                  "y1": "912",
+                  "x2": "198",
+                  "y2": "912",
+                  "stroke": "#080d16",
+                  "stroke-width": "1.6",
+                  "marker-end": "url(#arrow)"
+                },
+                "text": null,
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}rect",
+                "attributes": {
+                  "x": "207",
+                  "y": "842",
+                  "width": "184",
+                  "height": "140",
+                  "rx": "4",
+                  "fill": "white",
+                  "stroke": "#dbe2e9",
+                  "stroke-width": "1"
+                },
+                "text": null,
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}text",
+                "attributes": {
+                  "x": "220",
+                  "y": "865",
+                  "font-size": "15.5",
+                  "fill": "#080d16",
+                  "text-anchor": "start"
+                },
+                "text": "Same fixed wordings ",
+                "tail": null,
+                "children": [
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}tspan",
+                    "attributes": {
+                      "font-style": "italic"
+                    },
+                    "text": "b",
+                    "tail": null,
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}text",
+                "attributes": {
+                  "x": "220",
+                  "y": "885",
+                  "font-size": "15.5",
+                  "fill": "#080d16",
+                  "text-anchor": "start"
+                },
+                "text": "and anchors ",
+                "tail": null,
+                "children": [
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}tspan",
+                    "attributes": {
+                      "font-style": "italic"
+                    },
+                    "text": "a",
+                    "tail": null,
+                    "children": []
+                  },
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}tspan",
+                    "attributes": {
+                      "dy": "4",
+                      "font-size": "70%"
+                    },
+                    "text": "i",
+                    "tail": null,
+                    "children": []
+                  },
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}tspan",
+                    "attributes": {
+                      "dy": "-4"
+                    },
+                    "text": "​",
+                    "tail": null,
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}text",
+                "attributes": {
+                  "x": "220",
+                  "y": "918",
+                  "font-size": "15.5",
+                  "fill": "#080d16",
+                  "text-anchor": "start"
+                },
+                "text": "Score with frozen model",
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}text",
+                "attributes": {
+                  "x": "299",
+                  "y": "954",
+                  "font-size": "18",
+                  "fill": "#080d16",
+                  "text-anchor": "middle"
+                },
+                "text": null,
+                "tail": null,
+                "children": [
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}tspan",
+                    "attributes": {
+                      "font-style": "italic"
+                    },
+                    "text": "s",
+                    "tail": null,
+                    "children": []
+                  },
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}tspan",
+                    "attributes": {
+                      "dy": "4",
+                      "font-size": "70%"
+                    },
+                    "text": "i,b",
+                    "tail": null,
+                    "children": []
+                  },
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}tspan",
+                    "attributes": {
+                      "dy": "-4"
+                    },
+                    "text": "​",
+                    "tail": "(",
+                    "children": []
+                  },
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}tspan",
+                    "attributes": {
+                      "font-style": "italic"
+                    },
+                    "text": "x",
+                    "tail": ") → ",
+                    "children": []
+                  },
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}tspan",
+                    "attributes": {
+                      "font-style": "italic"
+                    },
+                    "text": "s̄",
+                    "tail": null,
+                    "children": []
+                  },
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}tspan",
+                    "attributes": {
+                      "dy": "4",
+                      "font-size": "70%"
+                    },
+                    "text": "i",
+                    "tail": null,
+                    "children": []
+                  },
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}tspan",
+                    "attributes": {
+                      "dy": "-4"
+                    },
+                    "text": "​",
+                    "tail": "(",
+                    "children": []
+                  },
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}tspan",
+                    "attributes": {
+                      "font-style": "italic"
+                    },
+                    "text": "x",
+                    "tail": ")",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}line",
+                "attributes": {
+                  "x1": "400",
+                  "y1": "912",
+                  "x2": "416",
+                  "y2": "912",
+                  "stroke": "#080d16",
+                  "stroke-width": "1.6",
+                  "marker-end": "url(#arrow)"
+                },
+                "text": null,
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}rect",
+                "attributes": {
+                  "x": "425",
+                  "y": "842",
+                  "width": "199",
+                  "height": "140",
+                  "rx": "4",
+                  "fill": "url(#model-fill)",
+                  "stroke": "#bddcff",
+                  "stroke-width": "1"
+                },
+                "text": null,
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}text",
+                "attributes": {
+                  "x": "438",
+                  "y": "865",
+                  "font-size": "15",
+                  "fill": "#08264a",
+                  "text-anchor": "start",
+                  "font-weight": "bold"
+                },
+                "text": "Compare with external",
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}text",
+                "attributes": {
+                  "x": "438",
+                  "y": "885",
+                  "font-size": "15",
+                  "fill": "#08264a",
+                  "text-anchor": "start",
+                  "font-weight": "bold"
+                },
+                "text": "human criterion",
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}text",
+                "attributes": {
+                  "x": "438",
+                  "y": "914",
+                  "font-size": "14.5",
+                  "fill": "#24364e",
+                  "text-anchor": "start",
+                  "font-style": "italic"
+                },
+                "text": "e.g., self-reports,",
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}text",
+                "attributes": {
+                  "x": "438",
+                  "y": "934",
+                  "font-size": "14.5",
+                  "fill": "#24364e",
+                  "text-anchor": "start",
+                  "font-style": "italic"
+                },
+                "text": "behavioural measures,",
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}text",
+                "attributes": {
+                  "x": "438",
+                  "y": "954",
+                  "font-size": "14.5",
+                  "fill": "#24364e",
+                  "text-anchor": "start",
+                  "font-style": "italic"
+                },
+                "text": "or expert ratings",
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}line",
+                "attributes": {
+                  "x1": "633",
+                  "y1": "912",
+                  "x2": "649",
+                  "y2": "912",
+                  "stroke": "#080d16",
+                  "stroke-width": "1.6",
+                  "marker-end": "url(#arrow)"
+                },
+                "text": null,
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}text",
+                "attributes": {
+                  "x": "662",
+                  "y": "865",
+                  "font-size": "14.5",
+                  "fill": "#11243c",
+                  "text-anchor": "start",
+                  "font-weight": "bold"
+                },
+                "text": "Evaluate measurement",
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}text",
+                "attributes": {
+                  "x": "662",
+                  "y": "885",
+                  "font-size": "14.5",
+                  "fill": "#11243c",
+                  "text-anchor": "start",
+                  "font-weight": "bold"
+                },
+                "text": "quality",
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}text",
+                "attributes": {
+                  "x": "662",
+                  "y": "908",
+                  "font-size": "14.5",
+                  "fill": "#080d16",
+                  "text-anchor": "start"
+                },
+                "text": "•",
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}text",
+                "attributes": {
+                  "x": "677",
+                  "y": "908",
+                  "font-size": "15",
+                  "fill": "#080d16",
+                  "text-anchor": "start"
+                },
+                "text": "Correlation",
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}text",
+                "attributes": {
+                  "x": "662",
+                  "y": "928",
+                  "font-size": "14.5",
+                  "fill": "#080d16",
+                  "text-anchor": "start"
+                },
+                "text": "•",
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}text",
+                "attributes": {
+                  "x": "677",
+                  "y": "928",
+                  "font-size": "15",
+                  "fill": "#080d16",
+                  "text-anchor": "start"
+                },
+                "text": "Reliability",
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}text",
+                "attributes": {
+                  "x": "662",
+                  "y": "948",
+                  "font-size": "14.5",
+                  "fill": "#080d16",
+                  "text-anchor": "start"
+                },
+                "text": "•",
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}text",
+                "attributes": {
+                  "x": "677",
+                  "y": "948",
+                  "font-size": "15",
+                  "fill": "#080d16",
+                  "text-anchor": "start"
+                },
+                "text": "Construct validity",
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}text",
+                "attributes": {
+                  "x": "662",
+                  "y": "968",
+                  "font-size": "14.5",
+                  "fill": "#080d16",
+                  "text-anchor": "start"
+                },
+                "text": "•",
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}text",
+                "attributes": {
+                  "x": "677",
+                  "y": "968",
+                  "font-size": "15",
+                  "fill": "#080d16",
+                  "text-anchor": "start"
+                },
+                "text": "etc.",
+                "tail": null,
+                "children": []
+              }
+            ]
+          },
+          {
+            "tag": "{http://www.w3.org/2000/svg}g",
+            "attributes": {
+              "id": "trained-prediction-route",
+              "{http://www.inkscape.org/namespaces/inkscape}label": "trained prediction route"
+            },
+            "text": null,
+            "tail": null,
+            "children": [
+              {
+                "tag": "{http://www.w3.org/2000/svg}rect",
+                "attributes": {
+                  "x": "900",
+                  "y": "842",
+                  "width": "226",
+                  "height": "172",
+                  "rx": "4",
+                  "fill": "white",
+                  "stroke": "#dbe2e9",
+                  "stroke-width": "1"
+                },
+                "text": null,
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}text",
+                "attributes": {
+                  "x": "913",
+                  "y": "865",
+                  "font-size": "14.5",
+                  "fill": "#08264a",
+                  "text-anchor": "start",
+                  "font-weight": "bold"
+                },
+                "text": "Coordinates for many materials",
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}rect",
+                "attributes": {
+                  "x": "913",
+                  "y": "878",
+                  "width": "200",
+                  "height": "120",
+                  "rx": "0",
+                  "fill": "white",
+                  "stroke": "#cbd1d8",
+                  "stroke-width": "0.85"
+                },
+                "text": null,
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}rect",
+                "attributes": {
+                  "x": "913",
+                  "y": "878",
+                  "width": "200",
+                  "height": "24",
+                  "rx": "0",
+                  "fill": "url(#table-head)",
+                  "stroke": "#b7c1cb",
+                  "stroke-width": "0.85"
+                },
+                "text": null,
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}line",
+                "attributes": {
+                  "x1": "913",
+                  "y1": "902",
+                  "x2": "1113",
+                  "y2": "902",
+                  "stroke": "#cbd1d8",
+                  "stroke-width": "0.8"
+                },
+                "text": null,
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}line",
+                "attributes": {
+                  "x1": "913",
+                  "y1": "926",
+                  "x2": "1113",
+                  "y2": "926",
+                  "stroke": "#cbd1d8",
+                  "stroke-width": "0.8"
+                },
+                "text": null,
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}line",
+                "attributes": {
+                  "x1": "913",
+                  "y1": "950",
+                  "x2": "1113",
+                  "y2": "950",
+                  "stroke": "#cbd1d8",
+                  "stroke-width": "0.8"
+                },
+                "text": null,
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}line",
+                "attributes": {
+                  "x1": "913",
+                  "y1": "974",
+                  "x2": "1113",
+                  "y2": "974",
+                  "stroke": "#cbd1d8",
+                  "stroke-width": "0.8"
+                },
+                "text": null,
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}text",
+                "attributes": {
+                  "x": "950.5",
+                  "y": "894.76",
+                  "font-size": "14",
+                  "fill": "#080d16",
+                  "text-anchor": "middle",
+                  "font-weight": "bold"
+                },
+                "text": "Material",
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}text",
+                "attributes": {
+                  "x": "950.5",
+                  "y": "918.76",
+                  "font-size": "14",
+                  "fill": "#080d16",
+                  "text-anchor": "middle"
+                },
+                "text": null,
+                "tail": null,
+                "children": [
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}tspan",
+                    "attributes": {
+                      "font-style": "italic"
+                    },
+                    "text": "x",
+                    "tail": null,
+                    "children": []
+                  },
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}tspan",
+                    "attributes": {
+                      "dy": "4",
+                      "font-size": "70%"
+                    },
+                    "text": "1",
+                    "tail": null,
+                    "children": []
+                  },
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}tspan",
+                    "attributes": {
+                      "dy": "-4"
+                    },
+                    "text": "​",
+                    "tail": null,
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}text",
+                "attributes": {
+                  "x": "950.5",
+                  "y": "942.76",
+                  "font-size": "14",
+                  "fill": "#080d16",
+                  "text-anchor": "middle"
+                },
+                "text": null,
+                "tail": null,
+                "children": [
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}tspan",
+                    "attributes": {
+                      "font-style": "italic"
+                    },
+                    "text": "x",
+                    "tail": null,
+                    "children": []
+                  },
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}tspan",
+                    "attributes": {
+                      "dy": "4",
+                      "font-size": "70%"
+                    },
+                    "text": "2",
+                    "tail": null,
+                    "children": []
+                  },
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}tspan",
+                    "attributes": {
+                      "dy": "-4"
+                    },
+                    "text": "​",
+                    "tail": null,
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}text",
+                "attributes": {
+                  "x": "950.5",
+                  "y": "966.76",
+                  "font-size": "14",
+                  "fill": "#080d16",
+                  "text-anchor": "middle"
+                },
+                "text": null,
+                "tail": null,
+                "children": [
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}tspan",
+                    "attributes": {
+                      "font-style": "italic"
+                    },
+                    "text": "x",
+                    "tail": null,
+                    "children": []
+                  },
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}tspan",
+                    "attributes": {
+                      "dy": "4",
+                      "font-size": "70%"
+                    },
+                    "text": "3",
+                    "tail": null,
+                    "children": []
+                  },
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}tspan",
+                    "attributes": {
+                      "dy": "-4"
+                    },
+                    "text": "​",
+                    "tail": null,
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}text",
+                "attributes": {
+                  "x": "950.5",
+                  "y": "990.76",
+                  "font-size": "14",
+                  "fill": "#080d16",
+                  "text-anchor": "middle"
+                },
+                "text": "…",
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}line",
+                "attributes": {
+                  "x1": "988",
+                  "y1": "878",
+                  "x2": "988",
+                  "y2": "998",
+                  "stroke": "#bfc7cf",
+                  "stroke-width": "0.8"
+                },
+                "text": null,
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}text",
+                "attributes": {
+                  "x": "1050.5",
+                  "y": "894.76",
+                  "font-size": "14",
+                  "fill": "#080d16",
+                  "text-anchor": "middle",
+                  "font-weight": "bold"
+                },
+                "text": "Coordinates",
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}text",
+                "attributes": {
+                  "x": "1050.5",
+                  "y": "918.76",
+                  "font-size": "14",
+                  "fill": "#080d16",
+                  "text-anchor": "middle"
+                },
+                "text": "[",
+                "tail": null,
+                "children": [
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}tspan",
+                    "attributes": {
+                      "font-style": "italic"
+                    },
+                    "text": "s̄",
+                    "tail": null,
+                    "children": []
+                  },
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}tspan",
+                    "attributes": {
+                      "dy": "4",
+                      "font-size": "70%"
+                    },
+                    "text": "1",
+                    "tail": null,
+                    "children": []
+                  },
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}tspan",
+                    "attributes": {
+                      "dy": "-4"
+                    },
+                    "text": "​",
+                    "tail": "(",
+                    "children": []
+                  },
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}tspan",
+                    "attributes": {
+                      "font-style": "italic"
+                    },
+                    "text": "x",
+                    "tail": null,
+                    "children": []
+                  },
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}tspan",
+                    "attributes": {
+                      "dy": "4",
+                      "font-size": "70%"
+                    },
+                    "text": "1",
+                    "tail": null,
+                    "children": []
+                  },
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}tspan",
+                    "attributes": {
+                      "dy": "-4"
+                    },
+                    "text": "​",
+                    "tail": "), …]",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}text",
+                "attributes": {
+                  "x": "1050.5",
+                  "y": "942.76",
+                  "font-size": "14",
+                  "fill": "#080d16",
+                  "text-anchor": "middle"
+                },
+                "text": "[",
+                "tail": null,
+                "children": [
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}tspan",
+                    "attributes": {
+                      "font-style": "italic"
+                    },
+                    "text": "s̄",
+                    "tail": null,
+                    "children": []
+                  },
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}tspan",
+                    "attributes": {
+                      "dy": "4",
+                      "font-size": "70%"
+                    },
+                    "text": "1",
+                    "tail": null,
+                    "children": []
+                  },
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}tspan",
+                    "attributes": {
+                      "dy": "-4"
+                    },
+                    "text": "​",
+                    "tail": "(",
+                    "children": []
+                  },
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}tspan",
+                    "attributes": {
+                      "font-style": "italic"
+                    },
+                    "text": "x",
+                    "tail": null,
+                    "children": []
+                  },
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}tspan",
+                    "attributes": {
+                      "dy": "4",
+                      "font-size": "70%"
+                    },
+                    "text": "2",
+                    "tail": null,
+                    "children": []
+                  },
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}tspan",
+                    "attributes": {
+                      "dy": "-4"
+                    },
+                    "text": "​",
+                    "tail": "), …]",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}text",
+                "attributes": {
+                  "x": "1050.5",
+                  "y": "966.76",
+                  "font-size": "14",
+                  "fill": "#080d16",
+                  "text-anchor": "middle"
+                },
+                "text": "[",
+                "tail": null,
+                "children": [
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}tspan",
+                    "attributes": {
+                      "font-style": "italic"
+                    },
+                    "text": "s̄",
+                    "tail": null,
+                    "children": []
+                  },
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}tspan",
+                    "attributes": {
+                      "dy": "4",
+                      "font-size": "70%"
+                    },
+                    "text": "1",
+                    "tail": null,
+                    "children": []
+                  },
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}tspan",
+                    "attributes": {
+                      "dy": "-4"
+                    },
+                    "text": "​",
+                    "tail": "(",
+                    "children": []
+                  },
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}tspan",
+                    "attributes": {
+                      "font-style": "italic"
+                    },
+                    "text": "x",
+                    "tail": null,
+                    "children": []
+                  },
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}tspan",
+                    "attributes": {
+                      "dy": "4",
+                      "font-size": "70%"
+                    },
+                    "text": "3",
+                    "tail": null,
+                    "children": []
+                  },
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}tspan",
+                    "attributes": {
+                      "dy": "-4"
+                    },
+                    "text": "​",
+                    "tail": "), …]",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}text",
+                "attributes": {
+                  "x": "1050.5",
+                  "y": "990.76",
+                  "font-size": "14",
+                  "fill": "#080d16",
+                  "text-anchor": "middle"
+                },
+                "text": "…",
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}text",
+                "attributes": {
+                  "x": "1203",
+                  "y": "872",
+                  "font-size": "15",
+                  "fill": "#080d16",
+                  "text-anchor": "middle",
+                  "font-weight": "bold"
+                },
+                "text": "Train a prediction",
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}text",
+                "attributes": {
+                  "x": "1203",
+                  "y": "892",
+                  "font-size": "15",
+                  "fill": "#080d16",
+                  "text-anchor": "middle",
+                  "font-weight": "bold"
+                },
+                "text": "model",
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}line",
+                "attributes": {
+                  "x1": "1138",
+                  "y1": "912",
+                  "x2": "1268",
+                  "y2": "912",
+                  "stroke": "#080d16",
+                  "stroke-width": "1.6",
+                  "marker-end": "url(#arrow)"
+                },
+                "text": null,
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}text",
+                "attributes": {
+                  "x": "1203",
+                  "y": "939",
+                  "font-size": "14.5",
+                  "fill": "#48515e",
+                  "text-anchor": "middle",
+                  "font-style": "italic"
+                },
+                "text": "e.g., regression",
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}text",
+                "attributes": {
+                  "x": "1203",
+                  "y": "959",
+                  "font-size": "14.5",
+                  "fill": "#48515e",
+                  "text-anchor": "middle",
+                  "font-style": "italic"
+                },
+                "text": "or classification",
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}rect",
+                "attributes": {
+                  "x": "1280",
+                  "y": "842",
+                  "width": "216",
+                  "height": "88",
+                  "rx": "4",
+                  "fill": "url(#model-fill)",
+                  "stroke": "#bddcff",
+                  "stroke-width": "1"
+                },
+                "text": null,
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}text",
+                "attributes": {
+                  "x": "1293",
+                  "y": "865",
+                  "font-size": "14.5",
+                  "fill": "#003278",
+                  "text-anchor": "start",
+                  "font-weight": "bold"
+                },
+                "text": "Predict external criterion",
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}text",
+                "attributes": {
+                  "x": "1293",
+                  "y": "892",
+                  "font-size": "14.5",
+                  "fill": "#080d16",
+                  "text-anchor": "start"
+                },
+                "text": null,
+                "tail": null,
+                "children": [
+                  {
+                    "tag": "{http://www.w3.org/2000/svg}tspan",
+                    "attributes": {
+                      "font-style": "italic"
+                    },
+                    "text": "Ŷ",
+                    "tail": " (e.g., trait scores,",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}text",
+                "attributes": {
+                  "x": "1293",
+                  "y": "912",
+                  "font-size": "14.5",
+                  "fill": "#080d16",
+                  "text-anchor": "start"
+                },
+                "text": "behavioural outcomes)",
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}text",
+                "attributes": {
+                  "x": "1293",
+                  "y": "953",
+                  "font-size": "14.5",
+                  "fill": "#142238",
+                  "text-anchor": "start",
+                  "font-weight": "bold"
+                },
+                "text": "Evaluate predictive performance",
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}text",
+                "attributes": {
+                  "x": "1293",
+                  "y": "975",
+                  "font-size": "14.5",
+                  "fill": "#080d16",
+                  "text-anchor": "start"
+                },
+                "text": "•",
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}text",
+                "attributes": {
+                  "x": "1309",
+                  "y": "975",
+                  "font-size": "14.5",
+                  "fill": "#080d16",
+                  "text-anchor": "start"
+                },
+                "text": "Out-of-sample accuracy",
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}text",
+                "attributes": {
+                  "x": "1293",
+                  "y": "995",
+                  "font-size": "14.5",
+                  "fill": "#080d16",
+                  "text-anchor": "start"
+                },
+                "text": "•",
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}text",
+                "attributes": {
+                  "x": "1309",
+                  "y": "995",
+                  "font-size": "14.5",
+                  "fill": "#080d16",
+                  "text-anchor": "start"
+                },
+                "text": "Generalisation",
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}text",
+                "attributes": {
+                  "x": "1293",
+                  "y": "1015",
+                  "font-size": "14.5",
+                  "fill": "#080d16",
+                  "text-anchor": "start"
+                },
+                "text": "•",
+                "tail": null,
+                "children": []
+              },
+              {
+                "tag": "{http://www.w3.org/2000/svg}text",
+                "attributes": {
+                  "x": "1309",
+                  "y": "1015",
+                  "font-size": "14.5",
+                  "fill": "#080d16",
+                  "text-anchor": "start"
+                },
+                "text": "etc.",
+                "tail": null,
+                "children": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

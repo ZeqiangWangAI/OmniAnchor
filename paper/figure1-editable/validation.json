@@ -1,0 +1,1024 @@
+{
+  "canvas": {
+    "width": 1536,
+    "height": 1072
+  },
+  "editable_text_elements": 144,
+  "images": 2,
+  "rasterImagesEmbedded": true,
+  "vectorShapes": 129,
+  "externalImageLinks": 0,
+  "outOfCanvasText": [],
+  "textBounds": [
+    {
+      "text": "a",
+      "x": 26,
+      "y": 2,
+      "width": 25.5,
+      "height": 56
+    },
+    {
+      "text": "The scored event",
+      "x": 80,
+      "y": 15,
+      "width": 259.296875,
+      "height": 40
+    },
+    {
+      "text": "Supported input types (single input x)",
+      "x": 37,
+      "y": 74,
+      "width": 233.796875,
+      "height": 17.34521484375
+    },
+    {
+      "text": "Text",
+      "x": 49.65625,
+      "y": 148,
+      "width": 24.6982421875,
+      "height": 15
+    },
+    {
+      "text": "Image",
+      "x": 105.5078125,
+      "y": 148,
+      "width": 34.984375,
+      "height": 15.021484375
+    },
+    {
+      "text": "Image + text",
+      "x": 162.5625,
+      "y": 148,
+      "width": 70.888671875,
+      "height": 15.021484375
+    },
+    {
+      "text": "Video",
+      "x": 257.3125,
+      "y": 148,
+      "width": 33.375,
+      "height": 15
+    },
+    {
+      "text": "Material x",
+      "x": 38,
+      "y": 198,
+      "width": 85.09521484375,
+      "height": 21
+    },
+    {
+      "text": "OASIS · Lake 12 (I466)",
+      "x": 38,
+      "y": 383,
+      "width": 150.671875,
+      "height": 17.31494140625
+    },
+    {
+      "text": "Dataset example; scores below are symbolic.",
+      "x": 37.627685546875,
+      "y": 404,
+      "width": 225.794189453125,
+      "height": 14
+    },
+    {
+      "text": "Declared relation:",
+      "x": 351,
+      "y": 77,
+      "width": 115.671875,
+      "height": 16
+    },
+    {
+      "text": "emotion evocation",
+      "x": 351,
+      "y": 98,
+      "width": 116.234375,
+      "height": 16
+    },
+    {
+      "text": "Fixed wording b1",
+      "x": 361,
+      "y": 136,
+      "width": 109.4375,
+      "height": 19
+    },
+    {
+      "text": "Fixed wording b2",
+      "x": 361,
+      "y": 230,
+      "width": 109.4375,
+      "height": 19
+    },
+    {
+      "text": "Fixed wording b3",
+      "x": 361,
+      "y": 303,
+      "width": 109.4375,
+      "height": 19
+    },
+    {
+      "text": "“The feeling this photograph",
+      "x": 361,
+      "y": 160,
+      "width": 197.875,
+      "height": 19
+    },
+    {
+      "text": "evokes in a viewer is:”",
+      "x": 361,
+      "y": 180,
+      "width": 155.796875,
+      "height": 19
+    },
+    {
+      "text": "…",
+      "x": 363,
+      "y": 253,
+      "width": 18,
+      "height": 20
+    },
+    {
+      "text": "…",
+      "x": 363,
+      "y": 326,
+      "width": 18,
+      "height": 20
+    },
+    {
+      "text": "Same relation and language;",
+      "x": 351,
+      "y": 366,
+      "width": 185.609375,
+      "height": 17.453125
+    },
+    {
+      "text": "fixed before scoring.",
+      "x": 348.2109375,
+      "y": 385,
+      "width": 134.1640625,
+      "height": 17.453125
+    },
+    {
+      "text": "Prefix",
+      "x": 636.671875,
+      "y": 184,
+      "width": 46.65625,
+      "height": 20
+    },
+    {
+      "text": "p = TM(P(x, b))",
+      "x": 599.6611328125,
+      "y": 207,
+      "width": 118.5810546875,
+      "height": 24
+    },
+    {
+      "text": "Frozen multimodal generative model",
+      "x": 766.2578125,
+      "y": 99,
+      "width": 377.484375,
+      "height": 26.1796875
+    },
+    {
+      "text": "Qwen3.5-4B",
+      "x": 910.125,
+      "y": 127,
+      "width": 99.75,
+      "height": 21
+    },
+    {
+      "text": "Model weights fixed",
+      "x": 899.4111328125,
+      "y": 157,
+      "width": 146.2939453125,
+      "height": 20
+    },
+    {
+      "text": "Context tokens (from prefix p)",
+      "x": 760.9296875,
+      "y": 204,
+      "width": 184.140625,
+      "height": 16.2080078125
+    },
+    {
+      "text": "Continuation tokens (ci,t)",
+      "x": 988.9296875,
+      "y": 204,
+      "width": 150.140625,
+      "height": 19
+    },
+    {
+      "text": "t1",
+      "x": 774.3984375,
+      "y": 252,
+      "width": 13.203125,
+      "height": 26
+    },
+    {
+      "text": "t2",
+      "x": 822.3984375,
+      "y": 252,
+      "width": 13.203125,
+      "height": 26
+    },
+    {
+      "text": "tn",
+      "x": 918.3984375,
+      "y": 252,
+      "width": 13.203125,
+      "height": 26
+    },
+    {
+      "text": "⋯",
+      "x": 864.5,
+      "y": 249,
+      "width": 25,
+      "height": 27
+    },
+    {
+      "text": "ci,1",
+      "x": 978.78125,
+      "y": 252,
+      "width": 24.4375,
+      "height": 26
+    },
+    {
+      "text": "ci,2",
+      "x": 1026.78125,
+      "y": 252,
+      "width": 24.4375,
+      "height": 26
+    },
+    {
+      "text": "ci,Lᵢ",
+      "x": 1119.7578125,
+      "y": 252,
+      "width": 28.484375,
+      "height": 26
+    },
+    {
+      "text": "⋯",
+      "x": 1074.5,
+      "y": 249,
+      "width": 25,
+      "height": 27
+    },
+    {
+      "text": "Score the exact continuation",
+      "x": 840.390625,
+      "y": 310,
+      "width": 229.21875,
+      "height": 21
+    },
+    {
+      "text": "Target continuation ai",
+      "x": 1256,
+      "y": 100,
+      "width": 178.25,
+      "height": 24
+    },
+    {
+      "text": "pleasant",
+      "x": 1287.666015625,
+      "y": 144,
+      "width": 65.625,
+      "height": 22.27734375
+    },
+    {
+      "text": "unpleasant",
+      "x": 1277.734375,
+      "y": 196,
+      "width": 85.556640625,
+      "height": 22.27734375
+    },
+    {
+      "text": "aroused",
+      "x": 1289.3984375,
+      "y": 248,
+      "width": 62.24609375,
+      "height": 22
+    },
+    {
+      "text": "calm",
+      "x": 1301.0625,
+      "y": 300,
+      "width": 38.875,
+      "height": 22
+    },
+    {
+      "text": "One anchor",
+      "x": 1429,
+      "y": 206,
+      "width": 71.967529296875,
+      "height": 17
+    },
+    {
+      "text": "per scored",
+      "x": 1428.947021484375,
+      "y": 224,
+      "width": 64.2099609375,
+      "height": 17.31494140625
+    },
+    {
+      "text": "event",
+      "x": 1429,
+      "y": 242,
+      "width": 33.58837890625,
+      "height": 17
+    },
+    {
+      "text": "si,b(x) = log pM(ci | p) =",
+      "x": 703.740234375,
+      "y": 383,
+      "width": 259.384765625,
+      "height": 33
+    },
+    {
+      "text": "∑",
+      "x": 991.6015625,
+      "y": 371,
+      "width": 32.796875,
+      "height": 51
+    },
+    {
+      "text": "Li",
+      "x": 999.84765625,
+      "y": 352,
+      "width": 15.66015625,
+      "height": 25
+    },
+    {
+      "text": "t=1",
+      "x": 995.9140625,
+      "y": 419,
+      "width": 24.171875,
+      "height": 20
+    },
+    {
+      "text": "log pM(ci,t | p, ci,<t).",
+      "x": 1035,
+      "y": 384,
+      "width": 207.328125,
+      "height": 32
+    },
+    {
+      "text": "Natural log probability; nats.",
+      "x": 1316.5546875,
+      "y": 392,
+      "width": 189.1953125,
+      "height": 17.453125
+    },
+    {
+      "text": "b",
+      "x": 26,
+      "y": 460,
+      "width": 28.375,
+      "height": 56
+    },
+    {
+      "text": "From scores to named coordinates",
+      "x": 80,
+      "y": 473,
+      "width": 511.96875,
+      "height": 39
+    },
+    {
+      "text": "Scores for one material x",
+      "x": 92,
+      "y": 524,
+      "width": 191.4462890625,
+      "height": 20
+    },
+    {
+      "text": "Anchor ai",
+      "x": 124.8828125,
+      "y": 561.5999755859375,
+      "width": 62.234375,
+      "height": 19
+    },
+    {
+      "text": "pleasant",
+      "x": 106.9453125,
+      "y": 587.9400024414062,
+      "width": 52.5,
+      "height": 17.421875
+    },
+    {
+      "text": "unpleasant",
+      "x": 107,
+      "y": 614.9400024414062,
+      "width": 68.4453125,
+      "height": 17.421875
+    },
+    {
+      "text": "aroused",
+      "x": 107,
+      "y": 641.9400024414062,
+      "width": 49.796875,
+      "height": 17
+    },
+    {
+      "text": "calm",
+      "x": 107,
+      "y": 668.9400024414062,
+      "width": 31.09375,
+      "height": 17
+    },
+    {
+      "text": "…",
+      "x": 107,
+      "y": 695.9400024414062,
+      "width": 16,
+      "height": 17
+    },
+    {
+      "text": "Score (nats)",
+      "x": 241.015625,
+      "y": 561.5999755859375,
+      "width": 75.96875,
+      "height": 16.0029296875
+    },
+    {
+      "text": "s1,b(x)",
+      "x": 259.8515625,
+      "y": 587.9400024414062,
+      "width": 38.1484375,
+      "height": 20
+    },
+    {
+      "text": "s2,b(x)",
+      "x": 259.8515625,
+      "y": 614.9400024414062,
+      "width": 38.1484375,
+      "height": 20
+    },
+    {
+      "text": "s3,b(x)",
+      "x": 259.8515625,
+      "y": 641.9400024414062,
+      "width": 38.1484375,
+      "height": 20
+    },
+    {
+      "text": "s4,b(x)",
+      "x": 259.8515625,
+      "y": 668.9400024414062,
+      "width": 38.1484375,
+      "height": 20
+    },
+    {
+      "text": "…",
+      "x": 271,
+      "y": 695.9400024414062,
+      "width": 16,
+      "height": 17
+    },
+    {
+      "text": "Aggregate across",
+      "x": 381.7734375,
+      "y": 578,
+      "width": 124.453125,
+      "height": 20
+    },
+    {
+      "text": "wordings b",
+      "x": 403.75,
+      "y": 598,
+      "width": 80.5,
+      "height": 20
+    },
+    {
+      "text": "(e.g., mean)",
+      "x": 406.984375,
+      "y": 636,
+      "width": 74.03125,
+      "height": 17.34521484375
+    },
+    {
+      "text": "Named coordinates for material x",
+      "x": 565,
+      "y": 524,
+      "width": 258.7587890625,
+      "height": 20
+    },
+    {
+      "text": "Coordinate (construct)",
+      "x": 583.3828125,
+      "y": 561.5999755859375,
+      "width": 146.234375,
+      "height": 16.0029296875
+    },
+    {
+      "text": "Pleasantness",
+      "x": 580,
+      "y": 587.9400024414062,
+      "width": 80.875,
+      "height": 17
+    },
+    {
+      "text": "Unpleasantness",
+      "x": 580,
+      "y": 614.9400024414062,
+      "width": 99.53125,
+      "height": 17.421875
+    },
+    {
+      "text": "Arousal",
+      "x": 580,
+      "y": 641.9400024414062,
+      "width": 50.65625,
+      "height": 17
+    },
+    {
+      "text": "Calmness",
+      "x": 580,
+      "y": 668.9400024414062,
+      "width": 62.21875,
+      "height": 17
+    },
+    {
+      "text": "…",
+      "x": 580,
+      "y": 695.9400024414062,
+      "width": 16,
+      "height": 17
+    },
+    {
+      "text": "Value",
+      "x": 781.4375,
+      "y": 561.5999755859375,
+      "width": 36.125,
+      "height": 16
+    },
+    {
+      "text": "s̄1(x)",
+      "x": 784.546875,
+      "y": 587.9400024414062,
+      "width": 29.7578125,
+      "height": 20
+    },
+    {
+      "text": "s̄2(x)",
+      "x": 784.546875,
+      "y": 614.9400024414062,
+      "width": 29.7578125,
+      "height": 20
+    },
+    {
+      "text": "s̄3(x)",
+      "x": 784.546875,
+      "y": 641.9400024414062,
+      "width": 29.7578125,
+      "height": 20
+    },
+    {
+      "text": "s̄4(x)",
+      "x": 784.546875,
+      "y": 668.9400024414062,
+      "width": 29.7578125,
+      "height": 20
+    },
+    {
+      "text": "…",
+      "x": 791.5,
+      "y": 695.9400024414062,
+      "width": 16,
+      "height": 17
+    },
+    {
+      "text": "Coordinates for many",
+      "x": 919.515625,
+      "y": 578,
+      "width": 156.96875,
+      "height": 20
+    },
+    {
+      "text": "materials form a dataset",
+      "x": 911.78125,
+      "y": 598,
+      "width": 172.4501953125,
+      "height": 20
+    },
+    {
+      "text": "X → [s̄1(x), s̄2(x), s̄3(x), s̄4(x), …]",
+      "x": 888.161865234375,
+      "y": 638,
+      "width": 218.572509765625,
+      "height": 21
+    },
+    {
+      "text": "Measurement space",
+      "x": 1147,
+      "y": 524,
+      "width": 152.140625,
+      "height": 20
+    },
+    {
+      "text": "Arousal",
+      "x": 1336,
+      "y": 557,
+      "width": 47.5,
+      "height": 16
+    },
+    {
+      "text": "(higher)",
+      "x": 1336,
+      "y": 574,
+      "width": 48.3125,
+      "height": 16.2373046875
+    },
+    {
+      "text": "Unpleasantness",
+      "x": 1146.34375,
+      "y": 616,
+      "width": 93.3125,
+      "height": 16.2080078125
+    },
+    {
+      "text": "(higher)",
+      "x": 1168.84375,
+      "y": 633,
+      "width": 48.3125,
+      "height": 16.2373046875
+    },
+    {
+      "text": "Pleasantness",
+      "x": 1418.0859375,
+      "y": 616,
+      "width": 75.828125,
+      "height": 16
+    },
+    {
+      "text": "(higher)",
+      "x": 1431.84375,
+      "y": 633,
+      "width": 48.3125,
+      "height": 16.2373046875
+    },
+    {
+      "text": "Calmness",
+      "x": 1340,
+      "y": 684,
+      "width": 58.34375,
+      "height": 16
+    },
+    {
+      "text": "(higher)",
+      "x": 1340,
+      "y": 701,
+      "width": 48.3125,
+      "height": 16.2373046875
+    },
+    {
+      "text": "c",
+      "x": 26,
+      "y": 740,
+      "width": 22.640625,
+      "height": 56
+    },
+    {
+      "text": "Two validation routes",
+      "x": 80,
+      "y": 751,
+      "width": 332.703125,
+      "height": 40
+    },
+    {
+      "text": "1. Direct measurement (no training)",
+      "x": 38,
+      "y": 802,
+      "width": 291.109375,
+      "height": 21.1005859375
+    },
+    {
+      "text": "2. Trained prediction (downstream model)",
+      "x": 899,
+      "y": 802,
+      "width": 342.1875,
+      "height": 21.0634765625
+    },
+    {
+      "text": "New material x",
+      "x": 54,
+      "y": 852,
+      "width": 97.59326171875,
+      "height": 16
+    },
+    {
+      "text": "…",
+      "x": 146,
+      "y": 911,
+      "width": 18,
+      "height": 20
+    },
+    {
+      "text": "Same fixed wordings b",
+      "x": 220,
+      "y": 851,
+      "width": 143.359375,
+      "height": 17.34521484375
+    },
+    {
+      "text": "and anchors ai",
+      "x": 220,
+      "y": 871,
+      "width": 89.109375,
+      "height": 20
+    },
+    {
+      "text": "Score with frozen model",
+      "x": 220,
+      "y": 904,
+      "width": 152.8125,
+      "height": 17
+    },
+    {
+      "text": "si,b(x) → s̄i(x)",
+      "x": 250.0830078125,
+      "y": 938,
+      "width": 97.6669921875,
+      "height": 23
+    },
+    {
+      "text": "Compare with external",
+      "x": 438,
+      "y": 852,
+      "width": 148.03125,
+      "height": 16.2080078125
+    },
+    {
+      "text": "human criterion",
+      "x": 438,
+      "y": 872,
+      "width": 104.578125,
+      "height": 16
+    },
+    {
+      "text": "e.g., self-reports,",
+      "x": 438,
+      "y": 901,
+      "width": 98.140625,
+      "height": 16.12939453125
+    },
+    {
+      "text": "behavioural measures,",
+      "x": 438,
+      "y": 921,
+      "width": 131.5625,
+      "height": 16
+    },
+    {
+      "text": "or expert ratings",
+      "x": 438,
+      "y": 941,
+      "width": 97.46875,
+      "height": 16.12939453125
+    },
+    {
+      "text": "Evaluate measurement",
+      "x": 662,
+      "y": 852,
+      "width": 141.90625,
+      "height": 16
+    },
+    {
+      "text": "quality",
+      "x": 662,
+      "y": 872,
+      "width": 43.515625,
+      "height": 16.12939453125
+    },
+    {
+      "text": "•",
+      "x": 662,
+      "y": 895,
+      "width": 5.078125,
+      "height": 16
+    },
+    {
+      "text": "Correlation",
+      "x": 677,
+      "y": 895,
+      "width": 68.328125,
+      "height": 16
+    },
+    {
+      "text": "•",
+      "x": 662,
+      "y": 915,
+      "width": 5.078125,
+      "height": 16
+    },
+    {
+      "text": "Reliability",
+      "x": 677,
+      "y": 915,
+      "width": 63.328125,
+      "height": 16.2373046875
+    },
+    {
+      "text": "•",
+      "x": 662,
+      "y": 935,
+      "width": 5.078125,
+      "height": 16
+    },
+    {
+      "text": "Construct validity",
+      "x": 677,
+      "y": 935,
+      "width": 107.921875,
+      "height": 16.2373046875
+    },
+    {
+      "text": "•",
+      "x": 662,
+      "y": 955,
+      "width": 5.078125,
+      "height": 16
+    },
+    {
+      "text": "etc.",
+      "x": 677,
+      "y": 955,
+      "width": 21.234375,
+      "height": 16
+    },
+    {
+      "text": "Coordinates for many materials",
+      "x": 913,
+      "y": 852,
+      "width": 197.484375,
+      "height": 16.12939453125
+    },
+    {
+      "text": "Material",
+      "x": 924.453125,
+      "y": 882.760009765625,
+      "width": 52.09375,
+      "height": 15
+    },
+    {
+      "text": "x1",
+      "x": 944.4453125,
+      "y": 906.760009765625,
+      "width": 11.6171875,
+      "height": 18
+    },
+    {
+      "text": "x2",
+      "x": 944.4453125,
+      "y": 930.760009765625,
+      "width": 11.6171875,
+      "height": 18
+    },
+    {
+      "text": "x3",
+      "x": 944.4453125,
+      "y": 954.760009765625,
+      "width": 11.6171875,
+      "height": 18
+    },
+    {
+      "text": "…",
+      "x": 943.5,
+      "y": 978.760009765625,
+      "width": 14,
+      "height": 15
+    },
+    {
+      "text": "Coordinates",
+      "x": 1013.9375,
+      "y": 882.760009765625,
+      "width": 73.125,
+      "height": 15
+    },
+    {
+      "text": "[s̄1(x1), …]",
+      "x": 1019.921875,
+      "y": 906.760009765625,
+      "width": 61.15625,
+      "height": 18
+    },
+    {
+      "text": "[s̄1(x2), …]",
+      "x": 1019.921875,
+      "y": 930.760009765625,
+      "width": 61.15625,
+      "height": 18
+    },
+    {
+      "text": "[s̄1(x3), …]",
+      "x": 1019.921875,
+      "y": 954.760009765625,
+      "width": 61.15625,
+      "height": 18
+    },
+    {
+      "text": "…",
+      "x": 1043.5,
+      "y": 978.760009765625,
+      "width": 14,
+      "height": 15
+    },
+    {
+      "text": "Train a prediction",
+      "x": 1144.9375,
+      "y": 859,
+      "width": 116.125,
+      "height": 16.2080078125
+    },
+    {
+      "text": "model",
+      "x": 1183.4140625,
+      "y": 879,
+      "width": 39.171875,
+      "height": 16
+    },
+    {
+      "text": "e.g., regression",
+      "x": 1158.828125,
+      "y": 926,
+      "width": 88.34375,
+      "height": 16.12939453125
+    },
+    {
+      "text": "or classification",
+      "x": 1156.0703125,
+      "y": 946,
+      "width": 93.859375,
+      "height": 16.12939453125
+    },
+    {
+      "text": "Predict external criterion",
+      "x": 1293,
+      "y": 852,
+      "width": 156.75,
+      "height": 16
+    },
+    {
+      "text": "Ŷ (e.g., trait scores,",
+      "x": 1293,
+      "y": 879,
+      "width": 111.5625,
+      "height": 16.12939453125
+    },
+    {
+      "text": "behavioural outcomes)",
+      "x": 1292.964599609375,
+      "y": 899,
+      "width": 132.504150390625,
+      "height": 16.10107421875
+    },
+    {
+      "text": "Evaluate predictive performance",
+      "x": 1293,
+      "y": 940,
+      "width": 203.5,
+      "height": 16.10107421875
+    },
+    {
+      "text": "•",
+      "x": 1293,
+      "y": 962,
+      "width": 5.078125,
+      "height": 16
+    },
+    {
+      "text": "Out-of-sample accuracy",
+      "x": 1309,
+      "y": 962,
+      "width": 139.703125,
+      "height": 16.12939453125
+    },
+    {
+      "text": "•",
+      "x": 1293,
+      "y": 982,
+      "width": 5.078125,
+      "height": 16
+    },
+    {
+      "text": "Generalisation",
+      "x": 1309,
+      "y": 982,
+      "width": 84.5625,
+      "height": 16
+    },
+    {
+      "text": "•",
+      "x": 1293,
+      "y": 1002,
+      "width": 5.078125,
+      "height": 16
+    },
+    {
+      "text": "etc.",
+      "x": 1309,
+      "y": 1002,
+      "width": 20.53125,
+      "height": 16
+    }
+  ],
+  "revision": "Removed only the two visible footer text lines beginning Note: and Photo:.",
+  "other_visible_text_preserved": true
+}

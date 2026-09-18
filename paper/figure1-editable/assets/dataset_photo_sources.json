@@ -1,0 +1,29 @@
+{
+  "dataset": "Open Affective Standardized Image Set (OASIS)",
+  "dataset_paper": {
+    "authors": "Benedek Kurdi, Shayn Lozano, Mahzarin R. Banaji",
+    "year": 2017,
+    "title": "Introducing the Open Affective Standardized Image Set (OASIS)",
+    "doi": "10.3758/s13428-016-0715-3",
+    "url": "https://doi.org/10.3758/s13428-016-0715-3"
+  },
+  "dataset_project_url": "https://osf.io/6pnd7/",
+  "original_archive_url": "https://osf.io/download/uxvpb/",
+  "original_archive_sha256": "b1c1f23a2adfb504801ad05df00e01b5530f4442524c983fe535476807137312",
+  "image_id": "I466",
+  "image_name": "Lake 12",
+  "category": "Scene",
+  "source_credit_as_recorded_by_dataset": "Flickr/James Wheeler",
+  "original_dataset_member": "images/Lake 12.jpg",
+  "local_path": "/Volumes/OutsourceData/VLanchor/figures/editable_measurement/assets/oasis_I466_Lake_12_native.jpg",
+  "dimensions_pixels": [
+    500,
+    400
+  ],
+  "sha256": "2589e17cd4aaeb194387146d80fcf1de75406b3752cf14c7e3fa20eaccb0ed07",
+  "alterations": "None; byte-for-byte copy of the original OASIS stimulus. Cropping/scaling for diagram display may be performed via an SVG image viewport without changing this asset.",
+  "ratings_used_in_figure": false,
+  "reuse_basis": "The original dataset paper describes free use, reuse and modification of the images in online and offline research. OSF API returned no machine-readable dataset license. Do not assert a blanket CC license based on third-party repository claims.",
+  "higher_resolution_search": "Photographer originals depicting the same scene were located, but exact correspondence to the dataset stimulus could not be established. The canonical 500 x 400 dataset stimulus is recommended for scientific fidelity.",
+  "retrieved_or_verified_date": "2026-09-18"
+}
